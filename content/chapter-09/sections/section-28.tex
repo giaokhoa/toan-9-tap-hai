@@ -8,7 +8,7 @@
 % Authority: https://olm.vn/thu-vien-so/doc-sach/shs-toan-tap-2.4491669493
 %
 % Nguồn SBT Toán 9 Tập hai — Bài 28, PDF trang 53--54:
-% SBT TOÁN 9 TẬP 2.pdf
+% SBT TOÁN 9 TẬP 2.pdf (Project Sources)
 % SHA-256: 5ff01fd213d1adc75f9c54b4408d6a9642a4d8038e685040efef3311a196196c
 
 \section{Đường tròn ngoại tiếp và đường tròn nội tiếp của một tam giác}
@@ -409,24 +409,24 @@
 
     \begin{center}
     \begin{tikzpicture}
-        \coordinate (B) at (0,0);
-        \coordinate (C) at (4,0);
-        \path[name path=BA] (B)--++(60:5);
-        \path[name path=CA] (C)--++(100:5);
-        \path[name intersections={of=BA and CA, by=A}];
-        \path[name path=BI] (B)--++(30:5);
-        \path[name path=CI] (C)--++(140:5);
-        \path[name intersections={of=BI and CI, by=I}];
-        \pgfextracty{\dimen0}{\pgfpointanchor{I}{center}}
-        \pgfmathsetlengthmacro{\rinex}{\dimen0}
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (4,0);
+        \path[name path=AC] (A)--++(40:6);
+        \path[name path=BC] (B)--++(120:6);
+        \path[name intersections={of=AC and BC, by=C}];
+        \path[name path=AI] (A)--++(20:6);
+        \path[name path=BI] (B)--++(150:6);
+        \path[name intersections={of=AI and BI, by=I}];
+        \coordinate (D) at ($(A)!(I)!(B)$);
         \draw (A)--(B)--(C)--cycle;
         \draw (A)--(I) (B)--(I) (C)--(I);
-        \draw (I) circle (\rinex);
+        \draw (I)--(D);
+        \draw let \p1=($(I)-(D)$), \n1={veclen(\x1,\y1)} in (I) circle (\n1);
         \fill (I) circle (1.2pt);
-        \node[above=1pt of A] {$C$};
-        \node[below left=1pt of B] {$A$};
-        \node[below right=1pt of C] {$B$};
-        \node[below=1pt of I] {$I$};
+        \node[below left=1pt of A] {$A$};
+        \node[below right=1pt of B] {$B$};
+        \node[above=1pt of C] {$C$};
+        \node[above right=1pt of I] {$I$};
     \end{tikzpicture}
 
     \textit{Hình 9.20}
@@ -441,40 +441,23 @@
 
     \begin{center}
     \begin{tikzpicture}
-        \coordinate (A) at (0,3.2);
-        \coordinate (B) at (-2.1,0);
-        \coordinate (C) at (2.4,0);
-        \path[name path=BI] (B)--($(B)!5cm!0.5:(A)$);
-        % Hai tia phân giác được dựng bằng giao điểm của các đường phân giác trong.
-        \coordinate (X) at ($(B)!0.34!(C)$);
-        \coordinate (Y) at ($(B)!0.34!(A)$);
-        \coordinate (XC) at ($(C)!0.34!(B)$);
-        \coordinate (YC) at ($(C)!0.34!(A)$);
-        \path let \p1=($(X)-(Y)$) in \pgfextra{\pgfmathsetmacro{\rB}{veclen(\x1,\y1)}};
-        \path let \p1=($(XC)-(YC)$) in \pgfextra{\pgfmathsetmacro{\rC}{veclen(\x1,\y1)}};
-        \path[name path=arcBX] (X) circle ({1.05*\rB});
-        \path[name path=arcBY] (Y) circle ({1.05*\rB});
-        \path[name intersections={of=arcBX and arcBY, by={Z,Zout}}];
-        \path[name path=bisB] (B)--(Z);
-        \path[name path=arcCX] (XC) circle ({1.05*\rC});
-        \path[name path=arcCY] (YC) circle ({1.05*\rC});
-        \path[name intersections={of=arcCX and arcCY, by={W,Wout}}];
-        \path[name path=bisC] (C)--(W);
-        \path[name intersections={of=bisB and bisC, by=I}];
-        \coordinate (D) at ($(B)!(I)!(C)$);
-        \coordinate (E) at ($(A)!(I)!(C)$);
+        \coordinate (A) at (0,3);
+        \coordinate (B) at (-2,0);
+        \coordinate (C) at (2,0);
+        \pgfmathsetmacro{\rin}{6/(2+sqrt(13))}
+        \coordinate (I) at (0,\rin);
+        \coordinate (D) at (0,0);
+        \coordinate (X) at ($(B)!1.1cm!(C)$);
+        \coordinate (Y) at ($(B)!1.1cm!(A)$);
+        \coordinate (Z) at ($(B)!0.62!(I)$);
         \draw (A)--(B)--(C)--cycle;
         \draw (B)--(I) (C)--(I);
         \draw (I)--(D);
-        \draw (I) circle ({veclen(0,0)});
-        \path let \p1=($(I)-(D)$) in \pgfextra{\pgfmathsetmacro{\rI}{veclen(\x1,\y1)}};
-        \draw (I) circle (\rI);
-        \draw[dashed] (B) ++(0:0.72) arc[start angle=0,end angle=57,radius=0.72];
-        \draw[dashed] (X) circle ({1.05*\rB});
-        \draw[dashed] (Y) circle ({1.05*\rB});
-        \draw[dashed] (XC) circle ({1.05*\rC});
-        \draw[dashed] (YC) circle ({1.05*\rC});
+        \draw (I) circle (\rin);
+        \draw[dashed] let \p1=($(X)-(Z)$), \n1={veclen(\x1,\y1)} in (X) circle (\n1);
+        \draw[dashed] let \p1=($(Y)-(Z)$), \n1={veclen(\x1,\y1)} in (Y) circle (\n1);
         \pic[draw, angle radius=2.8mm] {right angle=I--D--C};
+        \fill (I) circle (1.2pt);
         \node[above=1pt of A] {$A$};
         \node[below left=1pt of B] {$B$};
         \node[below right=1pt of C] {$C$};
