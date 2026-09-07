@@ -1,0 +1,227 @@
+% SGK direct images:
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-78-1771844560338.png
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-79-1771844560670.png
+
+\section*{Luyện tập chung}
+
+\begin{lesson}
+    \textbf{Ví dụ 1}
+
+    Cho tam giác $ABC$ nội tiếp đường tròn $(O)$. Biết rằng $\widehat{OAB}=30^\circ$, $\widehat{OAC}=40^\circ$. Hãy tính số đo của các góc $ABC$ và $ACB$.
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (O) at (0,0);
+            \coordinate (A) at (90:2);
+            \coordinate (B) at (210:2);
+            \coordinate (C) at (-10:2);
+            \coordinate (M) at ($(A)!0.24!(O)$);
+
+            \draw (O) circle[radius=2cm];
+            \draw (A)--(B)--(C)--cycle;
+            \draw (O)--(A) (O)--(B) (O)--(C);
+            \pic[draw, angle radius=4mm] {angle=B--A--O};
+            \pic[draw, angle radius=4mm] {angle=O--A--C};
+            \node[left=2pt of M] {$30^\circ$};
+            \node[right=2pt of M] {$40^\circ$};
+
+            \fill (O) circle (1.2pt);
+            \node[above=2pt of A] {$A$};
+            \node[below left=1pt of B] {$B$};
+            \node[right=2pt of C] {$C$};
+            \node[below=2pt of O] {$O$};
+        \end{tikzpicture}
+
+        Hình 9.24
+    \end{center}
+
+    \textbf{Giải} (H.9.24).
+
+    Vì $OA=OB$ nên tam giác $OAB$ cân tại $O$.
+
+    Suy ra $\widehat{OBA}=\widehat{OAB}=30^\circ$.
+
+    Do tổng các góc trong tam giác $OAB$ bằng $180^\circ$ nên
+    \[
+        \widehat{AOB}=180^\circ-\widehat{OAB}-\widehat{OBA}
+        =180^\circ-30^\circ-30^\circ=120^\circ.
+    \]
+
+    Tương tự, tam giác $OAC$ cân tại $O$ vì $OA=OC$.
+
+    Do đó $\widehat{OCA}=\widehat{OAC}=40^\circ$.
+
+    Vì tổng các góc trong tam giác $OAC$ bằng $180^\circ$ nên
+    \[
+        \widehat{AOC}=180^\circ-\widehat{OAC}-\widehat{OCA}
+        =180^\circ-40^\circ-40^\circ=100^\circ.
+    \]
+
+    Xét đường tròn $(O)$ ta có:
+
+    Vì góc nội tiếp $ABC$ và góc ở tâm $AOC$ cùng chắn cung nhỏ $AC$ nên
+    \[
+        \widehat{ABC}=\dfrac{1}{2}\widehat{AOC}=50^\circ.
+    \]
+
+    Vì góc nội tiếp $ACB$ và góc ở tâm $AOB$ cùng chắn cung nhỏ $AB$ nên
+    \[
+        \widehat{ACB}=\dfrac{1}{2}\widehat{AOB}=60^\circ.
+    \]
+
+    \textbf{Ví dụ 2}
+
+    Cho tam giác $ABC$ có diện tích $S$ và ngoại tiếp đường tròn $(I;r)$. Chứng minh rằng
+    \[
+        S=\dfrac{1}{2}r(BC+CA+AB).
+    \]
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (A) at (0,4);
+            \coordinate (B) at (-3,0);
+            \coordinate (C) at (3,0);
+            \coordinate (I) at (0,1.5);
+            \coordinate (D) at ($(B)!(I)!(C)$);
+            \coordinate (E) at ($(C)!(I)!(A)$);
+            \coordinate (F) at ($(A)!(I)!(B)$);
+
+            \draw (A)--(B)--(C)--cycle;
+            \draw (I) circle[radius=1.5cm];
+            \draw (A)--(I) (B)--(I) (C)--(I);
+            \draw (I)--(D) (I)--(E) (I)--(F);
+            \pic[draw, angle radius=2.5mm] {right angle=B--D--I};
+            \pic[draw, angle radius=2.5mm] {right angle=I--E--C};
+            \pic[draw, angle radius=2.5mm] {right angle=B--F--I};
+
+            \fill (I) circle (1.2pt);
+            \node[above=2pt of A] {$A$};
+            \node[below left=1pt of B] {$B$};
+            \node[below right=1pt of C] {$C$};
+            \node[below=1pt of D] {$D$};
+            \node[right=1pt of E] {$E$};
+            \node[left=1pt of F] {$F$};
+            \node[below right=1pt of I] {$I$};
+        \end{tikzpicture}
+
+        Hình 9.25
+    \end{center}
+
+    \textbf{Giải} (H.9.25).
+
+    Gọi $D$, $E$, $F$ lần lượt là các tiếp điểm của đường tròn $(I;r)$ với $BC$, $CA$ và $AB$.
+
+    Ta có:
+    \[
+        \begin{aligned}
+            S&=S_{IBC}+S_{ICA}+S_{IAB}\\
+             &=\dfrac{1}{2}ID\cdot BC+\dfrac{1}{2}IE\cdot CA+\dfrac{1}{2}IF\cdot AB\\
+             &=\dfrac{1}{2}r(BC+CA+AB).
+        \end{aligned}
+    \]
+\end{lesson}
+
+\begin{exercises}
+    \subsection{Bài tập}
+
+    \begin{questions}[resume=SGK]
+        \item Cho tam giác $ABC$ nội tiếp đường tròn $(O)$. Biết rằng $\widehat{BOC}=120^\circ$ và $\widehat{OCA}=20^\circ$. Tính số đo các góc của tam giác $ABC$.
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Cho tam giác đều $ABC$ có độ dài cạnh bằng $4$ cm. Tính bán kính đường tròn ngoại tiếp và bán kính đường tròn nội tiếp tam giác $ABC$.
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Cho tam giác đều $ABC$ có độ dài cạnh bằng $3$ cm và nội tiếp đường tròn $(O)$ như Hình 9.26.
+
+        \begin{center}
+            \begin{tikzpicture}
+                \coordinate (O) at (0,0);
+                \coordinate (A) at (90:2);
+                \coordinate (B) at (210:2);
+                \coordinate (C) at (330:2);
+
+                \path[fill=orange!45] (B) arc[start angle=210,end angle=330,radius=2cm] -- cycle;
+                \draw (O) circle[radius=2cm];
+                \draw (A)--(B)--(C)--cycle;
+
+                \fill (O) circle (1.2pt);
+                \node[above=2pt of A] {$A$};
+                \node[below left=1pt of B] {$B$};
+                \node[below right=1pt of C] {$C$};
+                \node[above right=1pt of O] {$O$};
+            \end{tikzpicture}
+
+            Hình 9.26
+        \end{center}
+
+        \begin{questions}
+            \item Tính bán kính $R$ của đường tròn $(O)$.
+
+            \answerline
+            \answerline
+            \item Tính diện tích hình viên phân giới hạn bởi dây cung $BC$ và cung nhỏ $BC$.
+
+            \answerline
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Trong một khu vui chơi có dạng hình tam giác đều với độ dài cạnh bằng $60$ m, người ta muốn tìm một vị trí đặt bộ phát sóng wifi sao cho ở chỗ nào trong khu vui chơi đó đều có thể bắt được sóng. Biết rằng bộ phát sóng đó có tầm phát sóng tối đa là $50$ m, hỏi có thể tìm được vị trí để đặt bộ phát sóng như vậy hay không?
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Người ta vẽ bản quy hoạch của một khu dân cư được bao quanh bởi ba con đường thẳng lập thành một tam giác với độ dài các cạnh là $900$ m, $1\,200$ m và $1\,500$ m (H.9.27).
+
+        \begin{center}
+            \begin{tikzpicture}[x=1.1cm,y=1.1cm]
+                \coordinate (P) at (0,0);
+                \coordinate (Q) at (0,3);
+                \coordinate (R) at (4,0);
+                \coordinate (I) at (1,1);
+                \coordinate (L) at ($(P)!(I)!(Q)$);
+                \coordinate (D) at ($(P)!(I)!(R)$);
+                \coordinate (H) at ($(Q)!(I)!(R)$);
+
+                % Ba con đường bao quanh khu dân cư.
+                \draw (P)--(Q)--(R)--cycle;
+                \draw (-0.35,-0.25)--(-0.35,3.35);
+                \draw (-0.35,-0.25)--(4.45,-0.25);
+                \draw ($(Q)+(0.18,0.24)$)--($(R)+(0.18,0.24)$);
+
+                % Các khoảng cách từ vị trí khách sạn đến ba con đường.
+                \draw[dashed] (I)--(L) (I)--(D) (I)--(H);
+                \pic[draw, angle radius=2.5mm] {right angle=Q--L--I};
+                \pic[draw, angle radius=2.5mm] {right angle=P--D--I};
+                \pic[draw, angle radius=2.5mm] {right angle=Q--H--I};
+
+                \path (P)--node[sloped,below=6pt,pos=0.53] {$900\text{ m}$} (Q);
+                \path (P)--node[below=4pt,pos=0.55] {$1\,200\text{ m}$} (R);
+                \path (Q)--node[sloped,above=4pt,pos=0.60] {$1\,500\text{ m}$} (R);
+                \fill[red!80!black] (I) circle (1.7pt);
+            \end{tikzpicture}
+
+            Hình 9.27
+        \end{center}
+
+        \begin{questions}
+            \item Tính chu vi và diện tích của phần đất giới hạn bởi tam giác trên.
+
+            \answerline
+            \answerline
+            \answerline
+            \item Họ muốn xây dựng một khách sạn bên trong khu dân cư cách đều cả ba con đường đó. Hỏi khi đó khách sạn sẽ cách mỗi con đường một khoảng là bao nhiêu?
+
+            \answerline
+            \answerline
+            \answerline
+        \end{questions}
+    \end{questions}
+\end{exercises}
