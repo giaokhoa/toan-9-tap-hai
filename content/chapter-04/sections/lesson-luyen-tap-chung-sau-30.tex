@@ -1,0 +1,234 @@
+% Nguồn SGK Toán 9 Tập hai — Chương IX, Luyện tập chung sau Bài 30, trang 90--91:
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-90-1771844564458.png
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-91-1771844564796.png
+
+\section*{Luyện tập chung}
+
+\begin{exercises}
+    \textbf{Ví dụ 1}
+
+    Cho tứ giác $ABCD$ nội tiếp đường tròn $(O)$. Biết rằng $\widehat{AOB}=120^\circ$, $\widehat{BOC}=40^\circ$, $\widehat{COD}=80^\circ$. Tính số đo các góc của tứ giác $ABCD$.
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (O) at (0,0);
+            \def\R{1.7}
+            \coordinate (B) at (0:\R);
+            \coordinate (A) at (120:\R);
+            \coordinate (C) at (-40:\R);
+            \coordinate (D) at (-120:\R);
+
+            \draw (O) circle[radius=\R cm];
+            \draw (A)--(B)--(C)--(D)--cycle;
+            \draw (A)--(C);
+            \draw (B)--(D);
+            \fill (O) circle[radius=1.2pt];
+
+            \node[above left=1pt of A] {$A$};
+            \node[right=1pt of B] {$B$};
+            \node[right=1pt of C] {$C$};
+            \node[below left=1pt of D] {$D$};
+            \node[below right=1pt of O] {$O$};
+        \end{tikzpicture}
+
+        \textit{Hình 9.56}
+    \end{center}
+
+    \textbf{Giải} (H.9.56). Xét đường tròn $(O)$, ta có:
+    \[
+        \widehat{ADB}=\dfrac{1}{2}\widehat{AOB}=60^\circ
+    \]
+    (góc nội tiếp và góc ở tâm cùng chắn cung $\overset{\frown}{AB}$);
+    \[
+        \widehat{BAC}=\widehat{BDC}=\dfrac{1}{2}\widehat{BOC}=20^\circ
+    \]
+    (các góc nội tiếp và góc ở tâm cùng chắn cung $\overset{\frown}{BC}$);
+    \[
+        \widehat{CAD}=\dfrac{1}{2}\widehat{COD}=40^\circ
+    \]
+    (góc nội tiếp và góc ở tâm cùng chắn cung $\overset{\frown}{CD}$).
+
+    Suy ra $\widehat{BAD}=\widehat{BAC}+\widehat{CAD}=60^\circ$ và $\widehat{ADC}=\widehat{ADB}+\widehat{BDC}=80^\circ$.
+
+    Vì các góc đối nhau của tứ giác nội tiếp $ABCD$ có tổng bằng $180^\circ$ nên $\widehat{ABC}=180^\circ-\widehat{ADC}=100^\circ$ và $\widehat{BCD}=180^\circ-\widehat{BAD}=120^\circ$.
+
+    \textbf{Ví dụ 2}
+
+    Cho lục giác đều $ABCDEF$.
+    \begin{enumerate}[label=\alph*)]
+        \item Tính số đo các góc $BCF$, $BDF$, $BEF$.
+        \item Gọi $O$ là tâm của lục giác đều. Hãy chỉ ra ba phép quay tâm $O$ giữ nguyên tam giác $ACE$.
+    \end{enumerate}
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (O) at (0,0);
+            \def\R{1.7}
+            \coordinate (A) at (120:\R);
+            \coordinate (B) at (180:\R);
+            \coordinate (C) at (240:\R);
+            \coordinate (D) at (300:\R);
+            \coordinate (E) at (0:\R);
+            \coordinate (F) at (60:\R);
+
+            \draw (O) circle[radius=\R cm];
+            \draw (A)--(B)--(C)--(D)--(E)--(F)--cycle;
+            \draw (C)--(F);
+            \draw (B)--(D);
+            \draw (B)--(E);
+            \draw[dashed] (A)--(C)--(E)--cycle;
+            \fill (O) circle[radius=1.2pt];
+
+            \node[above left=1pt of A] {$A$};
+            \node[left=1pt of B] {$B$};
+            \node[below left=1pt of C] {$C$};
+            \node[below right=1pt of D] {$D$};
+            \node[right=1pt of E] {$E$};
+            \node[above right=1pt of F] {$F$};
+            \node[below right=1pt of O] {$O$};
+            \node at ($(A)!0.38!(O)$) {$120^\circ$};
+        \end{tikzpicture}
+
+        \textit{Hình 9.57}
+    \end{center}
+
+    \textbf{Giải} (H.9.57).
+
+    a) Lục giác đều $ABCDEF$ có các góc bằng $120^\circ$ và nội tiếp một đường tròn $(O)$. Khi đó, các tứ giác $ABCF$, $ABDF$, $ADEF$ nội tiếp $(O)$.
+
+    Vì vậy, $\widehat{BCF}=180^\circ-\widehat{BAF}=180^\circ-120^\circ=60^\circ$.
+
+    Tương tự, $\widehat{BDF}=\widehat{BEF}=60^\circ$.
+
+    b) Tương tự câu a, các góc của tam giác $ACE$ đều bằng $60^\circ$, hay $ACE$ là tam giác đều và nội tiếp đường tròn $(O)$. Như vậy, ba phép quay tâm $O$ giữ nguyên tam giác $ACE$ là ba phép quay thuận chiều lần lượt $120^\circ$, $240^\circ$, $360^\circ$ với tâm $O$.
+
+    \subsection{Bài tập}
+
+    \begin{questions}[resume=SGK]
+        \item Cho tam giác $ABC$ có các đường cao $AD$, $BE$, $CF$. Chứng minh rằng $BCEF$, $CAFD$, $ABDE$ là những tứ giác nội tiếp.
+
+        \answerline
+        \answerline
+        \answerline
+        \answerline
+        \answerline
+
+        \item Cho tứ giác $ABCD$ nội tiếp đường tròn $(O)$, $AB$ cắt $CD$ tại $E$, $AD$ cắt $BC$ tại $F$ như Hình 9.58. Biết $\widehat{BEC}=40^\circ$ và $\widehat{DFC}=20^\circ$, tính số đo các góc của tứ giác $ABCD$.
+
+        \begin{center}
+            \begin{tikzpicture}
+                \coordinate (O) at (0,0);
+                \def\R{1.45}
+                % Các cung theo thứ tự A-D-C-B có số đo 130°, 70°, 50°, 110°;
+                % do đó các góc ngoài BEC và DFC lần lượt là 40° và 20°.
+                \coordinate (A) at (170:\R);
+                \coordinate (D) at (40:\R);
+                \coordinate (C) at (-30:\R);
+                \coordinate (B) at (-80:\R);
+
+                \path[name path=ABline] ($(A)!-4!(B)$)--($(A)!4!(B)$);
+                \path[name path=CDline] ($(C)!-4!(D)$)--($(C)!4!(D)$);
+                \path[name path=ADline] ($(A)!-4!(D)$)--($(A)!4!(D)$);
+                \path[name path=BCline] ($(B)!-4!(C)$)--($(B)!4!(C)$);
+                \path[name intersections={of=ABline and CDline, by=E}];
+                \path[name intersections={of=ADline and BCline, by=F}];
+
+                \draw (O) circle[radius=\R cm];
+                \draw (A)--(E);
+                \draw (D)--(E);
+                \draw (A)--(F);
+                \draw (B)--(F);
+                \fill (O) circle[radius=1.2pt];
+
+                \node[left=1pt of A] {$A$};
+                \node[below left=1pt of B] {$B$};
+                \node[right=1pt of C] {$C$};
+                \node[above right=1pt of D] {$D$};
+                \node[below right=1pt of E] {$E$};
+                \node[above right=1pt of F] {$F$};
+                \node[below left=1pt of O] {$O$};
+                \node at ($(E)!0.18!(B)+(0.18,0.02)$) {$40^\circ$};
+                \node at ($(F)!0.18!(D)+(0.05,-0.12)$) {$20^\circ$};
+            \end{tikzpicture}
+
+            \textit{Hình 9.58}
+        \end{center}
+
+        \answerline
+        \answerline
+        \answerline
+        \answerline
+
+        \item Cho hình vuông $ABCD$ có cạnh bằng $4$ cm. Tính chu vi, diện tích của các đường tròn nội tiếp và ngoại tiếp hình vuông $ABCD$.
+
+        \answerline
+        \answerline
+        \answerline
+        \answerline
+
+        \item Biết rằng bốn đỉnh $A$, $B$, $C$, $D$ của một hình vuông cùng nằm trên một đường tròn $(O)$ theo thứ tự ngược chiều quay của kim đồng hồ. Phép quay thuận chiều $45^\circ$ biến các điểm $A$, $B$, $C$, $D$ lần lượt thành các điểm $E$, $F$, $G$, $H$.
+        \begin{questions}
+            \item Vẽ đa giác $EAFBGCHD$.
+
+            \answerline
+            \answerline
+            \answerline
+            \answerline
+
+            \item Đa giác $EAFBGCHD$ có phải là một bát giác đều hay không? Vì sao?
+
+            \answerline
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Cho ngũ giác đều $ABCDE$ nội tiếp đường tròn $(O)$ như Hình 9.59.
+
+        \begin{center}
+            \begin{tikzpicture}
+                \coordinate (O) at (0,0);
+                \def\R{1.45}
+                \coordinate (A) at (126:\R);
+                \coordinate (B) at (198:\R);
+                \coordinate (C) at (270:\R);
+                \coordinate (D) at (342:\R);
+                \coordinate (E) at (54:\R);
+
+                \draw (O) circle[radius=\R cm];
+                \draw (A)--(B)--(C)--(D)--(E)--cycle;
+                \fill (O) circle[radius=1.2pt];
+
+                \node[above left=1pt of A] {$A$};
+                \node[left=1pt of B] {$B$};
+                \node[below=1pt of C] {$C$};
+                \node[right=1pt of D] {$D$};
+                \node[above right=1pt of E] {$E$};
+                \node[right=1pt of O] {$O$};
+            \end{tikzpicture}
+
+            \textit{Hình 9.59}
+        \end{center}
+
+        \begin{questions}
+            \item Hãy tìm một phép quay thuận chiều tâm $O$ biến điểm $A$ thành điểm $C$.
+
+            \answerline
+            \answerline
+
+            \item Phép quay trên sẽ biến các điểm $B$, $C$, $D$, $E$ lần lượt thành những điểm nào? Phép quay này có giữ nguyên ngũ giác đều $ABCDE$ không?
+
+            \answerline
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Người ta muốn làm một khay đựng bánh kẹo hình lục giác đều có cạnh $10$ cm và chia thành $7$ ngăn gồm một lục giác đều nhỏ và $6$ hình thang cân như Hình 9.60. Hỏi lục giác đều nhỏ phải có cạnh bằng bao nhiêu để nó có diện tích bằng hai lần diện tích mỗi hình thang?
+
+        % TODO(HINH-NGUON): bổ sung asset/crop đúng Hình 9.60 từ SGK trang 91; đây là ảnh phối cảnh/texture, không redraw xấp xỉ bằng TikZ.
+
+        \answerline
+        \answerline
+        \answerline
+        \answerline
+    \end{questions}
+\end{exercises}
