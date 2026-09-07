@@ -1,5 +1,17 @@
-\setcounter{chapter}{5}
-\chapter{Hàm số $y=ax^2$ ($a\ne0$). Phương trình bậc hai một ẩn}
+% Verification-only harness for issue #21. Do not merge.
+\setcounter{chapter}{8}
+\chapter{Đường tròn ngoại tiếp và đường tròn nội tiếp}
 
-\setcounter{section}{17}
-\input{content/chapter-01/sections/section-01}
+% Seed named series immediately before Bài 29 without rendering the seed.
+\setbox0=\vbox{%
+    \begin{questions}[series=SGK,start=17]
+        \item seed
+    \end{questions}%
+}
+\setbox1=\vbox{%
+    \begin{questions}[series=SBT,start=20]
+        \item seed
+    \end{questions}%
+}
+
+\input{content/chapter-04/sections/lesson-29-tu-giac-noi-tiep}
