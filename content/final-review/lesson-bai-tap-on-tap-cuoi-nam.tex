@@ -134,8 +134,11 @@
                 \node[below right] at (K) {$K$};
                 \node[right] at ($(H)!0.5!(K)$) {$a$};
                 \pic[draw,angle radius=3mm] {right angle=A--H--K};
-                \pic[draw,"$\alpha$",angle radius=7mm,angle eccentricity=1.35] {angle=A--K--H};
-                \pic[draw,"$\beta$",angle radius=4.5mm,angle eccentricity=1.55] {angle=B--K--H};
+                % Cung góc được vẽ trực tiếp từ K để tránh marker chồng lấn trong layout nhỏ.
+                \draw ($(K)+(90:0.42)$) arc[start angle=90,end angle=117,radius=0.42];
+                \draw ($(K)+(90:0.72)$) arc[start angle=90,end angle=147,radius=0.72];
+                \node at ($(K)+(104:0.64)$) {$\beta$};
+                \node at ($(K)+(119:0.98)$) {$\alpha$};
             \end{tikzpicture}
         \end{center}
 
@@ -365,8 +368,11 @@
                 \node[left] at ($(C)!0.55!(A)$) {$8$};
                 \node[right] at ($(A)!0.48!(D)$) {$9{,}6$};
                 \pic[draw,angle radius=3mm] {right angle=A--B--C};
-                \pic[draw,"$54^\circ$",angle radius=6mm,angle eccentricity=1.5] {angle=B--C--A};
-                \pic[draw,"$74^\circ$",angle radius=8mm,angle eccentricity=1.35] {angle=A--C--D};
+                % Hai cung góc tại C bám đúng các tia CB, CA, CD và không đè lên nhau.
+                \draw (74:0.78) arc[start angle=74,end angle=128,radius=0.78];
+                \node at (101:1.05) {$54^\circ$};
+                \draw (0.58,0) arc[start angle=0,end angle=74,radius=0.58];
+                \node at (37:0.86) {$74^\circ$};
                 \pic[draw,angle radius=3mm] {right angle=A--H--D};
             \end{tikzpicture}
         \end{center}
