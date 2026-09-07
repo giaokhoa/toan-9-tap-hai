@@ -44,7 +44,7 @@
 
     \textbf{Tần số tương đối và bảng tần số tương đối}
 
-    \textbf{HĐ1} Có một túi kín đựng 10 quả bóng, mỗi quả có một trong các màu xanh, đỏ hoặc vàng. Thực hiện 30 lần lấy bóng, mỗi lần lấy 1 quả, ghi lại màu quả bóng được lấy ra sau đó trả lại bóng vào túi và trộn đều.
+    \textbf{HĐ1} Có một túi kín đựng 10 quả bóng có cùng kích thước và khối lượng, mỗi quả có một trong các màu xanh, đỏ hoặc vàng. Thực hiện 30 lần lấy bóng, mỗi lần lấy 1 quả, ghi lại màu quả bóng được lấy ra sau đó trả lại bóng vào túi và trộn đều.
 
     \begin{enumerate}[label=\alph*)]
         \item Từ dữ liệu ghi lại, cho biết tần số xuất hiện của các quả bóng màu xanh, đỏ, vàng. Lập tỉ số giữa tần số và số lần lấy bóng.
@@ -72,13 +72,10 @@
         \end{tblr}
         \end{center}
 
-        trong đó $n=m_1+\ldots+m_k$ và
-        \[
-            f_1=\dfrac{m_1}{n}\cdot100\%,\ldots,
-            f_k=\dfrac{m_k}{n}\cdot100\%
-        \]
-        lần lượt là tần số tương đối của $x_1,\ldots,x_k$.
+        trong đó $n=m_1+\ldots+m_k$ và $f_1=\dfrac{m_1}{n}\cdot100(\%)$ là tần số tương đối của $x_1,\ldots$, $f_k=\dfrac{m_k}{n}\cdot100(\%)$ là tần số tương đối của $x_k$.
     \end{keyconcept}
+
+    \textbf{Lưu ý.} Tần số tương đối còn gọi là tần suất.
 
     \textbf{Câu hỏi} Lập bảng tần số tương đối cho dãy dữ liệu thu được trong HĐ1.
 
@@ -89,7 +86,7 @@
 
     \textbf{Ví dụ 1} Thu thập dữ liệu về chất lượng không khí tại một địa điểm trong 30 ngày mùa xuân cho kết quả như sau:
 
-    M1, M1, M2, M2, M2, M2, M1, M2, M2, M2, M2, M2, M2, M2, M2, M4, M3, M3, M3, M3, M4, M4, M1, M1, M1, M1, M3, M3, M3, M1.
+    M1, M1, M2, M2, M2, M2, M1, M2, M2, M2, M2, M2, M2, M2, M2, M4, M1, M3, M3, M3, M4, M4, M1, M1, M1, M1, M3, M3, M3, M1.
 
     (M1: Tốt; M2: Trung bình; M3: Kém; M4: Xấu)
 
@@ -98,16 +95,20 @@
         \item Trong một ngày xuân, khả năng cao nhất địa điểm này có chất lượng không khí ở mức nào?
     \end{enumerate}
 
-    \textbf{Giải}
+    \textbf{Lời giải}
 
-    a) Tổng số quan sát là $n=30$. Số ngày có chất lượng không khí ở các mức M1, M2, M3, M4 tương ứng là $m_1=8$, $m_2=12$, $m_3=7$, $m_4=3$. Do đó các tần số tương đối cho các mức M1, M2, M3, M4 lần lượt là:
+    a) Tổng số ngày quan sát là $n=30$.
+
+    Số ngày có chất lượng không khí ở các mức M1, M2, M3, M4 tương ứng là $m_1=9$, $m_2=12$, $m_3=6$, $m_4=3$.
+
+    Do đó các tần số tương đối cho các mức M1, M2, M3, M4 lần lượt là:
     \[
-        \dfrac{8}{30}\cdot100\%\approx26{,}7\%;\qquad
-        \dfrac{12}{30}\cdot100\%=40\%;
+        f_1=\dfrac{9}{30}\cdot100\%=30\%;\qquad
+        f_2=\dfrac{12}{30}\cdot100\%=40\%;
     \]
     \[
-        \dfrac{7}{30}\cdot100\%\approx23{,}3\%;\qquad
-        \dfrac{3}{30}\cdot100\%=10\%.
+        f_3=\dfrac{6}{30}\cdot100\%=20\%;\qquad
+        f_4=\dfrac{3}{30}\cdot100\%=10\%.
     \]
 
     Ta có bảng tần số tương đối sau:
@@ -115,7 +116,7 @@
     \begin{center}
     \begin{tblr}{colspec={Q[l] *{4}{Q[c]}}}
         Chất lượng không khí & M1 & M2 & M3 & M4 \\
-        Tần số tương đối & $26{,}7\%$ & $40\%$ & $23{,}3\%$ & $10\%$ \\
+        Tần số tương đối & $30\%$ & $40\%$ & $20\%$ & $10\%$ \\
     \end{tblr}
     \end{center}
 
@@ -159,20 +160,22 @@
     Ban tổ chức đã lấy phiếu khảo sát ý kiến. Kết quả được Bình và Nam biểu diễn bằng các biểu đồ như sau:
 
     \begin{center}
-    \begin{tikzpicture}[x=0.9cm,y=0.045cm]
-        \draw[->] (0,0)--(5.3,0) node[below] {Phương án thi đấu};
-        \draw[->] (0,0)--(0,90) node[above] {Tỉ lệ};
+    \begin{tikzpicture}[x=1.05cm,y=0.038cm]
+        \draw[->] (0,0)--(6.2,0);
+        \draw[->] (0,0)--(0,90);
         \foreach \y in {0,20,40,60,80} {
             \draw (-0.08,\y)--(0.08,\y);
             \node[left] at (0,\y) {\y\%};
         }
-        \foreach \x/\h/\lab in {1/28/Phương án 1,2.7/61/Phương án 2,4.4/11/Phương án 3} {
+        \foreach \x/\h/\num in {1.1/28/1,3.1/61/2,5.1/11/3} {
             \path[fill=base300] (\x-0.35,0) rectangle (\x+0.35,\h);
             \draw (\x-0.35,0) rectangle (\x+0.35,\h);
             \node[above] at (\x,\h) {\h\%};
-            \node[below,align=center] at (\x,0) {\lab};
+            \node[below=2pt,align=center] at (\x,0) {Phương án\\\num};
         }
-        \node[font=\bfseries] at (2.6,87) {Tỉ lệ ủng hộ các phương án thi đấu};
+        \node[above left=1pt] at (0,90) {Tỉ lệ};
+        \node[below=26pt] at (3.1,0) {Phương án thi đấu};
+        \node[font=\bfseries] at (3.1,101) {Tỉ lệ ủng hộ các phương án thi đấu};
     \end{tikzpicture}
 
     \textit{Hình 7.9. Biểu đồ cột}
@@ -232,7 +235,7 @@
 
     Vẽ biểu đồ hình quạt tròn biểu diễn bảng tần số tương đối trên.
 
-    \textbf{Giải}
+    \textbf{Lời giải}
 
     \textbf{Bước 1.} Xác định số đo cung tương ứng của các hình quạt biểu diễn các tần số tương đối cho mỗi loại phim:
 
@@ -385,7 +388,7 @@
 
         \begin{center}
         \begin{tblr}{colspec={Q[l] X[c] X[c] X[c]}}
-            Khu vực kinh tế & Nông nghiệp, lâm nghiệp và thuỷ sản & Công nghiệp và xây dựng & Dịch vụ \\
+            Khu vực kinh tế & Nông nghiệp, lâm nghiệp và thủy sản & Công nghiệp và xây dựng & Dịch vụ \\
             Mức tăng trưởng & $3{,}36\%$ & $7{,}78\%$ & $9{,}99\%$ \\
         \end{tblr}
         \end{center}
