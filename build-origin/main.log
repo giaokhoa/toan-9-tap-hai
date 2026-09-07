@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.9.6)  7 SEP 2026 09:10
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.9.6)  7 SEP 2026 09:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1169,7 +1169,82 @@ Chương VII.
 (./content/chapter-02/sections/lesson-bai-tap-cuoi-chuong.tex [13] [1
 
 ] [2]
-[3] [4] [5] [6] [7])) [8]
+[3] [4] [5] [6] [7])) (./content/chapter-03/chapter.tex [8]
+Chương VIII.
+(./content/chapter-03/sections/section-25.tex [9
+
+] [10] [11] [12] [13])
+(./content/chapter-03/sections/section-26.tex [14] [1
+
+] [2] [3] [4] [5])
+(./content/chapter-03/sections/lesson-luyen-tap-chung-sau-26.tex [6] [1
+
+]
+[2]) (./content/chapter-03/sections/lesson-bai-tap-cuoi-chuong.tex [3] [1
+
+]
+[2] [1
+
+])) (./content/chapter-04/chapter.tex [2]
+Chương IX.
+(./content/chapter-04/sections/section-27.tex [3
+
+] [4] [5] [6] [7] [8])
+(./content/chapter-04/sections/section-28.tex [9]
+Underfull \hbox (badness 5302) in paragraph at lines 42--42
+[]\TU/TimesNewRoman(0)/m/n/12 Đường tròn nội tiếp
+ []
+
+
+Underfull \hbox (badness 5302) in paragraph at lines 42--42
+[]\TU/TimesNewRoman(0)/m/n/12 Đường tròn nội tiếp
+ []
+
+[1
+
+] [2] [3] [4] [5] [6] [7] [8] [9] [10])
+(./content/chapter-04/sections/lesson-luyen-tap-chung-sau-28.tex [11] [1
+
+]
+[2] [3]) (./content/chapter-04/sections/lesson-29-tu-giac-noi-tiep.tex [4]
+[1
+
+] [2] [3] [4] [5] [6] [7] [8]) (./content/chapter-04/sections/section-30.tex
+[9] (./content/chapter-04/sections/section-30-core.tex [1
+
+] [2] [3] [4] [5])
+(./content/chapter-04/sections/section-30-exercises.tex [6])
+(./content/chapter-04/sections/section-30-practice.tex [7] [8]))
+(./content/chapter-04/sections/lesson-luyen-tap-chung-sau-30.tex [9] [1
+
+]
+[2] [3]) (./content/chapter-04/sections/lesson-bai-tap-cuoi-chuong.tex [4]
+[1
+
+] [2] [1
+
+] [2])) (./content/chapter-05/chapter.tex [3] [4
+
+]
+Chương X.
+(./content/chapter-05/sections/section-31.tex
+(./content/chapter-05/sections/lesson-31-core-a.tex [5] [6])
+(./content/chapter-05/sections/lesson-31-core-b.tex [7])
+(./content/chapter-05/sections/lesson-31-core-c.tex [8] [9] [10] [11])
+(./content/chapter-05/sections/lesson-31-exercises.tex [12] [13])
+(./content/chapter-05/sections/lesson-31-practice.tex [14] [15]))
+(./content/chapter-05/sections/lesson-32.tex [16] [1
+
+] [2] [3] [4] [5])
+(./content/chapter-05/sections/lesson-luyen-tap-chung-sau-32.tex [6] [1
+
+]
+[2] [3]) (./content/chapter-05/sections/lesson-bai-tap-cuoi-chuong.tex [4]
+[1
+
+] [2] [3] [4] [1
+
+] [2] [3])) [4]
 (./content/final-review/lesson-bai-tap-on-tap-cuoi-nam.tex [1
 
 
@@ -1181,12 +1256,12 @@ L3 programming layer <2026-08-10>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 30775 strings out of 467745
- 714350 string characters out of 5422258
- 1204366 words of memory out of 5000000
- 59411 multiletter control sequences out of 15000+600000
+ 32592 strings out of 467745
+ 753216 string characters out of 5422258
+ 1206808 words of memory out of 5000000
+ 61150 multiletter control sequences out of 15000+600000
  639304 words of font info for 127 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 102i,18n,111p,706b,1448s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,18n,363p,729b,1675s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on build/main.xdv (97 pages, 2166168 bytes).
+Output written on build/main.xdv (196 pages, 4035240 bytes).
