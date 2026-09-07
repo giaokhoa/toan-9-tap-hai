@@ -1,0 +1,133 @@
+    \textbf{Chú ý.} Từ một hình trụ, nếu ta cắt rời hai đáy và cắt theo một đường sinh nào đó rồi trải phẳng ra thì ta được một hình phẳng (gồm hai hình tròn và một hình chữ nhật) như Hình 10.5 gọi là hình khai triển của hình trụ đã cho.
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (Ctop) at (-2.3,2.2);
+            \coordinate (Cbot) at (-2.3,0);
+            \coordinate (A) at (-1.15,2.2);
+            \coordinate (B) at (-1.15,0);
+            \draw (Ctop) ellipse [x radius=1.15, y radius=.3];
+            \draw (Cbot) ellipse [x radius=1.15, y radius=.3];
+            \draw (-3.45,2.2)--(-3.45,0);
+            \draw (A)--(B);
+            \node[above right=1pt of A] {$A$};
+            \node[below right=1pt of B] {$B$};
+
+            \draw[->] (-.55,1.1)--(.35,1.1);
+            \coordinate (R1) at (1.1,0);
+            \coordinate (R2) at (4.2,2.2);
+            \draw (1.1,0) rectangle (4.2,2.2);
+            \draw (1.55,3.05) circle (.55);
+            \draw (3.75,3.05) circle (.55);
+        \end{tikzpicture}
+
+        \textit{Hình 10.5}
+    \end{center}
+
+    \textbf{Thực hành 1}
+
+    Chuẩn bị một băng giấy cứng hình chữ nhật $ABCD$ với $AB=8$ cm, $BC=15$ cm. Cuộn băng giấy lại sao cho hai cạnh $AB$ và $DC$ sát vào nhau như Hình 10.6 (dùng băng keo dán), ta được một hình trụ (không có đáy). Hãy cho biết chiều cao và chu vi đáy của hình trụ đó.
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (A) at (-3,2.1);
+            \coordinate (B) at (-1.4,2.1);
+            \coordinate (C) at (-1.4,-.7);
+            \coordinate (D) at (-3,-.7);
+            \draw (A)--(B)--(C)--(D)--cycle;
+            \node[above left=1pt of A] {$A$};
+            \node[above right=1pt of B] {$B$};
+            \node[below right=1pt of C] {$C$};
+            \node[below left=1pt of D] {$D$};
+            \node[above] at ($(A)!0.5!(B)$) {$8\text{ cm}$};
+            \node[left] at ($(A)!0.5!(D)$) {$15\text{ cm}$};
+            \draw[->] (-.8,.7)--(.25,.7);
+            \coordinate (Otop) at (2.0,1.8);
+            \coordinate (Obot) at (2.0,-.4);
+            \draw (Otop) ellipse [x radius=1.15, y radius=.3];
+            \draw (Obot) ellipse [x radius=1.15, y radius=.3];
+            \draw (.85,1.8)--(.85,-.4);
+            \draw (3.15,1.8)--(3.15,-.4);
+        \end{tikzpicture}
+
+        \textit{Hình 10.6}
+    \end{center}
+
+    \answerline
+
+    \textbf{Diện tích xung quanh và thể tích của hình trụ}
+
+    \textbf{HĐ1}
+
+    Người ta coi diện tích hình chữ nhật $ABCD$ chính là diện tích xung quanh của hình trụ được tạo thành (xem Thực hành 1). Cho hình trụ có chiều cao $h=9$ cm và bán kính đáy $R=5$ cm. Tính diện tích xung quanh của hình trụ.
+
+    \answerline
+    \answerline
+
+    Một cách tổng quát, ta có công thức tính diện tích mặt xung quanh (gọi tắt là diện tích xung quanh, kí hiệu là $S_{xq}$) của hình trụ như sau:
+
+    \begin{keyconcept}
+        \[
+            S_{xq}=2\pi Rh,
+        \]
+        trong đó $R$ là bán kính đáy, $h$ là chiều cao.
+    \end{keyconcept}
+
+    \textbf{HĐ2}
+
+    Hãy nhắc lại công thức tính thể tích của hình lăng trụ đứng tam giác (hoặc hình lăng trụ đứng tứ giác) có diện tích đáy $S$ và chiều cao $h$.
+
+    \answerline
+
+    Tương tự, đối với hình trụ ta cũng có công thức tính thể tích $V$ như sau:
+
+    \begin{keyconcept}
+        \[
+            V=S_{\text{đáy}}\cdot h=\pi R^2h,
+        \]
+        trong đó $S_{\text{đáy}}$ là diện tích đáy, $R$ là bán kính đáy, $h$ là chiều cao.
+    \end{keyconcept}
+
+    \textbf{Ví dụ 2}
+
+    Bác Khôi dự định sơn lại một thùng rác có dạng hình trụ (sơn mặt ngoài và một đáy là nắp) có bán kính đáy bằng $11$ cm, chiều cao bằng $30$ cm (H.10.7).
+    \begin{enumerate}[label=\alph*)]
+        \item Tính diện tích phần cần sơn của thùng rác.
+        \item Tính thể tích của thùng rác (làm tròn kết quả đến hàng đơn vị của $\text{cm}^3$).
+    \end{enumerate}
+
+    % TODO(HINH-NGUON): Hình 10.7 SGK trang 96 là hình minh hoạ thùng rác phối cảnh; bổ sung asset/crop đúng từ nguồn, không redraw xấp xỉ bằng TikZ.
+
+    \textbf{Giải}
+
+    a) Phần cần sơn bao gồm mặt xung quanh và một đáy của hình trụ.
+
+    Theo đề bài, ta có $R=11$ cm và $h=30$ cm. Do đó:
+    \[
+        S_{xq}=2\pi Rh=2\pi\cdot11\cdot30=660\pi\ (\text{cm}^2);
+    \]
+    \[
+        S_{\text{đáy}}=\pi R^2=\pi\cdot11^2=121\pi\ (\text{cm}^2).
+    \]
+    Vậy diện tích cần sơn là
+    \[
+        S=S_{xq}+S_{\text{đáy}}=(660+121)\pi=781\pi\ (\text{cm}^2).
+    \]
+
+    b) Thể tích của thùng rác là
+    \[
+        V=S_{\text{đáy}}\cdot h=121\pi\cdot30=3\,630\pi\approx11\,404\ (\text{cm}^3).
+    \]
+
+    \textbf{Luyện tập 2}
+
+    Một thùng nước có dạng hình trụ với chiều cao bằng $1{,}6$ m và bán kính đáy bằng $0{,}5$ m.
+    \begin{enumerate}[label=\alph*)]
+        \item Tính diện tích xung quanh của thùng nước.
+        \item Hỏi thùng chứa được bao nhiêu lít nước?
+    \end{enumerate}
+    (Coi chiều dày của thùng không đáng kể và làm tròn kết quả ở câu b đến hàng đơn vị của lít).
+
+    \answerline
+    \answerline
+
