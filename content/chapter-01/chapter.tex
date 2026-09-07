@@ -3,11 +3,18 @@
 \chapter{Đường tròn ngoại tiếp và đường tròn nội tiếp}
 \setcounter{section}{27}
 
+% Seed named enumitem series invisibly so Bài 28 can exercise resume=SGK/SBT
+% before Bài 27 is present on main.
+\newsavebox{\issueNineteenSeedBox}
+\savebox{\issueNineteenSeedBox}{%
+\begin{minipage}{\linewidth}
 \begin{questions}[series=SGK]
-    \setcounter{questionsi}{6}
+    \item\mbox{} \item\mbox{} \item\mbox{} \item\mbox{} \item\mbox{} \item\mbox{}
 \end{questions}
 \begin{questions}[series=SBT]
-    \setcounter{questionsi}{7}
+    \item\mbox{} \item\mbox{} \item\mbox{} \item\mbox{} \item\mbox{} \item\mbox{} \item\mbox{}
 \end{questions}
+\end{minipage}%
+}
 
 \input{content/chapter-04/sections/lesson-28}
