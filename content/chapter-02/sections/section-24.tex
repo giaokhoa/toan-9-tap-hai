@@ -1,0 +1,856 @@
+% Nguồn SGK Toán 9 Tập hai — Bài 24, trang 46--53:
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-46-1771844549752.png
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-47-1771844550076.png
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-48-1771844550404.png
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-49-1771844550735.png
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-50-1771844551040.png
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-51-1771844551389.png
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-52-1771844551723.png
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-53-1771844552027.png
+% Nguồn SBT: SBT TOÁN 9 TẬP 2.pdf, PDF pages 35--38, bài 7.17--7.24.
+% SHA-256: 5ff01fd213d1adc75f9c54b4408d6a9642a4d8038e685040efef3311a196196c.
+
+\setcounter{section}{23}
+\section{Bảng tần số, tần số tương đối ghép nhóm và biểu đồ}
+
+\begin{lesson}
+    \subsection{Kiến thức trọng tâm}
+
+    \begin{center}
+        \begin{tblr}{
+            width=\linewidth,
+            colspec={X[2,l] X[5,l]},
+            cells={valign=t},
+            row{1}={font=\bfseries, halign=c}
+        }
+            Khái niệm, thuật ngữ &
+            Kiến thức, kĩ năng \\
+            \textbullet\ Bảng tần số ghép nhóm\par
+            \textbullet\ Bảng tần số tương đối ghép nhóm\par
+            \textbullet\ Biểu đồ tần số tương đối ghép nhóm
+            &
+            \textbullet\ Thiết lập bảng tần số ghép nhóm, bảng tần số tương đối ghép nhóm.\par
+            \textbullet\ Vẽ biểu đồ tần số tương đối ghép nhóm.
+        \end{tblr}
+    \end{center}
+
+    Để tìm hiểu về thời gian tự học trong ngày của học sinh, giáo viên chủ nhiệm lớp 9C đã phát phiếu hỏi theo mẫu bên cho các bạn trong lớp.
+
+    Chúng ta biểu diễn dữ liệu thu được như thế nào? Hãy cùng tìm hiểu trong bài học này!
+
+    \begin{center}
+        \begin{tblr}{
+            width=.82\linewidth,
+            colspec={X[l]}
+        }
+            \textbf{Mỗi tối trong tuần em dành bao nhiêu thời gian để tự học?} \\
+            A. Từ 0 đến dưới 1 giờ. \\
+            B. Từ 1 giờ đến dưới 2 giờ. \\
+            C. Từ 2 giờ đến dưới 3 giờ. \\
+            D. Từ 3 giờ đến dưới 4 giờ.
+        \end{tblr}
+    \end{center}
+
+    \textbf{1. BẢNG TẦN SỐ, TẦN SỐ TƯƠNG ĐỐI GHÉP NHÓM}
+
+    \textbf{Tìm hiểu bảng tần số ghép nhóm và bảng tần số tương đối ghép nhóm}
+
+    \textbf{HĐ1} Giáo viên chủ nhiệm lớp 9C đã thu được kết quả như sau: Thời gian tự học dưới 1 giờ có 10 bạn; từ 1 giờ đến dưới 2 giờ có 15 bạn; từ 2 giờ đến dưới 3 giờ có 8 bạn; từ 3 giờ đến dưới 4 giờ có 7 bạn. Dựa vào dữ liệu trên, hãy hoàn thiện các bảng sau vào vở:
+
+    \begin{center}
+        \begin{tblr}{colspec={Q[l] *{4}{Q[c]}}}
+            Thời gian (giờ) & $[0;1)$ & $[1;2)$ & $[2;3)$ & $[3;4)$ \\
+            Tần số           &         &         &         &
+        \end{tblr}
+
+        \textit{Bảng 7.1}
+    \end{center}
+
+    \begin{center}
+        \begin{tblr}{colspec={Q[l] *{4}{Q[c]}}}
+            Thời gian (giờ)     & $[0;1)$ & $[1;2)$ & $[2;3)$ & $[3;4)$ \\
+            Tần số tương đối    &         &         &         &
+        \end{tblr}
+
+        \textit{Bảng 7.2}
+    \end{center}
+
+    Nhóm số liệu $[a;b)$ là nhóm gồm các số liệu lớn hơn hoặc bằng $a$ và nhỏ hơn $b$.
+
+    Bảng 7.1 được gọi là bảng tần số ghép nhóm, Bảng 7.2 được gọi là bảng tần số tương đối ghép nhóm.
+
+    Trong nhiều trường hợp, ta khó biết giá trị chính xác của số liệu mà chỉ biết nó thuộc một nhóm số liệu nào đó. Nhóm số liệu thường gặp là $[a;b)$, trong đó $a$ là đầu mút trái, $b$ là đầu mút phải.
+
+    \begin{keyconcept}
+        Bảng tần số ghép nhóm là bảng tần số của các nhóm số liệu:
+
+        \begin{center}
+            \begin{tblr}{colspec={Q[l] *{4}{Q[c]}}}
+                Nhóm    & $[a_1;a_2)$ & $[a_2;a_3)$ & $\ldots$ & $[a_k;a_{k+1})$ \\
+                Tần số  & $m_1$       & $m_2$       & $\ldots$ & $m_k$
+            \end{tblr}
+
+            \textit{Bảng 7.3}
+        \end{center}
+
+        Tần số $m_i$ của nhóm $[a_i;a_{i+1})$ là số giá trị của mẫu số liệu lớn hơn hoặc bằng $a_i$ và nhỏ hơn $a_{i+1}$.
+    \end{keyconcept}
+
+    \begin{keyconcept}
+        Bảng tần số tương đối ghép nhóm là bảng tần số tương đối của các nhóm số liệu:
+
+        \begin{center}
+            \begin{tblr}{colspec={Q[l] *{4}{Q[c]}}}
+                Nhóm                 & $[a_1;a_2)$ & $[a_2;a_3)$ & $\ldots$ & $[a_k;a_{k+1})$ \\
+                Tần số tương đối     & $f_1$       & $f_2$       & $\ldots$ & $f_k$
+            \end{tblr}
+
+            \textit{Bảng 7.4}
+        \end{center}
+
+        Trong đó $n=m_1+\cdots+m_k$ và
+        \[
+            f_1=\dfrac{m_1}{n}\cdot100\%
+        \]
+        là tần số tương đối của nhóm $[a_1;a_2)$, \ldots,
+        \[
+            f_k=\dfrac{m_k}{n}\cdot100\%
+        \]
+        là tần số tương đối của nhóm $[a_k;a_{k+1})$.
+    \end{keyconcept}
+
+    \textbf{Ví dụ 1}
+
+    Đo chiều cao (đơn vị là cm) của học sinh lớp 9C cho kết quả như sau:
+
+    \begin{center}
+        156, 157, 164, 166, 166, 165, 157, 154, 155, 158, 160, 163, 163,\\
+        161, 162, 159, 159, 160, 160, 160, 159, 158, 160, 160, 158, 163,\\
+        162, 162, 162, 161, 162, 161, 163, 161, 163, 161, 164, 166, 165, 165.
+    \end{center}
+
+    Lập bảng tần số ghép nhóm và bảng tần số tương đối ghép nhóm cho mẫu số liệu này với các nhóm $[155;158)$, $[158;161)$, $[161;164)$, $[164;167)$.
+
+    \textbf{Giải}
+
+    Số học sinh có chiều cao từ 150 cm đến dưới 158 cm là 5 học sinh; từ 158 cm đến dưới 161 cm là 12 học sinh; từ 161 cm đến dưới 164 cm là 15 học sinh; từ 164 cm đến dưới 167 cm là 8 học sinh. Do đó, tần số tương ứng với các nhóm là $m_1=5$, $m_2=12$, $m_3=15$, $m_4=8$.
+
+    \begin{center}
+        \begin{tblr}{colspec={Q[l] *{4}{Q[c]}}}
+            Chiều cao (cm) & $[150;158)$ & $[158;161)$ & $[161;164)$ & $[164;167)$ \\
+            Số học sinh    & 5           & 12          & 15          & 8
+        \end{tblr}
+    \end{center}
+
+    Tổng số học sinh trong lớp là $n=5+12+15+8=40$.
+
+    Tỉ lệ học sinh tương ứng với các nhóm là
+    $\dfrac{5}{40}\cdot100\%=12{,}5\%$;
+    $\dfrac{12}{40}\cdot100\%=30\%$;
+    $\dfrac{15}{40}\cdot100\%=37{,}5\%$;
+    $\dfrac{8}{40}\cdot100\%=20\%$.
+
+    \begin{center}
+        \begin{tblr}{colspec={Q[l] *{4}{Q[c]}}}
+            Chiều cao (cm)      & $[150;158)$ & $[158;161)$ & $[161;164)$ & $[164;167)$ \\
+            Tần số tương đối    & 12{,}5\%     & 30\%        & 37{,}5\%     & 20\%
+        \end{tblr}
+    \end{center}
+
+    \textbf{Luyện tập 1}
+
+    Cho bảng tần số ghép nhóm về tuổi thọ của một số ong mật cái như sau:
+
+    \begin{center}
+        \begin{tblr}{colspec={Q[l] *{3}{Q[c]}}}
+            Tuổi thọ (ngày) & $[30;40)$ & $[40;50)$ & $[50;60)$ \\
+            Tần số           & 12        & 23        & 15
+        \end{tblr}
+    \end{center}
+
+    \begin{enumerate}[label=\alph*)]
+        \item Đọc và giải thích bảng thống kê trên.
+
+        \answerline
+        \answerline
+
+        \item Lập bảng tần số tương đối ghép nhóm cho bảng thống kê này.
+
+        \answerline
+        \answerline
+        \answerline
+    \end{enumerate}
+
+    \textbf{Ví dụ 2}
+
+    Chỉ số chất lượng không khí (AQI) cho biết tình trạng chất lượng không khí và mức độ ảnh hưởng đến sức khoẻ con người. Chất lượng không khí là Tốt nếu AQI từ 0 đến dưới 50; là Trung bình nếu AQI từ 50 đến dưới 100; là Kém nếu AQI từ 100 đến dưới 150; là Xấu nếu AQI từ 150 đến dưới 200. Chất lượng không khí tại Hà Nội từ ngày 4-2-2023 đến 5-3-2023 được cho như sau:
+
+    Trung bình, Trung bình, Trung bình, Trung bình, Trung bình, Trung bình, Trung bình, Trung bình, Kém, Kém, Kém, Kém, Xấu, Xấu, Kém, Xấu, Xấu, Xấu, Kém, Kém, Kém, Kém, Kém, Xấu, Kém, Xấu, Xấu, Xấu, Xấu, Xấu.
+
+    \textit{(Theo iqair.com)}
+
+    Lập bảng tần số ghép nhóm và bảng tần số tương đối ghép nhóm theo chỉ số AQI cho dãy dữ liệu trên.
+
+    \textbf{Giải}
+
+    Có 8 ngày chất lượng không khí ở mức Trung bình tương ứng với chỉ số AQI từ 50 đến dưới 100; có 11 ngày chất lượng không khí ở mức Kém tương ứng với chỉ số AQI từ 100 đến dưới 150; có 11 ngày chất lượng không khí ở mức Xấu tương ứng với chỉ số AQI từ 150 đến dưới 200.
+
+    \begin{center}
+        \begin{tblr}{colspec={Q[l] *{3}{Q[c]}}}
+            Chỉ số AQI & $[50;100)$ & $[100;150)$ & $[150;200)$ \\
+            Tần số     & 8          & 11          & 11
+        \end{tblr}
+    \end{center}
+
+    Tổng số ngày là $n=30$. Tần số tương đối của ba nhóm lần lượt là
+    $\dfrac{8}{30}\cdot100\%\approx26{,}6\%$;
+    $\dfrac{11}{30}\cdot100\%\approx36{,}7\%$;
+    $\dfrac{11}{30}\cdot100\%\approx36{,}7\%$.
+
+    \begin{center}
+        \begin{tblr}{colspec={Q[l] *{3}{Q[c]}}}
+            Chỉ số AQI         & $[50;100)$ & $[100;150)$ & $[150;200)$ \\
+            Tần số tương đối   & 26{,}6\%    & 36{,}7\%     & 36{,}7\%
+        \end{tblr}
+    \end{center}
+
+    \textbf{Luyện tập 2}
+
+    Chỉ số phát triển con người (HDI) là chỉ tiêu tổng hợp phản ánh các mặt thu nhập, sức khoẻ, giáo dục của người dân trong một quốc gia. Các nước và vùng lãnh thổ trên thế giới được chia thành bốn nhóm theo HDI: Nhóm 1 (rất cao) có HDI từ 0,8 trở lên; Nhóm 2 (cao) có HDI từ 0,7 đến dưới 0,8; Nhóm 3 (trung bình) có HDI từ 0,55 đến dưới 0,7; Nhóm 4 (thấp) có HDI dưới 0,55. Năm 2021, chỉ số HDI của 11 quốc gia Đông Nam Á như sau:
+
+    \begin{center}
+        0,939; 0,829; 0,803; 0,8; 0,705; 0,703; 0,699; 0,607; 0,607; 0,593; 0,585.
+    \end{center}
+
+    Dựa vào dữ liệu trên, hãy hoàn thành bảng tần số ghép nhóm sau:
+
+    \begin{center}
+        \begin{tblr}{colspec={Q[l] *{4}{Q[c]}}}
+            Chỉ số HDI & $[0;0{,}55)$ & $[0{,}55;0{,}7)$ & $[0{,}7;0{,}8)$ & $[0{,}8;1{,}0)$ \\
+            Tần số     &              &                  &                 &
+        \end{tblr}
+    \end{center}
+
+    \answerline
+    \answerline
+
+    \textbf{2. BIỂU ĐỒ TẦN SỐ TƯƠNG ĐỐI GHÉP NHÓM DẠNG CỘT}
+
+    \textbf{Tìm hiểu về biểu đồ tần số tương đối ghép nhóm dạng cột}
+
+    \textbf{HĐ2} Biểu đồ Hình 7.17 cho biết tỉ lệ cân nặng của 62 trẻ sơ sinh tại một bệnh viện.
+
+    \begin{center}
+        \begin{tikzpicture}[x=1.05cm,y=0.12cm]
+            \foreach \y in {0,5,...,25} {
+                \draw[base300] (0,\y) -- (8.4,\y);
+                \node[left] at (0,\y) {\y\%};
+            }
+            \draw[base700] (0,0) -- (8.4,0);
+            \draw[base700] (0,0) -- (0,26);
+
+            \foreach \x/\h in {0.65/3.2,1.65/6.5,2.65/11.3,3.65/19.4,4.65/24.2,5.65/16.1,6.65/12.9,7.65/6.4} {
+                \fill[cyan!45] (\x-0.34,0) rectangle (\x+0.34,\h);
+            }
+
+            \node[above=2pt] at (0.65,3.2) {3,2\%};
+            \node[above=2pt] at (1.65,6.5) {6,5\%};
+            \node[above=2pt] at (2.65,11.3) {11,3\%};
+            \node[above=2pt] at (3.65,19.4) {19,4\%};
+            \node[above=2pt] at (4.65,24.2) {24,2\%};
+            \node[above=2pt] at (5.65,16.1) {16,1\%};
+            \node[above=2pt] at (6.65,12.9) {12,9\%};
+            \node[above=2pt] at (7.65,6.4) {6,4\%};
+
+            \node[below,rotate=35] at (0.65,0) {$[2{,}5;2{,}7)$};
+            \node[below,rotate=35] at (1.65,0) {$[2{,}7;2{,}9)$};
+            \node[below,rotate=35] at (2.65,0) {$[2{,}9;3{,}1)$};
+            \node[below,rotate=35] at (3.65,0) {$[3{,}1;3{,}3)$};
+            \node[below,rotate=35] at (4.65,0) {$[3{,}3;3{,}5)$};
+            \node[below,rotate=35] at (5.65,0) {$[3{,}5;3{,}7)$};
+            \node[below,rotate=35] at (6.65,0) {$[3{,}7;3{,}9)$};
+            \node[below,rotate=35] at (7.65,0) {$[3{,}9;4{,}1)$};
+
+            \node[rotate=90] at (-0.75,13) {Tỉ lệ};
+            \node[below=34pt] at (4.2,0) {Cân nặng (kg)};
+            \node[font=\bfseries] at (4.2,29) {Tỉ lệ cân nặng của trẻ sơ sinh};
+        \end{tikzpicture}
+
+        \textit{Hình 7.17}
+    \end{center}
+
+    \begin{enumerate}[label=\alph*)]
+        \item Đọc và giải thích số liệu được biểu diễn trên biểu đồ.
+
+        \answerline
+        \answerline
+
+        \item Lập bảng thống kê cho số liệu được biểu diễn trên biểu đồ. Bảng thống kê đó có phải là bảng tần số tương đối ghép nhóm không?
+
+        \answerline
+        \answerline
+        \answerline
+    \end{enumerate}
+
+    \begin{keyconcept}
+        Biểu đồ tần số tương đối ghép nhóm dạng cột là biểu đồ gồm các cột liền nhau để biểu diễn bảng tần số tương đối ghép nhóm. Trong biểu đồ này, chiều cao mỗi cột biểu diễn tần số tương đối của nhóm số liệu.
+    \end{keyconcept}
+
+    Để vẽ biểu đồ tần số tương đối ghép nhóm dạng cột biểu diễn bảng tần số tương đối ghép nhóm với các nhóm số liệu có độ dài bằng nhau ta thực hiện theo các bước sau:
+
+    \begin{itemize}
+        \item \textbf{Bước 1.} Vẽ trục đứng, trục ngang. Trên trục đứng xác định đơn vị độ dài phù hợp với các tần số tương đối. Trên trục ngang xác định các nhóm số liệu cần biểu diễn.
+        \item \textbf{Bước 2.} Dựng các hình cột (kề nhau) ứng với các nhóm dữ liệu, mỗi hình cột có chiều cao bằng tần số tương đối của nhóm số liệu.
+        \item \textbf{Bước 3.} Ghi chú giải cho các trục, các cột và tiêu đề cho biểu đồ.
+    \end{itemize}
+
+    Biểu đồ tần số tương đối (tần số) ghép nhóm dạng cột còn gọi là tổ chức đồ (histogram).
+
+    \textbf{Chú ý.} Trong biểu đồ trên, nếu chiều cao mỗi cột biểu diễn tần số của nhóm số liệu thì ta có biểu đồ tần số ghép nhóm dạng cột.
+
+    \textbf{Ví dụ 3}
+
+    Vẽ biểu đồ tần số tương đối ghép nhóm dạng cột cho bảng thống kê sau về thời gian đi từ nhà tới trường của một số bạn trong lớp 9D.
+
+    \begin{center}
+        \begin{tblr}{colspec={Q[l] *{4}{Q[c]}}}
+            Thời gian (phút)    & $[5;10)$ & $[10;15)$ & $[15;20)$ & $[20;25)$ \\
+            Tần số tương đối    & 20\%     & 37{,}5\%  & 30\%      & 12{,}5\%
+        \end{tblr}
+    \end{center}
+
+    \textbf{Giải}
+
+    \textbf{Bước 1.} Vẽ các trục của biểu đồ, xác định đơn vị độ dài trên trục đứng, các nhóm trên trục ngang (H.7.18).
+
+    \textbf{Bước 2.} Dựng các hình cột kề nhau ứng với các nhóm số liệu (H.7.18).
+
+    \begin{center}
+        \begin{tikzpicture}[x=1.55cm,y=0.11cm]
+            \foreach \y in {0,10,...,40} {
+                \draw[base300] (0,\y) -- (4.8,\y);
+                \node[left] at (0,\y) {\y\%};
+            }
+            \draw[base700] (0,0)--(4.8,0);
+            \draw[base700] (0,0)--(0,42);
+            \foreach \x/\h in {0.8/20,1.8/37.5,2.8/30,3.8/12.5} {
+                \fill[cyan!45] (\x-0.48,0) rectangle (\x+0.48,\h);
+            }
+            \node[below] at (0.8,0) {$[5;10)$};
+            \node[below] at (1.8,0) {$[10;15)$};
+            \node[below] at (2.8,0) {$[15;20)$};
+            \node[below] at (3.8,0) {$[20;25)$};
+        \end{tikzpicture}
+
+        \textit{Hình 7.18}
+    \end{center}
+
+    \textbf{Bước 3.} Ghi chú giải cho các trục, các cột và tiêu đề của biểu đồ (H.7.19).
+
+    \begin{center}
+        \begin{tikzpicture}[x=1.55cm,y=0.11cm]
+            \foreach \y in {0,10,...,40} {
+                \draw[base300] (0,\y) -- (4.8,\y);
+                \node[left] at (0,\y) {\y\%};
+            }
+            \draw[base700] (0,0)--(4.8,0);
+            \draw[base700] (0,0)--(0,42);
+            \foreach \x/\h in {0.8/20,1.8/37.5,2.8/30,3.8/12.5} {
+                \fill[cyan!45] (\x-0.48,0) rectangle (\x+0.48,\h);
+            }
+            \node[above=2pt] at (0.8,20) {20\%};
+            \node[above=2pt] at (1.8,37.5) {37,5\%};
+            \node[above=2pt] at (2.8,30) {30\%};
+            \node[above=2pt] at (3.8,12.5) {12,5\%};
+            \node[below] at (0.8,0) {$[5;10)$};
+            \node[below] at (1.8,0) {$[10;15)$};
+            \node[below] at (2.8,0) {$[15;20)$};
+            \node[below] at (3.8,0) {$[20;25)$};
+            \node[rotate=90] at (-0.62,20) {Tần số tương đối};
+            \node[below=16pt] at (2.4,0) {Thời gian (phút)};
+            \node[font=\bfseries] at (2.4,46) {Thời gian đến trường của các bạn trong lớp};
+        \end{tikzpicture}
+
+        \textit{Hình 7.19}
+    \end{center}
+
+    \textbf{Luyện tập 3}
+
+    Vẽ biểu đồ tần số tương đối ghép nhóm dạng cột cho bảng sau về chiều cao của một số cây chà là giống 3 tháng tuổi.
+
+    \begin{center}
+        \begin{tblr}{colspec={Q[l] *{4}{Q[c]}}}
+            Chiều cao (cm)      & $[30;34)$ & $[34;38)$ & $[38;42)$ & $[42;46)$ \\
+            Tần số tương đối    & 20\%      & 35\%      & 30\%      & 15\%
+        \end{tblr}
+    \end{center}
+
+    \answerline
+    \answerline
+    \answerline
+    \answerline
+    \answerline
+
+    \textbf{3. BIỂU ĐỒ TẦN SỐ TƯƠNG ĐỐI GHÉP NHÓM DẠNG ĐOẠN THẲNG}
+
+    Để biểu diễn bảng tần số tương đối ghép nhóm ta cũng có thể dùng biểu đồ tần số tương đối ghép nhóm dạng đoạn thẳng.
+
+    \textbf{Cách vẽ biểu đồ tần số tương đối ghép nhóm dạng đoạn thẳng}
+
+    Để vẽ biểu đồ tần số tương đối ghép nhóm dạng đoạn thẳng cho mẫu số liệu ghép nhóm, ta thực hiện theo các bước sau:
+
+    \begin{itemize}
+        \item \textbf{Bước 1.} Chọn giá trị
+        \[
+            x_i=\dfrac{a_i+a_{i+1}}{2}
+        \]
+        đại diện cho nhóm số liệu $[a_i;a_{i+1})$, với $i=1,2,\ldots,k$.
+        \item \textbf{Bước 2.} Vẽ trục ngang để biểu diễn các giá trị đại diện cho các nhóm số liệu, vẽ trục đứng thể hiện tần số tương đối.
+        \item \textbf{Bước 3.} Với mỗi giá trị đại diện $x_i$ trên trục ngang và tần số tương đối $f_i$ tương ứng, ta xác định một điểm $M_i(x_i;f_i)$. Nối các điểm liên tiếp với nhau.
+        \item \textbf{Bước 4.} Ghi chú giải cho các trục, các điểm và tiêu đề của biểu đồ.
+    \end{itemize}
+
+    \textbf{Chú ý.} Trong cách vẽ biểu đồ trên, nếu thay tần số tương đối bằng tần số thì ta có biểu đồ tần số ghép nhóm dạng đoạn thẳng.
+
+    \textbf{Ví dụ 4}
+
+    Cho bảng tần số tương đối ghép nhóm sau về tuổi thọ của một loại bóng đèn.
+
+    \begin{center}
+        \begin{tblr}{colspec={Q[l] *{5}{Q[c]}}}
+            Tuổi thọ (năm)      & $[1;1{,}5)$ & $[1{,}5;2)$ & $[2;2{,}5)$ & $[2{,}5;3)$ & $[3;3{,}5)$ \\
+            Tần số tương đối    & 15\%        & 20\%        & 30\%        & 25\%        & 10\%
+        \end{tblr}
+    \end{center}
+
+    Vẽ biểu đồ tần số tương đối ghép nhóm dạng đoạn thẳng cho bảng thống kê trên.
+
+    \textbf{Giải}
+
+    \textbf{Bước 1.} Chọn giá trị đại diện cho các nhóm số liệu ta có bảng sau:
+
+    \begin{center}
+        \begin{tblr}{colspec={Q[l] *{5}{Q[c]}}}
+            Giá trị đại diện    & 1{,}25 & 1{,}75 & 2{,}25 & 2{,}75 & 3{,}25 \\
+            Tần số tương đối    & 15\%   & 20\%   & 30\%   & 25\%   & 10\%
+        \end{tblr}
+    \end{center}
+
+    \textbf{Bước 2.} Vẽ các trục (H.7.20).
+
+    \textbf{Bước 3.} Xác định các điểm, nối các điểm liên tiếp với nhau (H.7.20).
+
+    \begin{center}
+        \begin{tikzpicture}[x=1.45cm,y=0.14cm]
+            \foreach \y in {0,5,...,30} {
+                \draw[base300] (0,\y) -- (5.2,\y);
+                \node[left] at (0,\y) {\y\%};
+            }
+            \draw[base700] (0,0)--(5.2,0);
+            \draw[base700] (0,0)--(0,32);
+            \coordinate (A) at (0.6,15);
+            \coordinate (B) at (1.6,20);
+            \coordinate (C) at (2.6,30);
+            \coordinate (D) at (3.6,25);
+            \coordinate (E) at (4.6,10);
+            \draw[thick,base700] (A)--(B)--(C)--(D)--(E);
+            \foreach \P in {A,B,C,D,E} {\fill[base700] (\P) circle (2pt);}
+            \node[below] at (0.6,0) {1,25};
+            \node[below] at (1.6,0) {1,75};
+            \node[below] at (2.6,0) {2,25};
+            \node[below] at (3.6,0) {2,75};
+            \node[below] at (4.6,0) {3,25};
+        \end{tikzpicture}
+
+        \textit{Hình 7.20}
+    \end{center}
+
+    \textbf{Bước 4.} Ghi chú giải cho các trục, các điểm và tiêu đề của biểu đồ tần số tương đối ghép nhóm (H.7.21).
+
+    \begin{center}
+        \begin{tikzpicture}[x=1.45cm,y=0.14cm]
+            \foreach \y in {0,5,...,30} {
+                \draw[base300] (0,\y) -- (5.2,\y);
+                \node[left] at (0,\y) {\y\%};
+            }
+            \draw[base700] (0,0)--(5.2,0);
+            \draw[base700] (0,0)--(0,32);
+            \coordinate (A) at (0.6,15);
+            \coordinate (B) at (1.6,20);
+            \coordinate (C) at (2.6,30);
+            \coordinate (D) at (3.6,25);
+            \coordinate (E) at (4.6,10);
+            \draw[thick,base700] (A)--(B)--(C)--(D)--(E);
+            \foreach \P/\h in {A/15,B/20,C/30,D/25,E/10} {
+                \fill[base700] (\P) circle (2pt);
+                \node[above=2pt] at (\P) {\h\%};
+            }
+            \node[below] at (0.6,0) {1,25};
+            \node[below] at (1.6,0) {1,75};
+            \node[below] at (2.6,0) {2,25};
+            \node[below] at (3.6,0) {2,75};
+            \node[below] at (4.6,0) {3,25};
+            \node[rotate=90] at (-0.72,16) {Tần số tương đối};
+            \node[below=16pt] at (2.6,0) {Tuổi thọ (năm)};
+            \node[font=\bfseries] at (2.6,36) {Tuổi thọ bóng đèn};
+        \end{tikzpicture}
+
+        \textit{Hình 7.21}
+    \end{center}
+
+    \textbf{Chú ý.} Trên trục ngang ta cũng có thể điền các nhóm số liệu thay cho các giá trị đại diện.
+
+    \textbf{Luyện tập 4}
+
+    Cho bảng tần số ghép nhóm sau về thời gian gọi (phút) của một số cuộc điện thoại.
+
+    \begin{center}
+        \begin{tblr}{colspec={Q[l] *{5}{Q[c]}}}
+            Thời gian (phút) & $[0{,}5;2{,}5)$ & $[2{,}5;4{,}5)$ & $[4{,}5;6{,}5)$ & $[6{,}5;8{,}5)$ & $[8{,}5;10{,}5)$ \\
+            Số cuộc gọi      & 6               & 14              & 20              & 12              & 8
+        \end{tblr}
+    \end{center}
+
+    Vẽ biểu đồ tần số tương đối ghép nhóm dạng đoạn thẳng cho bảng thống kê trên.
+
+    \answerline
+    \answerline
+    \answerline
+    \answerline
+    \answerline
+
+    \textbf{EM CÓ BIẾT? (Đọc thêm)}
+
+    Để biểu diễn bảng tần số tương đối ghép nhóm với các nhóm $[a_i;a_{i+1})$, $i=1,2,\ldots,k$ có độ dài $l_i=a_{i+1}-a_i$, không bằng nhau bằng biểu đồ tần số tương đối dạng cột người ta dựng các cột có đáy bằng $l_i$ và chiều cao là $\dfrac{f_i}{l_i}$, tức là diện tích của mỗi cột chính bằng tần số tương đối của nhóm $[a_i;a_{i+1})$.
+\end{lesson}
+
+\begin{exercises}
+    \subsection{Bài tập}
+
+    \begin{questions}[resume=SGK]
+        \item Một cuộc điều tra về thời gian dùng mạng Internet trong ngày của học sinh lớp 9 tại một thành phố cho kết quả như sau:
+
+        \begin{center}
+            \begin{tblr}{colspec={Q[l] *{5}{Q[c]}}}
+                Thời gian (giờ) & $[0;0{,}5)$ & $[0{,}5;1{,}0)$ & $[1{,}0;1{,}5)$ & $[1{,}5;2{,}0)$ & $[2{,}0;2{,}5)$ \\
+                Tỉ lệ           & 15\%        & 27\%            & 23\%            & 18\%            & 17\%
+            \end{tblr}
+        \end{center}
+
+        \begin{questions}
+            \item Đọc và giải thích bảng thống kê trên.
+
+            \answerline
+            \answerline
+
+            \item Để thu được bảng thống kê trên, người ta đã lập phiếu điều tra và thu về tổng cộng 2 000 phiếu trả lời. Lập bảng tần số ghép nhóm cho kết quả thu được.
+
+            \answerline
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Ghi lại cấp độ động đất của các trận động đất xảy ra tại một vùng trong 10 năm người ta thu được kết quả sau:
+
+        I, V, II, III, VI, V, IV, II, III, V, VI, VII, VIII, I, I, II, VI, VII, IV.
+
+        Biết rằng theo thang Richter thì trận động đất cấp I có độ lớn từ 1 đến dưới 3; cấp II và III có độ lớn từ 3 đến dưới 4; cấp IV và V có độ lớn từ 4 đến dưới 5; cấp VI và VII có độ lớn từ 5 đến dưới 6; cấp VIII có độ lớn từ 6 đến dưới 6,9.
+
+        Lập bảng tần số ghép nhóm cho độ lớn các trận động đất xảy ra ở vùng này theo thang Richter.
+
+        \answerline
+        \answerline
+        \answerline
+        \answerline
+
+        \item Giáo viên ghi lại thời gian chạy cự li 100 mét của các học sinh lớp 9A cho kết quả như sau:
+
+        \begin{center}
+            \begin{tblr}{colspec={Q[l] *{4}{Q[c]}}}
+                Thời gian (giây) & $[13;15)$ & $[15;17)$ & $[17;19)$ & $[19;21)$ \\
+                Số học sinh      & 5         & 20        & 13        & 2
+            \end{tblr}
+        \end{center}
+
+        \begin{questions}
+            \item Nêu các nhóm số liệu và tần số tương ứng.
+
+            \answerline
+            \answerline
+
+            \item Lập bảng tần số tương đối ghép nhóm.
+
+            \answerline
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Người ta trồng cà rốt và thử nghiệm một loại phân bón mới. Khi thu hoạch người ta đo chiều dài các củ cà rốt thu được kết quả sau:
+
+        \begin{center}
+            \begin{tblr}{colspec={Q[l] *{6}{Q[c]}}}
+                Chiều dài (cm) & $[15;16)$ & $[16;17)$ & $[17;18)$ & $[18;19)$ & $[19;20)$ & $[20;21)$ \\
+                Số củ cà rốt   & 8         & 17        & 30        & 28        & 12        & 5
+            \end{tblr}
+        \end{center}
+
+        Vẽ biểu đồ tần số tương đối ghép nhóm dạng cột cho bảng thống kê trên.
+
+        \answerline
+        \answerline
+        \answerline
+        \answerline
+        \answerline
+
+        \item Thời gian chờ mua vé xem bóng đá của một số cổ động viên được cho như sau:
+
+        \begin{center}
+            \begin{tblr}{colspec={Q[l] *{6}{Q[c]}}}
+                Thời gian (phút)    & $[0;5)$ & $[5;10)$ & $[10;15)$ & $[15;20)$ & $[20;25)$ & $[25;30)$ \\
+                Số cổ động viên     & 15      & 38       & 50        & 27        & 20        & 10
+            \end{tblr}
+        \end{center}
+
+        \begin{questions}
+            \item Lập bảng tần số tương đối ghép nhóm.
+
+            \answerline
+            \answerline
+            \answerline
+
+            \item Vẽ biểu đồ tần số tương đối ghép nhóm dạng đoạn thẳng cho bảng thống kê thu được ở câu a.
+
+            \answerline
+            \answerline
+            \answerline
+            \answerline
+            \answerline
+        \end{questions}
+    \end{questions}
+\end{exercises}
+
+\begin{practice}
+    \subsection{Luyện tập}
+
+    \begin{questions}[resume=SBT]
+        \item Bảng tần số ghép nhóm sau cho biết cân nặng của một số con voi khi vừa sinh ra (đơn vị tính là kg):
+
+        \begin{center}
+            \begin{tblr}{colspec={Q[l] *{4}{Q[c]}}}
+                Cân nặng (kg) & $[110;115)$ & $[115;120)$ & $[120;125)$ & $[125;130)$ \\
+                Tần số        & 8           & 15          & 17          & 10
+            \end{tblr}
+        \end{center}
+
+        \begin{questions}
+            \item Đọc và giải thích dữ liệu cho bởi bảng tần số ghép nhóm trên.
+
+            \answerline
+            \answerline
+
+            \item Lập bảng tần số tương đối ghép nhóm.
+
+            \answerline
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Một nhóm học sinh lớp 9B thực hiện 20 lần đo hiệu điện thế và cường độ dòng điện để xác định công suất của một chiếc quạt điện và thu được bảng tần số tương đối ghép nhóm sau:
+
+        \begin{center}
+            \begin{tblr}{colspec={Q[l] *{5}{Q[c]}}}
+                Công suất (W)        & $[72;73)$ & $[73;74)$ & $[74;75)$ & $[75;76)$ & $[76;77)$ \\
+                Tần số tương đối     & 10\%      & 20\%      & 30\%      & 25\%      & 15\%
+            \end{tblr}
+        \end{center}
+
+        \begin{questions}
+            \item Đọc và giải thích thông tin của hai nhóm dữ liệu cho bởi bảng tần số tương đối ghép nhóm trên.
+
+            \answerline
+            \answerline
+
+            \item Lập bảng tần số ghép nhóm cho kết quả 20 lần đo của nhóm học sinh.
+
+            \answerline
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Một phòng khám đo và ghi lại huyết áp tâm thu (đơn vị tính là mmHg) của một số người đến khám bệnh thu được kết quả như sau:
+
+        \begin{center}
+            118, 100, 107, 135, 127, 158, 179, 95, 127, 130, 135, 116, 182, 166, 164,\\
+            99, 112, 129, 134, 144, 158, 97, 175, 110, 99, 128, 134, 192, 149, 135, 90.
+        \end{center}
+
+        Theo Hiệp hội Tim mạch Hoa Kỳ, người bình thường có huyết áp tâm thu từ 90 mmHg đến dưới 120 mmHg; người ở dạng tiền tăng huyết áp có huyết áp tâm thu từ 120 mmHg đến dưới 140 mmHg; người bị tăng huyết áp có huyết áp tâm thu lớn hơn hoặc bằng 140 mmHg.
+
+        Lập bảng tần số ghép nhóm và bảng tần số tương đối ghép nhóm cho dãy số liệu trên theo các mức bệnh huyết áp.
+
+        \answerline
+        \answerline
+        \answerline
+        \answerline
+
+        \item Một công ty quản lý phần mềm ứng dụng trực tuyến đã thống kê tỉ lệ người dùng phần mềm này theo dung lượng bộ nhớ dành cho lưu trữ ảnh và biểu diễn dưới dạng biểu đồ tần số tương đối ghép nhóm dạng cột như sau:
+
+        \begin{center}
+            \begin{tikzpicture}[x=1.55cm,y=0.09cm]
+                \foreach \y in {0,10,...,50} {
+                    \draw[base300] (0,\y) -- (4.8,\y);
+                    \node[left] at (0,\y) {\y\%};
+                }
+                \draw[base700] (0,0)--(4.8,0);
+                \draw[base700] (0,0)--(0,52);
+                \foreach \x/\h in {0.8/45,1.8/30,2.8/15,3.8/10} {
+                    \fill[cyan!45] (\x-0.48,0) rectangle (\x+0.48,\h);
+                }
+                \node[above=2pt] at (0.8,45) {45\%};
+                \node[above=2pt] at (1.8,30) {30\%};
+                \node[above=2pt] at (2.8,15) {15\%};
+                \node[above=2pt] at (3.8,10) {10\%};
+                \node[below] at (0.8,0) {$[0;5)$};
+                \node[below] at (1.8,0) {$[5;10)$};
+                \node[below] at (2.8,0) {$[10;15)$};
+                \node[below] at (3.8,0) {$[15;20)$};
+                \node[rotate=90] at (-0.65,26) {Tỉ lệ};
+                \node[below=16pt] at (2.4,0) {Dung lượng (GB)};
+                \node[font=\bfseries] at (2.4,58) {Tỉ lệ người dùng theo dung lượng lưu trữ ảnh};
+            \end{tikzpicture}
+        \end{center}
+
+        \begin{questions}
+            \item Đọc và giải thích thông tin về một nhóm dữ liệu được biểu diễn trên biểu đồ.
+
+            \answerline
+            \answerline
+
+            \item Lập bảng tần số tương đối ghép nhóm cho dữ liệu được biểu diễn trên biểu đồ.
+
+            \answerline
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Cho biểu đồ tần số tương đối ghép nhóm dạng đoạn thẳng sau:
+
+        \begin{center}
+            \begin{tikzpicture}[x=1.25cm,y=0.14cm]
+                \foreach \y in {0,5,...,35} {
+                    \draw[base300] (0,\y) -- (6.5,\y);
+                    \node[left] at (0,\y) {\y\%};
+                }
+                \draw[base700] (0,0)--(6.5,0);
+                \draw[base700] (0,0)--(0,37);
+                \coordinate (A) at (0.6,6);
+                \coordinate (B) at (1.6,10);
+                \coordinate (C) at (2.6,24);
+                \coordinate (D) at (3.6,30);
+                \coordinate (E) at (4.6,16);
+                \coordinate (F) at (5.6,14);
+                \draw[thick,base700] (A)--(B)--(C)--(D)--(E)--(F);
+                \foreach \P/\h in {A/6,B/10,C/24,D/30,E/16,F/14} {
+                    \fill[base700] (\P) circle (2pt);
+                    \node[above=2pt] at (\P) {\h\%};
+                }
+                \node[below,rotate=28] at (0.6,0) {$[7;10)$};
+                \node[below,rotate=28] at (1.6,0) {$[10;13)$};
+                \node[below,rotate=28] at (2.6,0) {$[13;16)$};
+                \node[below,rotate=28] at (3.6,0) {$[16;19)$};
+                \node[below,rotate=28] at (4.6,0) {$[19;22)$};
+                \node[below,rotate=28] at (5.6,0) {$[22;25)$};
+                \node[rotate=90] at (-0.7,18) {Tỉ lệ};
+                \node[below=29pt] at (3.1,0) {Mức lương (triệu đồng)};
+                \node[font=\bfseries] at (3.1,42) {Lương của công nhân công ty A};
+            \end{tikzpicture}
+        \end{center}
+
+        \begin{questions}
+            \item Đọc và giải thích thông tin về hai nhóm dữ liệu được biểu diễn trên biểu đồ.
+
+            \answerline
+            \answerline
+
+            \item Lập bảng tần số tương đối ghép nhóm cho dữ liệu được biểu diễn trên biểu đồ.
+
+            \answerline
+            \answerline
+            \answerline
+
+            \item Biết rằng công ty A có 300 người, lập bảng tần số ghép nhóm cho lương của công nhân công ty này.
+
+            \answerline
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Bảng thống kê sau cho biết thời gian học tiếng Anh (đơn vị là năm, tính từ lúc bắt đầu học tiếng Anh đến thời điểm khảo sát) của một số học sinh lớp 9.
+
+        \begin{center}
+            \begin{tblr}{colspec={Q[l] *{5}{Q[c]}}}
+                Thời gian (năm) & $[0;2)$ & $[2;4)$ & $[4;6)$ & $[6;8)$ & $[8;10)$ \\
+                Số học sinh     & 8       & 12      & 15      & 10      & 5
+            \end{tblr}
+        \end{center}
+
+        \begin{questions}
+            \item Lập bảng tần số tương đối ghép nhóm cho bảng thống kê trên.
+
+            \answerline
+            \answerline
+            \answerline
+
+            \item Vẽ biểu đồ tần số tương đối ghép nhóm dạng cột biểu diễn bảng tần số tương đối ghép nhóm thu được ở câu a.
+
+            \answerline
+            \answerline
+            \answerline
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Bảng tần số ghép nhóm sau cho biết thành tích luyện tập của một vận động viên nghiệp dư chạy maraton 42 km.
+
+        \begin{center}
+            \begin{tblr}{colspec={Q[l] *{5}{Q[c]}}}
+                Thời gian (giờ) & $[6;6{,}5)$ & $[6{,}5;7)$ & $[7;7{,}5)$ & $[7{,}5;8)$ & $[8;8{,}5)$ \\
+                Số lần          & 2           & 6           & 7           & 4           & 1
+            \end{tblr}
+        \end{center}
+
+        \begin{questions}
+            \item Lập bảng tần số tương đối ghép nhóm cho bảng thống kê trên.
+
+            \answerline
+            \answerline
+            \answerline
+
+            \item Vẽ biểu đồ tần số tương đối ghép nhóm dạng đoạn thẳng biểu diễn bảng tần số tương đối ghép nhóm thu được.
+
+            \answerline
+            \answerline
+            \answerline
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Kiểm tra khối lượng của một số bao xi măng trước khi xuất xưởng cho kết quả như sau:
+
+        \begin{center}
+            \begin{tblr}{colspec={Q[l] *{5}{Q[c]}}}
+                Khối lượng (kg) & $[48{,}5;49)$ & $[49;49{,}5)$ & $[49{,}5;50)$ & $[50;50{,}5)$ & $[50{,}5;51)$ \\
+                Tỉ lệ           & 5\%           & 10\%          & 35\%          & 40\%          & 10\%
+            \end{tblr}
+        \end{center}
+
+        Vẽ các biểu đồ tần số tương đối ghép nhóm dạng cột và dạng đoạn thẳng biểu diễn dữ liệu trên.
+
+        \answerline
+        \answerline
+        \answerline
+        \answerline
+        \answerline
+        \answerline
+    \end{questions}
+\end{practice}
