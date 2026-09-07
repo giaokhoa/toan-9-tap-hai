@@ -1,0 +1,284 @@
+    \subsubsection{Hình nón}
+
+    \textbf{Nhận biết hình nón}
+
+    1. Đồ chơi, chi tiết cơ khí (H.10.8) có dạng một hình nón. Một số yếu tố của hình nón được thể hiện trên Hình 10.9b.
+
+    % TODO(HINH-NGUON): Hình 10.8 SGK trang 97 là cụm ảnh đồ chơi/chi tiết cơ khí; bổ sung asset/crop đúng từ nguồn, không redraw xấp xỉ bằng TikZ.
+
+    2. Khi quay tam giác vuông $SOA$ (vuông ở $O$) một vòng quanh $SO$ cố định thì ta được một hình nón đỉnh $S$ (H.10.9a), trong đó:
+    \begin{itemize}
+        \item Đáy của hình nón là hình tròn $(O;OA)$, $R=OA$ gọi là bán kính đáy của hình nón.
+        \item Mỗi đường sinh là một vị trí của $SA$ khi quay. Vậy hình nón có vô số đường sinh dài bằng nhau.
+        \item $SO$ gọi là đường cao của hình nón. Độ dài đoạn $SO$ được gọi là chiều cao của hình nón.
+    \end{itemize}
+
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{scope}[xshift=-2.7cm]
+                \coordinate (O) at (0,0);
+                \coordinate (S) at (0,3);
+                \coordinate (A) at (1.65,0);
+                \draw (S)--(O)--(A)--cycle;
+                \pic[draw,angle radius=3mm] {right angle=S--O--A};
+                \node[above=1pt of S] {$S$};
+                \node[below left=1pt of O] {$O$};
+                \node[below right=1pt of A] {$A$};
+                \node at (0,-.6) {a)};
+            \end{scope}
+            \begin{scope}[xshift=2.4cm]
+                \coordinate (O) at (0,0);
+                \coordinate (S) at (0,3);
+                \coordinate (A) at (-1.65,0);
+                \coordinate (B) at (1.65,0);
+                \draw (A) arc[start angle=180,end angle=360,x radius=1.65,y radius=.42];
+                \draw[dashed] (B) arc[start angle=0,end angle=180,x radius=1.65,y radius=.42];
+                \draw (S)--(A) (S)--(B);
+                \draw[dashed] (S)--(O);
+                \draw (O)--(B);
+                \node[above=1pt of S] {$S$};
+                \node[below=1pt of O] {$O$};
+                \node[below left=1pt of A] {$A$};
+                \node[below right=1pt of B] {$B$};
+                \node at (0,-.9) {b)};
+            \end{scope}
+        \end{tikzpicture}
+
+        \textit{Hình 10.9}
+    \end{center}
+
+    \textbf{Câu hỏi}
+
+    Nêu một số đồ vật có dạng hình nón trong đời sống.
+
+    \answerline
+
+    \begin{keyconcept}
+        Một số yếu tố của hình nón:
+        \begin{itemize}
+            \item Đỉnh: $S$.
+            \item Chiều cao: $h=SO$.
+            \item Đường sinh: $l=SA=SB$.
+            \item Bán kính đáy: $R=OA$.
+        \end{itemize}
+    \end{keyconcept}
+
+    \textbf{Ví dụ 3}
+
+    Hãy kể tên đỉnh, đường cao, một bán kính đáy và một đường sinh của hình nón trong Hình 10.10.
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (O) at (0,0);
+            \coordinate (S) at (0,3);
+            \coordinate (M) at (-1.7,0);
+            \coordinate (N) at (1.7,0);
+            \coordinate (P) at (0,-.45);
+            \draw (M) arc[start angle=180,end angle=360,x radius=1.7,y radius=.45];
+            \draw[dashed] (N) arc[start angle=0,end angle=180,x radius=1.7,y radius=.45];
+            \draw (S)--(M) (S)--(N) (S)--(P);
+            \draw[dashed] (S)--(O);
+            \draw (O)--(M) (O)--(N) (O)--(P);
+            \node[above=1pt of S] {$S$};
+            \node[above right=1pt of O] {$O$};
+            \node[below left=1pt of M] {$M$};
+            \node[below right=1pt of N] {$N$};
+            \node[below=1pt of P] {$P$};
+        \end{tikzpicture}
+
+        \textit{Hình 10.10}
+    \end{center}
+
+    \textbf{Giải}
+
+    Đỉnh: $S$.
+
+    Đường cao: $SO$.
+
+    Một bán kính đáy: $OM$.
+
+    Một đường sinh: $SM$.
+
+    \textbf{Luyện tập 3}
+
+    Kể tên các bán kính đáy và các đường sinh còn lại của hình nón trong Hình 10.10.
+
+    \answerline
+    \answerline
+
+    \textbf{Chú ý.} Cho một hình nón. Nếu ta cắt rời đáy và cắt mặt xung quanh của nó theo đường sinh $SA$ rồi trải phẳng ra thì được một hình phẳng (gồm một hình tròn và một hình quạt tròn) như Hình 10.11 gọi là hình khai triển của hình nón đã cho.
+
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{scope}[xshift=-3cm]
+                \coordinate (O) at (0,0);
+                \coordinate (S) at (0,2.8);
+                \coordinate (A) at (-1.45,0);
+                \coordinate (B) at (1.45,0);
+                \draw (A) arc[start angle=180,end angle=360,x radius=1.45,y radius=.36];
+                \draw[dashed] (B) arc[start angle=0,end angle=180,x radius=1.45,y radius=.36];
+                \draw (S)--(A) (S)--(B);
+                \node[above=1pt of S] {$S$};
+                \node[below left=1pt of A] {$A$};
+            \end{scope}
+            \draw[->] (-1.1,1.25)--(.05,1.25);
+            \begin{scope}[xshift=2.5cm]
+                \coordinate (S) at (0,0);
+                \coordinate (A) at (120:2.1);
+                \coordinate (B) at (20:2.1);
+                \draw (S)--(A) arc[start angle=120,end angle=20,radius=2.1]--cycle;
+                \node[left=1pt of S] {$S$};
+                \node[above left=1pt of A] {$A$};
+                \node[right=1pt of B] {$B$};
+                \node[right] at ($(S)!0.55!(B)$) {$l$};
+                \draw (0,-2.15) circle (.62);
+                \node at (0,-2.15) {$O$};
+            \end{scope}
+        \end{tikzpicture}
+
+        \textit{Hình 10.11}
+    \end{center}
+
+    \textbf{Thực hành 2}
+
+    Cắt một nửa hình tròn bằng giấy cứng, có đường kính $AB=20$ cm và tâm là $S$. Cuộn nửa hình tròn đó lại sao cho $SA$ và $SB$ sát vào nhau như Hình 10.12 (dùng băng keo dán), ta được một hình nón đỉnh $S$. Hãy cho biết độ dài đường sinh và chu vi đáy của hình nón đó.
+
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{scope}[xshift=-2.6cm]
+                \coordinate (S) at (0,0);
+                \coordinate (A) at (-2,0);
+                \coordinate (B) at (2,0);
+                \draw (A) arc[start angle=180,end angle=0,radius=2]--cycle;
+                \node[below left=1pt of A] {$A$};
+                \node[below right=1pt of B] {$B$};
+                \node[below=1pt of S] {$S$};
+                \node[below] at ($(A)!0.5!(B)$) {$20\text{ cm}$};
+            \end{scope}
+            \draw[->] (-.2,1)--(.8,1);
+            \begin{scope}[xshift=3cm]
+                \coordinate (O) at (0,0);
+                \coordinate (S) at (0,2.8);
+                \coordinate (A) at (-1.4,0);
+                \coordinate (B) at (1.4,0);
+                \draw (A) arc[start angle=180,end angle=360,x radius=1.4,y radius=.36];
+                \draw[dashed] (B) arc[start angle=0,end angle=180,x radius=1.4,y radius=.36];
+                \draw (S)--(A) (S)--(B);
+                \node[above=1pt of S] {$S$};
+            \end{scope}
+        \end{tikzpicture}
+
+        \textit{Hình 10.12}
+    \end{center}
+
+    \answerline
+    \answerline
+
+    \textbf{Diện tích xung quanh và thể tích của hình nón}
+
+    \textbf{HĐ3}
+
+    Người ta coi diện tích của hình quạt tròn $SAB$ (xem Thực hành 2) chính là diện tích xung quanh của hình nón được tạo thành. Cho hình nón có đường sinh $l=9$ cm và bán kính đáy $r=5$ cm. Tính diện tích mặt xung quanh của hình nón.
+
+    \answerline
+    \answerline
+
+    Một cách tổng quát, ta có công thức tính diện tích mặt xung quanh (gọi tắt là diện tích xung quanh, kí hiệu là $S_{xq}$) của hình nón như sau:
+
+    \begin{keyconcept}
+        \[
+            S_{xq}=\pi rl,
+        \]
+        trong đó $r$ là bán kính đáy, $l$ là độ dài đường sinh.
+    \end{keyconcept}
+
+    \textbf{HĐ4}
+
+    Hãy nhắc lại công thức tính thể tích của hình chóp tam giác đều (hoặc hình chóp tứ giác đều) có diện tích đáy $S$ và chiều cao $h$.
+
+    \answerline
+
+    Tương tự, ta có công thức tính thể tích của hình nón như sau:
+
+    \begin{keyconcept}
+        \[
+            V=\dfrac{1}{3}S_{\text{đáy}}\cdot h=\dfrac{1}{3}\pi r^2h,
+        \]
+        trong đó $S_{\text{đáy}}$ là diện tích đáy, $r$ là bán kính đáy, $h$ là chiều cao.
+    \end{keyconcept}
+
+    \textbf{Ví dụ 4}
+
+    Cho một hình nón có độ dài đường sinh bằng $10$ cm, bán kính đáy bằng $6$ cm (H.10.13).
+    \begin{enumerate}[label=\alph*)]
+        \item Tính diện tích xung quanh của hình nón.
+        \item Tính thể tích của hình nón.
+    \end{enumerate}
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (O) at (0,0);
+            \coordinate (S) at (0,3.3);
+            \coordinate (A) at (-1.8,0);
+            \coordinate (B) at (1.8,0);
+            \draw (A) arc[start angle=180,end angle=360,x radius=1.8,y radius=.42];
+            \draw[dashed] (B) arc[start angle=0,end angle=180,x radius=1.8,y radius=.42];
+            \draw (S)--(A) (S)--(B);
+            \draw[dashed] (S)--(O);
+            \draw (O)--(B);
+            \pic[draw,angle radius=3mm] {right angle=S--O--B};
+            \node[above=1pt of S] {$S$};
+            \node[below=1pt of O] {$O$};
+            \node[below left=1pt of A] {$A$};
+            \node[below right=1pt of B] {$B$};
+            \node[right] at ($(S)!0.52!(B)$) {$10\text{ cm}$};
+            \node[below] at ($(O)!0.5!(B)$) {$6\text{ cm}$};
+        \end{tikzpicture}
+
+        \textit{Hình 10.13}
+    \end{center}
+
+    \textbf{Giải}
+
+    a) Diện tích xung quanh của hình nón là
+    \[
+        S_{xq}=\pi rl=\pi\cdot 6\cdot 10=60\pi\ (\text{cm}^2).
+    \]
+
+    b) Tam giác $SOB$ vuông tại $O$ nên theo định lí Pythagore ta có:
+    \[
+        OB^2+SO^2=SB^2,
+    \]
+    \[
+        6^2+SO^2=10^2,
+    \]
+    \[
+        SO^2=100-36=64,
+    \]
+    \[
+        SO=8\text{ cm}.
+    \]
+
+    Thể tích của hình nón là
+    \[
+        V=\dfrac{1}{3}\pi r^2h=\dfrac{1}{3}\pi\cdot 6^2\cdot 8=96\pi\ (\text{cm}^3).
+    \]
+
+    \textbf{Luyện tập 4}
+
+    Tính diện tích xung quanh và thể tích của một hình nón có độ dài đường sinh bằng $13$ cm và chiều cao bằng $12$ cm.
+
+    \answerline
+    \answerline
+    \answerline
+
+    \textbf{Vận dụng}
+
+    Người ta đổ muối thu hoạch được trên cánh đồng muối thành từng đống có dạng hình nón với chiều cao khoảng $0{,}9$ m và đường kính đáy khoảng $1{,}6$ m. Hỏi mỗi đống muối có bao nhiêu đềximét khối muối? (Làm tròn kết quả đến hàng đơn vị).
+
+    % TODO(HINH-NGUON): ảnh đống muối SGK trang 99 là ảnh thực tế; bổ sung asset/crop đúng từ nguồn, không redraw xấp xỉ bằng TikZ.
+
+    \answerline
+    \answerline
+    \answerline
+\end{lesson}

@@ -1,0 +1,186 @@
+\begin{lesson}
+    \subsection{Kiến thức trọng tâm}
+
+    \begin{center}
+    \begin{tblr}{
+        width=\linewidth,
+        colspec={X[2,l] X[5,l]},
+        cells={valign=t},
+        row{1}={font=\bfseries, halign=c}
+    }
+        Khái niệm, thuật ngữ & Kiến thức, kĩ năng \\
+        \begin{minipage}[t]{\linewidth}
+        \begin{itemize}
+            \item Hình trụ
+            \item Hình nón
+            \item Đường sinh
+        \end{itemize}
+        \end{minipage}
+        &
+        \begin{minipage}[t]{\linewidth}
+        \begin{itemize}
+            \item Mô tả đường sinh, chiều cao, bán kính đáy của hình trụ; đỉnh, đường sinh, chiều cao, bán kính đáy của hình nón.
+            \item Tạo lập hình trụ và hình nón.
+            \item Tính diện tích xung quanh và thể tích của hình trụ, hình nón.
+            \item Giải quyết một số vấn đề thực tiễn gắn với việc tính thể tích, diện tích xung quanh của hình trụ, hình nón.
+        \end{itemize}
+        \end{minipage}
+    \end{tblr}
+    \end{center}
+
+    Đèn lồng, nón lá ở Hình 10.1 là những vật dụng quen thuộc có dạng hình trụ, hình nón. Trong bài học này, chúng ta sẽ tìm hiểu một số yếu tố cơ bản về hình trụ, hình nón và những vấn đề thực tiễn gắn với việc tính diện tích, thể tích của chúng.
+
+    % TODO(HINH-NGUON): Hình 10.1 SGK trang 93 là ảnh thực tế đèn lồng và nón lá; bổ sung asset/crop đúng từ nguồn, không redraw xấp xỉ bằng TikZ.
+
+    \subsubsection{Hình trụ}
+
+    \textbf{Nhận biết hình trụ}
+
+    1. Hộp sữa (H.10.2a) có dạng một hình trụ. Một số yếu tố của hình trụ được chỉ ra trên Hình 10.2b.
+
+    % TODO(HINH-NGUON): Hình 10.2a SGK trang 94 là ảnh hộp sữa; bổ sung asset/crop đúng từ nguồn, không redraw xấp xỉ bằng TikZ.
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (Otop) at (0,2.2);
+            \coordinate (Obot) at (0,0);
+            \coordinate (A) at (1.35,2.2);
+            \coordinate (B) at (1.35,0);
+            \draw (Otop) ellipse [x radius=1.35, y radius=.34];
+            \draw (Obot) ellipse [x radius=1.35, y radius=.34];
+            \draw (-1.35,2.2)--(-1.35,0);
+            \draw (A)--(B);
+            \draw[dashed] (Otop)--(Obot);
+            \draw (Otop)--(A);
+            \draw (Obot)--(B);
+            \node[above=1pt of Otop] {$O'$};
+            \node[below=1pt of Obot] {$O$};
+            \node[above right=1pt of A] {$A$};
+            \node[below right=1pt of B] {$B$};
+        \end{tikzpicture}
+
+        \textit{Hình 10.2b}
+    \end{center}
+
+    2. Khi quay hình chữ nhật $O'ABO$ một vòng quanh $OO'$ cố định thì ta được một hình trụ (H.10.3), trong đó:
+    \begin{itemize}
+        \item Hai đáy của hình trụ là hai hình tròn bằng nhau $(O';O'A)$ và $(O;OB)$.
+        \item Mỗi đường sinh là một vị trí của $AB$ khi quay. Vậy hình trụ có vô số đường sinh. $R=O'A=OB$ gọi là bán kính đáy của hình trụ.
+        \item Độ dài của đoạn $OO'$ gọi là chiều cao của hình trụ. Các đường sinh bằng nhau và bằng $OO'$.
+    \end{itemize}
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (Otop) at (-2,2.2);
+            \coordinate (Obot) at (-2,0);
+            \coordinate (A) at (-.6,2.2);
+            \coordinate (B) at (-.6,0);
+            \draw (Otop)--(A)--(B)--(Obot)--cycle;
+            \draw[dashed] (Otop)--(Obot);
+            \node[above left=1pt of Otop] {$O'$};
+            \node[below left=1pt of Obot] {$O$};
+            \node[above right=1pt of A] {$A$};
+            \node[below right=1pt of B] {$B$};
+
+            \coordinate (Ctop) at (2.2,2.2);
+            \coordinate (Cbot) at (2.2,0);
+            \coordinate (Dtop) at (3.55,2.2);
+            \coordinate (Dbot) at (3.55,0);
+            \draw (Ctop) ellipse [x radius=1.35, y radius=.34];
+            \draw (Cbot) ellipse [x radius=1.35, y radius=.34];
+            \draw (0.85,2.2)--(0.85,0);
+            \draw (Dtop)--(Dbot);
+            \draw[dashed] (Ctop)--(Cbot);
+            \draw (Ctop)--(Dtop);
+            \draw (Cbot)--(Dbot);
+            \node[above=1pt of Ctop] {$O'$};
+            \node[below=1pt of Cbot] {$O$};
+            \node[above right=1pt of Dtop] {$A$};
+            \node[below right=1pt of Dbot] {$B$};
+        \end{tikzpicture}
+
+        \textit{Hình 10.3}
+    \end{center}
+
+    \textbf{Câu hỏi}
+
+    Nêu một số đồ vật có dạng hình trụ trong đời sống.
+
+    \answerline
+
+    \begin{keyconcept}
+        Một số yếu tố của hình trụ:
+        \begin{itemize}
+            \item Chiều cao: $h=O'O$.
+            \item Bán kính đáy: $R=OB$.
+            \item Đường sinh: $l=AB$.
+        \end{itemize}
+
+        \begin{center}
+            \begin{tikzpicture}
+                \coordinate (Otop) at (0,2.3);
+                \coordinate (Obot) at (0,0);
+                \coordinate (A) at (1.35,2.3);
+                \coordinate (B) at (1.35,0);
+                \draw (Otop) ellipse [x radius=1.35, y radius=.34];
+                \draw (Obot) ellipse [x radius=1.35, y radius=.34];
+                \draw (-1.35,2.3)--(-1.35,0);
+                \draw (A)--(B);
+                \draw[dashed] (Otop)--(Obot);
+                \draw (Obot)--(B);
+                \node[above=1pt of Otop] {$O'$};
+                \node[below=1pt of Obot] {$O$};
+                \node[above right=1pt of A] {$A$};
+                \node[below right=1pt of B] {$B$};
+                \node[left] at ($(Otop)!0.5!(Obot)$) {$h$};
+                \node[below] at ($(Obot)!0.5!(B)$) {$R$};
+                \node[right] at ($(A)!0.5!(B)$) {$l$};
+            \end{tikzpicture}
+        \end{center}
+    \end{keyconcept}
+
+    \textbf{Ví dụ 1}
+
+    Hãy kể tên một bán kính đáy và một đường sinh của hình trụ trong Hình 10.4. Cho biết chiều cao của hình trụ này.
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (Otop) at (0,2.5);
+            \coordinate (Obot) at (0,0);
+            \coordinate (E) at (-1.45,2.5);
+            \coordinate (F) at (-1.45,0);
+            \coordinate (M) at (1.45,2.5);
+            \coordinate (N) at (1.45,0);
+            \draw (Otop) ellipse [x radius=1.45, y radius=.36];
+            \draw (Obot) ellipse [x radius=1.45, y radius=.36];
+            \draw (E)--(F);
+            \draw (M)--(N);
+            \draw[dashed] (Otop)--(Obot);
+            \draw (Otop)--(M);
+            \draw (Obot)--(N);
+            \node[above=1pt of Otop] {$O'$};
+            \node[below=1pt of Obot] {$O$};
+            \node[above left=1pt of E] {$E$};
+            \node[below left=1pt of F] {$F$};
+            \node[above right=1pt of M] {$M$};
+            \node[below right=1pt of N] {$N$};
+            \node[right] at ($(M)!0.5!(N)$) {$10\text{ cm}$};
+        \end{tikzpicture}
+
+        \textit{Hình 10.4}
+    \end{center}
+
+    \textbf{Giải}
+
+    $O'M$ là một bán kính đáy của hình trụ.
+
+    $EF$ là một đường sinh của hình trụ.
+
+    Chiều cao $O'O=10$ cm.
+
+    \textbf{Luyện tập 1}
+
+    Kể tên các bán kính đáy và đường sinh còn lại của hình trụ có trong Hình 10.4.
+
+    \answerline
+
