@@ -63,7 +63,7 @@
 
             \draw[thick,base700] (Pten) -- (Pnine) -- (Peight) -- (Pseven);
             \foreach \P/\lab in {Pten/8,Pnine/12,Peight/7,Pseven/3} {
-                \fill[base700] (\P) circle (2pt);
+                \node[draw=base700,fill=base700,minimum size=5pt,inner sep=0pt,rotate=45] at (\P) {};
                 \node[above=2pt] at (\P) {\lab};
             }
 
