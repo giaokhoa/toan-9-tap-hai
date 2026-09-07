@@ -119,12 +119,12 @@
             \begin{tikzpicture}
                 \coordinate (O) at (0,0);
                 \def\R{1.45}
-                % Các cung theo thứ tự A-D-C-B có số đo 130°, 70°, 50°, 110°;
+                % Các cung theo thứ tự A-D-C-B có số đo 165°, 35°, 85°, 75°;
                 % do đó các góc ngoài BEC và DFC lần lượt là 40° và 20°.
-                \coordinate (A) at (170:\R);
-                \coordinate (D) at (40:\R);
-                \coordinate (C) at (-30:\R);
-                \coordinate (B) at (-80:\R);
+                \coordinate (A) at (180:\R);
+                \coordinate (D) at (15:\R);
+                \coordinate (C) at (-20:\R);
+                \coordinate (B) at (-105:\R);
 
                 \path[name path=ABline] ($(A)!-4!(B)$)--($(A)!4!(B)$);
                 \path[name path=CDline] ($(C)!-4!(D)$)--($(C)!4!(D)$);
@@ -147,8 +147,8 @@
                 \node[below right=1pt of E] {$E$};
                 \node[above right=1pt of F] {$F$};
                 \node[below left=1pt of O] {$O$};
-                \node at ($(E)!0.18!(B)+(0.18,0.02)$) {$40^\circ$};
-                \node at ($(F)!0.18!(D)+(0.05,-0.12)$) {$20^\circ$};
+                \node[above left=1pt of E] {$40^\circ$};
+                \node[below left=1pt of F] {$20^\circ$};
             \end{tikzpicture}
 
             \textit{Hình 9.58}
