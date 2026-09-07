@@ -1,0 +1,291 @@
+% Nguồn SGK Toán 9 Tập hai — Bài 25, trang 56--59:
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-56-1771844553011.png
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-57-1771844553359.png
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-58-1771844553684.png
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-59-1771844554028.png
+% Nguồn SBT Toán 9 Tập hai — Bài 25, PDF trang 43--44:
+% SBT TOÁN 9 TẬP 2.pdf
+% SHA-256: 5ff01fd213d1adc75f9c54b4408d6a9642a4d8038e685040efef3311a196196c
+
+\section{Phép thử ngẫu nhiên và không gian mẫu}
+
+\begin{lesson}
+    \subsection{Kiến thức trọng tâm}
+
+    \textbf{Mở đầu}
+
+    Ở lớp 8 ta đã làm quen với những hành động, thực nghiệm đơn giản, mà kết quả của chúng không thể biết được trước khi thực hiện. Trong bài học này, chúng ta sẽ gặp những hành động, thực nghiệm phức tạp hơn hoặc được tiến hành liên tiếp hay đồng thời.
+
+    Một cửa hàng muốn tặng hai phần quà cho hai trong bốn khách hàng có lượng mua nhiều nhất trong tháng bằng cách rút thăm ngẫu nhiên. Việc rút thăm được tiến hành như sau: Nhân viên viết tên 4 khách hàng đó vào 4 lá phiếu để vào một chiếc hộp. Nhân viên rút ngẫu nhiên một lá phiếu trong hộp. Lá phiếu rút ra không trả lại vào hộp. Sau đó, nhân viên tiếp tục rút ngẫu nhiên một lá phiếu từ ba lá phiếu còn lại. Hai khách hàng có tên trong hai lá phiếu được rút ra là hai khách hàng được tặng quà. Hỏi có bao nhiêu kết quả có thể xảy ra?
+
+    \answerline
+
+    \subsubsection{Phép thử ngẫu nhiên và không gian mẫu}
+
+    \textbf{HĐ} Xét tình huống mở đầu.
+    \begin{enumerate}[label=\alph*)]
+        \item Hỏi trước khi rút thăm có thể nói trước hai khách hàng nào được chọn hay không?
+        \item Cho ví dụ về ba trường hợp có thể xảy ra.
+    \end{enumerate}
+
+    \answerline
+    \answerline
+
+    \begin{keyconcept}
+        \begin{itemize}
+            \item Một hoặc một số hành động, thực nghiệm được tiến hành liên tiếp hay đồng thời mà kết quả của chúng không thể biết được trước khi thực hiện nhưng có thể liệt kê được tất cả các kết quả có thể xảy ra, được gọi là một \textit{phép thử ngẫu nhiên}, gọi tắt là \textit{phép thử}.
+            \item Tập hợp tất cả các kết quả có thể xảy ra của phép thử (gọi tắt là tập tất cả các kết quả có thể của phép thử) được gọi là \textit{không gian mẫu của phép thử}.
+        \end{itemize}
+
+        Không gian mẫu của phép thử được kí hiệu là $\Omega$.
+    \end{keyconcept}
+
+    \textbf{Ví dụ 1} Bạn Lan gieo một con xúc xắc và bạn Hoà gieo một đồng xu. Quan sát số chấm xuất hiện trên con xúc xắc và mặt xuất hiện của đồng xu.
+    \begin{enumerate}[label=\alph*)]
+        \item Phép thử và kết quả của phép thử là gì?
+        \item Mô tả không gian mẫu của phép thử. Không gian mẫu có bao nhiêu phần tử?
+    \end{enumerate}
+
+    \textbf{Giải}
+
+    a) Phép thử là bạn Lan gieo một con xúc xắc và bạn Hoà gieo một đồng xu. Kết quả của phép thử là số chấm xuất hiện trên con xúc xắc và mặt xuất hiện của đồng xu (mặt sấp (S), mặt ngửa (N)).
+
+    b) Ta liệt kê được tất cả các kết quả có thể của phép thử bằng cách lập bảng sau:
+
+    \begin{center}
+        \begin{tblr}{
+            colspec={Q[c,m,2.6cm] *{6}{Q[c,m,1.25cm]}},
+            rows={1cm}
+        }
+            \tikz[x=1cm,y=1cm,baseline=-0.1cm]{
+                \path[use as bounding box] (0,0) rectangle (2.05,.72);
+                \draw (0,.72)--(2.05,0);
+                \node[font=\small] at (1.48,.54) {Xúc xắc};
+                \node[font=\small] at (.52,.18) {Đồng xu};
+            } & 1 & 2 & 3 & 4 & 5 & 6 \\
+            S & $(1,\,S)$ & $(2,\,S)$ & $(3,\,S)$ & $(4,\,S)$ & $(5,\,S)$ & $(6,\,S)$ \\
+            N & $(1,\,N)$ & $(2,\,N)$ & $(3,\,N)$ & $(4,\,N)$ & $(5,\,N)$ & $(6,\,N)$ \\
+        \end{tblr}
+    \end{center}
+
+    Mỗi ô là một kết quả có thể. Không gian mẫu là tập hợp 12 ô của bảng trên. Do đó không gian mẫu của phép thử là
+    \[
+        \Omega=\{(1,\,S);\ (2,\,S);\ (3,\,S);\ (4,\,S);\ (5,\,S);\ (6,\,S);\ (1,\,N);\ (2,\,N);\ (3,\,N);\ (4,\,N);\ (5,\,N);\ (6,\,N)\}.
+    \]
+    Vậy không gian mẫu có 12 phần tử.
+
+    \textbf{Luyện tập 1} Một tấm bìa cứng hình tròn được chia làm ba hình quạt bằng nhau, đánh số 1; 2; 3 và được gắn vào trục quay có mũi tên cố định ở tâm (H.8.1). Bạn Hiền quay tấm bìa liên tiếp hai lần và quan sát xem mũi tên chỉ vào hình quạt nào khi tấm bìa dừng lại.
+    \begin{enumerate}[label=\alph*)]
+        \item Phép thử và kết quả của phép thử là gì?
+        \item Mô tả không gian mẫu của phép thử. Không gian mẫu có bao nhiêu phần tử?
+    \end{enumerate}
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (O) at (0,0);
+            \draw (O) circle (1.35cm);
+            \draw (O)--(105:1.35cm);
+            \draw (O)--(225:1.35cm);
+            \draw (O)--(345:1.35cm);
+            \node at (155:0.8cm) {1};
+            \node at (45:0.8cm) {2};
+            \node at (250:0.8cm) {3};
+            \draw[->] (O)--(270:0.9cm);
+        \end{tikzpicture}
+
+        \textit{Hình 8.1}
+    \end{center}
+
+    \textit{Gợi ý.} Ta liệt kê được tất cả các kết quả có thể của phép thử bằng cách lập bảng như mẫu sau:
+
+    \begin{center}
+        \begin{tblr}{
+            colspec={Q[c,m,2.4cm] *{3}{Q[c,m,1.8cm]}},
+            rows={1cm}
+        }
+            \tikz[x=1cm,y=1cm,baseline=-0.1cm]{
+                \path[use as bounding box] (0,0) rectangle (2.05,.72);
+                \draw (0,.72)--(2.05,0);
+                \node[font=\small] at (1.50,.54) {Lần 2};
+                \node[font=\small] at (.50,.18) {Lần 1};
+            } & 1 & 2 & 3 \\
+            1 & $(1,\,1)$ & ... & ... \\
+            2 & ... & ... & ... \\
+            3 & ... & ... & $(3,\,3)$ \\
+        \end{tblr}
+    \end{center}
+
+    \answerline
+    \answerline
+
+    \textbf{Ví dụ 2} Một hộp kín đựng 4 quả bóng có cùng khối lượng và kích thước, được đánh số 1; 2; 3; 4. Lấy ngẫu nhiên lần lượt hai quả bóng từ hộp, quả bóng được lấy ra lần đầu không trả lại vào hộp. Quan sát hai số ghi trên hai quả bóng được lấy ra.
+    \begin{enumerate}[label=\alph*)]
+        \item Phép thử và kết quả của phép thử là gì?
+        \item Mô tả không gian mẫu của phép thử. Không gian mẫu có bao nhiêu phần tử?
+    \end{enumerate}
+
+    \textbf{Giải}
+
+    a) Phép thử là lấy ngẫu nhiên lần lượt hai quả bóng từ hộp, quả bóng được lấy ra lần đầu không trả lại vào hộp.
+
+    Kết quả của phép thử là một cặp số $(a,\,b)$, trong đó $a$ và $b$ tương ứng là số ghi trên quả bóng được lấy ra ở lần thứ nhất và lần thứ hai. Vì quả bóng được lấy ra lần đầu không trả lại vào hộp nên $a\ne b$.
+
+    b) Ta liệt kê được tất cả các kết quả có thể của phép thử bằng cách lập bảng như sau:
+
+    \begin{center}
+        \begin{tblr}{
+            colspec={Q[c,m,2.2cm] *{4}{Q[c,m,1.65cm]}},
+            rows={1cm}
+        }
+            \tikz[x=1cm,y=1cm,baseline=-0.1cm]{
+                \path[use as bounding box] (0,0) rectangle (1.85,.72);
+                \draw (0,.72)--(1.85,0);
+                \node[font=\small] at (1.35,.54) {Lần 2};
+                \node[font=\small] at (.45,.18) {Lần 1};
+            } & 1 & 2 & 3 & 4 \\
+            1 & \tikz[baseline=(p11.base)]{\node[inner sep=0pt] (p11) {$(1,\,1)$};\draw[red] (p11.south west)--(p11.north east);} & $(1,\,2)$ & $(1,\,3)$ & $(1,\,4)$ \\
+            2 & $(2,\,1)$ & \tikz[baseline=(p22.base)]{\node[inner sep=0pt] (p22) {$(2,\,2)$};\draw[red] (p22.south west)--(p22.north east);} & $(2,\,3)$ & $(2,\,4)$ \\
+            3 & $(3,\,1)$ & $(3,\,2)$ & \tikz[baseline=(p33.base)]{\node[inner sep=0pt] (p33) {$(3,\,3)$};\draw[red] (p33.south west)--(p33.north east);} & $(3,\,4)$ \\
+            4 & $(4,\,1)$ & $(4,\,2)$ & $(4,\,3)$ & \tikz[baseline=(p44.base)]{\node[inner sep=0pt] (p44) {$(4,\,4)$};\draw[red] (p44.south west)--(p44.north east);} \\
+        \end{tblr}
+    \end{center}
+
+    Chú ý rằng $a\ne b$ nên cặp có hai phần tử trùng nhau không được tính, tức là trong bảng ta phải xoá 4 ô: $(1,\,1)$, $(2,\,2)$, $(3,\,3)$, $(4,\,4)$. Do đó không gian mẫu của phép thử là
+    \[
+        \Omega=\{(1,\,2);\ (1,\,3);\ (1,\,4);\ (2,\,1);\ (2,\,3);\ (2,\,4);\ (3,\,1);\ (3,\,2);\ (3,\,4);\ (4,\,1);\ (4,\,2);\ (4,\,3)\}.
+    \]
+    Vậy không gian mẫu có 12 phần tử.
+
+    \textbf{Luyện tập 2} Trở lại tình huống mở đầu.
+    \begin{enumerate}[label=\alph*)]
+        \item Phép thử và kết quả của phép thử là gì?
+        \item Mô tả không gian mẫu của phép thử. Không gian mẫu có bao nhiêu phần tử?
+    \end{enumerate}
+
+    \textit{Gợi ý.} Kí hiệu bốn khách hàng có lượng mua nhiều nhất lần lượt là A, B, C và D rồi làm tương tự như Ví dụ 2.
+
+    \answerline
+    \answerline
+
+    \textbf{Vận dụng} Màu hạt của đậu Hà Lan có hai kiểu hình: màu vàng và màu xanh, có hai gene ứng với hai kiểu hình này allele trội A và allele lặn a. Hình dạng hạt của đậu Hà Lan có hai kiểu hình: hạt tròn và hạt nhăn, có hai gene ứng với hai kiểu hình này allele trội B và allele lặn b.
+
+    Khi cho lai hai cây đậu Hà Lan, cây con lấy ngẫu nhiên một gene từ cây bố và một gene từ cây mẹ để hình thành một cặp gene. Phép thử là lai hai cây đậu Hà Lan, trong đó cây bố có kiểu gene là $(AA,\,Bb)$, cây mẹ có kiểu gene là $(Aa,\,Bb)$.
+
+    Hãy mô tả không gian mẫu của phép thử trên. Không gian mẫu có bao nhiêu phần tử?
+
+    \textit{Gợi ý.} Về kiểu gene, có hai kiểu gene ứng với màu hạt của cây con là AA; Aa. Có bốn kiểu gene ứng với hình dạng hạt của cây con là BB; Bb; bB; bb.
+
+    Liệt kê được tất cả các kết quả có thể của phép thử bằng cách lập bảng theo mẫu sau:
+
+    \begin{center}
+        \begin{tblr}{
+            colspec={Q[c,m,2.4cm] *{4}{Q[c,m,1.55cm]}},
+            rows={1cm}
+        }
+            \tikz[x=1cm,y=1cm,baseline=-0.1cm]{
+                \path[use as bounding box] (0,0) rectangle (2.05,.72);
+                \draw (0,.72)--(2.05,0);
+                \node[font=\small] at (1.48,.54) {Dạng hạt};
+                \node[font=\small] at (.52,.18) {Màu hạt};
+            } & BB & Bb & bB & bb \\
+            AA & ... & ... & ... & ... \\
+            Aa & ... & ... & ... & ... \\
+        \end{tblr}
+    \end{center}
+
+    \answerline
+    \answerline
+\end{lesson}
+
+\begin{exercises}
+    \subsection{Bài tập}
+
+    \begin{questions}[series=SGK]
+        \item Chọn ngẫu nhiên một gia đình có hai con và quan sát giới tính của hai người con đó.
+        \begin{questions}
+            \item Phép thử và kết quả của phép thử là gì?
+            \item Mô tả không gian mẫu của phép thử.
+        \end{questions}
+
+        \answerline
+        \answerline
+
+        \item Một hộp đựng 5 tấm thẻ ghi các số 1; 2; 3; 4; 5. Rút ngẫu nhiên lần lượt hai tấm thẻ từ hộp, tấm thẻ rút ra lần đầu không trả lại vào hộp.
+        \begin{questions}
+            \item Phép thử và kết quả của phép thử là gì?
+            \item Mô tả không gian mẫu của phép thử. Không gian mẫu có bao nhiêu phần tử?
+        \end{questions}
+
+        \answerline
+        \answerline
+
+        \item Có hai nhóm học sinh: Nhóm I có ba học sinh nam là Huy, Sơn, Tùng; nhóm II có ba học sinh nữ là Hồng, Phương, Linh. Giáo viên chọn ngẫu nhiên một học sinh từ mỗi nhóm.
+        \begin{questions}
+            \item Phép thử và kết quả của phép thử là gì?
+            \item Mô tả không gian mẫu của phép thử. Không gian mẫu có bao nhiêu phần tử?
+        \end{questions}
+
+        \answerline
+        \answerline
+
+        \item Xếp ngẫu nhiên ba bạn Mai, Việt, Lan trên một chiếc ghế dài.
+        \begin{questions}
+            \item Phép thử và kết quả của phép thử là gì?
+            \item Mô tả không gian mẫu của phép thử. Không gian mẫu có bao nhiêu phần tử?
+        \end{questions}
+
+        \answerline
+        \answerline
+    \end{questions}
+\end{exercises}
+
+\begin{practice}
+    \subsection{Luyện tập}
+
+    \begin{questions}[series=SBT]
+        \item Túi I có 2 viên bi màu đen, kí hiệu là $B_1$, $B_2$ và 2 viên bi màu trắng, kí hiệu là $T_1$, $T_2$. Túi II có 3 viên bi màu xanh, kí hiệu là $X_1$, $X_2$, $X_3$ và 2 viên bi màu đỏ, kí hiệu là $D_1$, $D_2$, các viên bi có cùng kích thước. Từ mỗi túi lấy ngẫu nhiên một viên bi.
+        \begin{questions}
+            \item Phép thử là gì?
+            \item Mô tả không gian mẫu của phép thử.
+        \end{questions}
+
+        \answerline
+        \answerline
+
+        \item Bạn Minh gieo một đồng xu và bạn Ngọc lấy ngẫu nhiên một quả bóng từ một hộp chứa 4 quả bóng với các màu xanh, đỏ, tím, vàng.
+        \begin{questions}
+            \item Phép thử là gì?
+            \item Có bao nhiêu kết quả có thể? Mô tả không gian mẫu của phép thử.
+        \end{questions}
+
+        \answerline
+        \answerline
+
+        \item Túi A chứa 4 tấm thẻ được đánh số 1, 2, 3, 4. Túi B chứa 4 viên bi với các màu xanh, đỏ, tím, vàng. Từ túi A rút ngẫu nhiên một tấm thẻ đồng thời từ túi B lấy ngẫu nhiên một viên bi.
+        \begin{questions}
+            \item Phép thử là gì?
+            \item Có bao nhiêu kết quả có thể? Mô tả không gian mẫu của phép thử.
+        \end{questions}
+
+        \answerline
+        \answerline
+
+        \item Một hộp đựng 6 chiếc kẹo với các nhãn hiệu A, B, C, D, E, F. Bạn Lan lấy ngẫu nhiên một chiếc kẹo cho vào cặp sách của mình. Tiếp đó bạn Hồng lấy ngẫu nhiên một chiếc kẹo từ hộp.
+        \begin{questions}
+            \item Phép thử và kết quả của phép thử là gì?
+            \item Mô tả không gian mẫu của phép thử. Không gian mẫu có bao nhiêu phần tử?
+        \end{questions}
+
+        \answerline
+        \answerline
+
+        \item Một tấm bìa hình tròn được chia làm năm hình quạt tròn có diện tích bằng nhau, trên mỗi hình quạt lần lượt ghi các số 1, 2, 3, 4, 5 và được gắn vào trục quay có mũi tên cố định ở tâm. Bạn An quay tấm bìa hai lần và quan sát xem mũi tên chỉ vào hình quạt nào khi tấm bìa dừng lại.
+        \begin{questions}
+            \item Phép thử và kết quả của phép thử là gì?
+            \item Mô tả không gian mẫu của phép thử.
+        \end{questions}
+
+        \answerline
+        \answerline
+    \end{questions}
+\end{practice}
