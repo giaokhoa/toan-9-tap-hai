@@ -15,12 +15,15 @@
             \coordinate (A) at (90:2);
             \coordinate (B) at (210:2);
             \coordinate (C) at (-10:2);
+            \coordinate (M) at ($(A)!0.24!(O)$);
 
             \draw (O) circle[radius=2cm];
             \draw (A)--(B)--(C)--cycle;
             \draw (O)--(A) (O)--(B) (O)--(C);
-            \pic[draw, "$30^\circ$", angle radius=5mm, angle eccentricity=1.35] {angle=B--A--O};
-            \pic[draw, "$40^\circ$", angle radius=5mm, angle eccentricity=1.35] {angle=O--A--C};
+            \pic[draw, angle radius=4mm] {angle=B--A--O};
+            \pic[draw, angle radius=4mm] {angle=O--A--C};
+            \node[left=2pt of M] {$30^\circ$};
+            \node[right=2pt of M] {$40^\circ$};
 
             \fill (O) circle (1.2pt);
             \node[above=2pt of A] {$A$};
@@ -199,9 +202,9 @@
                 \pic[draw, angle radius=2.5mm] {right angle=P--D--I};
                 \pic[draw, angle radius=2.5mm] {right angle=Q--H--I};
 
-                \path (P)--node[right=5pt] {$900\text{ m}$} (Q);
-                \path (P)--node[above=5pt] {$1\,200\text{ m}$} (R);
-                \path (Q)--node[sloped,below=5pt] {$1\,500\text{ m}$} (R);
+                \path (P)--node[sloped,below=6pt,pos=0.53] {$900\text{ m}$} (Q);
+                \path (P)--node[above=5pt,pos=0.55] {$1\,200\text{ m}$} (R);
+                \path (Q)--node[sloped,below=8pt,pos=0.66] {$1\,500\text{ m}$} (R);
                 \fill[red!80!black] (I) circle (1.7pt);
             \end{tikzpicture}
 
