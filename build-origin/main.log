@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.9.6)  7 SEP 2026 09:04
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.9.6)  7 SEP 2026 09:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1123,30 +1123,70 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 Package babel Info: 'vietnamese' activates 'vietnamese' shorthands.
 (babel)             Reported on input line 148.
  [2] [3] [4] [5] [6] [7]
-[8])) (./content/chapter-02/chapter.tex [9] [10
+[8]) (./content/chapter-01/sections/lesson-19.tex [9] [1
+
+] [2] [3] [4] [5]
+[6]) (./content/chapter-01/sections/lesson-luyen-tap-chung-sau-19.tex [7]
+[1
+
+] [2] [3]) (./content/chapter-01/sections/lesson-20.tex [4] [1
+
+] [2] [3]
+[4] [5]) (./content/chapter-01/sections/lesson-21.tex [6] [1
+
+] [2] [3]
+File: content/chapter-01/figures/lesson-21-sbt-6-26.png Graphic file (type bmp)
+
+<content/chapter-01/figures/lesson-21-sbt-6-26.png>
+ [4]
+File: content/chapter-01/figures/lesson-21-sbt-6-27.png Graphic file (type bmp)
+
+<content/chapter-01/figures/lesson-21-sbt-6-27.png>
+
+[5]) (./content/chapter-01/sections/lesson-luyen-tap-chung-sau-21.tex [6]
+[1
+
+]) (./content/chapter-01/sections/lesson-bai-tap-cuoi-chuong.tex [2] [1
+
+]
+[2] [3] [4] [5] [6])) (./content/chapter-02/chapter.tex [7] [8
 
 ]
 Chương VII.
-(./content/chapter-02/sections/section-22.tex [11] [12] [13] [14] [15]
-(./content/chapter-02/sections/section-22-exercises.tex [16] [17])
-(./content/chapter-02/sections/section-22-practice.tex [18] [19] [20])))
-[21] (./content/final-review/lesson-bai-tap-on-tap-cuoi-nam.tex [1
+(./content/chapter-02/sections/section-22.tex [9] [10] [11] [12] [13]
+(./content/chapter-02/sections/section-22-exercises.tex [14] [15])
+(./content/chapter-02/sections/section-22-practice.tex [16] [17] [18]))
+(./content/chapter-02/sections/lesson-23.tex [19] [1
 
+] [2] [3] [4] [5] [6]
+[7] [8]) (./content/chapter-02/sections/lesson-luyen-tap-chung-sau-23.tex
+[9] [1
+
+] [2] [3]) (./content/chapter-02/sections/section-24.tex [4] [1
 
 ] [2]
-[3] [4] [5] [6] [7] [8] [9]) [10] (build/main.aux)
+[3] [4] [5] [6] [7] [8] [9] [10] [11] [12])
+(./content/chapter-02/sections/lesson-bai-tap-cuoi-chuong.tex [13] [1
+
+] [2]
+[3] [4] [5] [6] [7])) [8]
+(./content/final-review/lesson-bai-tap-on-tap-cuoi-nam.tex [1
+
+
+] [2] [3] [4]
+[5] [6] [7] [8] [9]) [10] (build/main.aux)
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-08-10>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 29129 strings out of 467745
- 677756 string characters out of 5422258
- 1202862 words of memory out of 5000000
- 57801 multiletter control sequences out of 15000+600000
- 639288 words of font info for 125 fonts, out of 8000000 for 9000
+ 30775 strings out of 467745
+ 714350 string characters out of 5422258
+ 1204366 words of memory out of 5000000
+ 59411 multiletter control sequences out of 15000+600000
+ 639304 words of font info for 127 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 102i,18n,111p,649b,1448s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,18n,111p,706b,1448s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on build/main.xdv (31 pages, 773708 bytes).
+Output written on build/main.xdv (97 pages, 2166168 bytes).
