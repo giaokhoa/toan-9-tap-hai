@@ -57,7 +57,12 @@
             colspec={Q[c,m,2.6cm] *{6}{Q[c,m,1.25cm]}},
             rows={1cm}
         }
-            Đồng xu / Xúc xắc & 1 & 2 & 3 & 4 & 5 & 6 \\
+            \tikz[x=1cm,y=1cm,baseline=-0.1cm]{
+                \path[use as bounding box] (0,0) rectangle (2.05,.72);
+                \draw (0,.72)--(2.05,0);
+                \node[font=\small] at (1.48,.54) {Xúc xắc};
+                \node[font=\small] at (.52,.18) {Đồng xu};
+            } & 1 & 2 & 3 & 4 & 5 & 6 \\
             S & $(1,\,S)$ & $(2,\,S)$ & $(3,\,S)$ & $(4,\,S)$ & $(5,\,S)$ & $(6,\,S)$ \\
             N & $(1,\,N)$ & $(2,\,N)$ & $(3,\,N)$ & $(4,\,N)$ & $(5,\,N)$ & $(6,\,N)$ \\
         \end{tblr}
@@ -79,12 +84,12 @@
         \begin{tikzpicture}
             \coordinate (O) at (0,0);
             \draw (O) circle (1.35cm);
-            \draw (O)--(90:1.35cm);
-            \draw (O)--(210:1.35cm);
-            \draw (O)--(330:1.35cm);
-            \node at (150:0.8cm) {1};
-            \node at (30:0.8cm) {2};
-            \node at (270:0.8cm) {3};
+            \draw (O)--(105:1.35cm);
+            \draw (O)--(225:1.35cm);
+            \draw (O)--(345:1.35cm);
+            \node at (155:0.8cm) {1};
+            \node at (45:0.8cm) {2};
+            \node at (250:0.8cm) {3};
             \draw[->] (O)--(270:0.9cm);
         \end{tikzpicture}
 
@@ -98,7 +103,12 @@
             colspec={Q[c,m,2.4cm] *{3}{Q[c,m,1.8cm]}},
             rows={1cm}
         }
-            Lần 1 / Lần 2 & 1 & 2 & 3 \\
+            \tikz[x=1cm,y=1cm,baseline=-0.1cm]{
+                \path[use as bounding box] (0,0) rectangle (2.05,.72);
+                \draw (0,.72)--(2.05,0);
+                \node[font=\small] at (1.50,.54) {Lần 2};
+                \node[font=\small] at (.50,.18) {Lần 1};
+            } & 1 & 2 & 3 \\
             1 & $(1,\,1)$ & ... & ... \\
             2 & ... & ... & ... \\
             3 & ... & ... & $(3,\,3)$ \\
@@ -127,7 +137,12 @@
             colspec={Q[c,m,2.2cm] *{4}{Q[c,m,1.65cm]}},
             rows={1cm}
         }
-            Lần 1 / Lần 2 & 1 & 2 & 3 & 4 \\
+            \tikz[x=1cm,y=1cm,baseline=-0.1cm]{
+                \path[use as bounding box] (0,0) rectangle (1.85,.72);
+                \draw (0,.72)--(1.85,0);
+                \node[font=\small] at (1.35,.54) {Lần 2};
+                \node[font=\small] at (.45,.18) {Lần 1};
+            } & 1 & 2 & 3 & 4 \\
             1 & \tikz[baseline=(p11.base)]{\node[inner sep=0pt] (p11) {$(1,\,1)$};\draw[red] (p11.south west)--(p11.north east);} & $(1,\,2)$ & $(1,\,3)$ & $(1,\,4)$ \\
             2 & $(2,\,1)$ & \tikz[baseline=(p22.base)]{\node[inner sep=0pt] (p22) {$(2,\,2)$};\draw[red] (p22.south west)--(p22.north east);} & $(2,\,3)$ & $(2,\,4)$ \\
             3 & $(3,\,1)$ & $(3,\,2)$ & \tikz[baseline=(p33.base)]{\node[inner sep=0pt] (p33) {$(3,\,3)$};\draw[red] (p33.south west)--(p33.north east);} & $(3,\,4)$ \\
@@ -167,7 +182,12 @@
             colspec={Q[c,m,2.4cm] *{4}{Q[c,m,1.55cm]}},
             rows={1cm}
         }
-            Màu hạt / Dạng hạt & BB & Bb & bB & bb \\
+            \tikz[x=1cm,y=1cm,baseline=-0.1cm]{
+                \path[use as bounding box] (0,0) rectangle (2.05,.72);
+                \draw (0,.72)--(2.05,0);
+                \node[font=\small] at (1.48,.54) {Dạng hạt};
+                \node[font=\small] at (.52,.18) {Màu hạt};
+            } & BB & Bb & bB & bb \\
             AA & ... & ... & ... & ... \\
             Aa & ... & ... & ... & ... \\
         \end{tblr}
@@ -223,7 +243,7 @@
     \subsection{Luyện tập}
 
     \begin{questions}[series=SBT]
-        \item Túi I có 2 viên bi màu đen, kí hiệu là $B_1$, $B_2$ và 2 viên bi màu trắng, kí hiệu là $T_1$, $T_2$. Túi II có 3 viên bi màu xanh, kí hiệu là $X_1$, $X_2$, $X_3$ và 2 viên bi màu đỏ, kí hiệu là $D_1$, $D_2$; các viên bi có cùng kích thước. Từ mỗi túi lấy ngẫu nhiên một viên bi.
+        \item Túi I có 2 viên bi màu đen, kí hiệu là $B_1$, $B_2$ và 2 viên bi màu trắng, kí hiệu là $T_1$, $T_2$. Túi II có 3 viên bi màu xanh, kí hiệu là $X_1$, $X_2$, $X_3$ và 2 viên bi màu đỏ, kí hiệu là $D_1$, $D_2$, các viên bi có cùng kích thước. Từ mỗi túi lấy ngẫu nhiên một viên bi.
         \begin{questions}
             \item Phép thử là gì?
             \item Mô tả không gian mẫu của phép thử.
