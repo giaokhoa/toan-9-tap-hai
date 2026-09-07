@@ -1,0 +1,521 @@
+% Nguồn SGK Toán 9 Tập hai — Bài tập ôn tập cuối năm, trang 127--129:
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-127-1771844576891.png
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-128-1771844577230.png
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-129-1771844577552.png
+%
+% Nguồn SBT bắt buộc: SBT TOÁN 9 TẬP 2.pdf trong Project Sources.
+% SHA-256: 5ff01fd213d1adc75f9c54b4408d6a9642a4d8038e685040efef3311a196196c
+% Phạm vi SBT: PDF pages 72--74, đủ 18 bài; không dùng từ page 75 trở đi.
+
+\section*{Bài tập ôn tập cuối năm}
+
+\begin{exercises}
+    \subsection{Bài tập ôn tập cuối năm}
+    \renewcommand{\questionprefix}{}
+
+    \subsubsection*{Đại số}
+
+    \begin{questions}[series=SGK]
+        \item Xét biểu thức
+        \[
+            P=\dfrac{x\sqrt{x}-x+2\sqrt{x}+4}{x\sqrt{x}+8}
+        \]
+        với $x\ge 0$.
+        \begin{questions}
+            \item Chứng minh rằng $P=1-\dfrac{1}{\sqrt{x}+2}$.
+            \answerline
+            \answerline
+            \item Tính giá trị biểu thức đã cho tại $x=64$.
+            \answerline
+        \end{questions}
+
+        \item Một vệ tinh địa tĩnh chuyển động theo quỹ đạo tròn cách bề mặt Trái Đất khoảng $AB=36\ 000$ km, tâm quỹ đạo trùng với tâm $O$ của Trái Đất như hình bên. Vệ tinh phát tín hiệu vô tuyến theo đường thẳng đến một số vị trí trên bề mặt Trái Đất. Cho biết bán kính Trái Đất khoảng $6\ 400$ km, vị trí xa nhất trên bề mặt Trái Đất có thể nhận được tín hiệu từ vệ tinh cách vệ tinh bao nhiêu kilômét? (Làm tròn kết quả đến hàng đơn vị của km).
+
+        \begin{center}
+            \begin{tikzpicture}[scale=0.9]
+                \def\r{1.15}
+                \def\a{4.7}
+                \coordinate (O) at (0,0);
+                \coordinate (A) at (0,\a);
+                \coordinate (B) at (0,\r);
+                \coordinate (H) at ({-sqrt(\r*\r-(\r*\r/\a)*(\r*\r/\a))},{\r*\r/\a});
+                \coordinate (T) at ({sqrt(\r*\r-(\r*\r/\a)*(\r*\r/\a))},{\r*\r/\a});
+                \draw (O) circle[radius=\r];
+                \draw (A)--(H) (A)--(T) (A)--(O) (O)--(H) (O)--(T);
+                \node[above] at (A) {$A$};
+                \node[right] at (B) {$B$};
+                \node[below] at (O) {$O$};
+                \node[left] at (H) {$H$};
+                \node[right] at ($(A)!0.47!(B)$) {$36\ 000\ \text{km}$};
+                \node[below,sloped] at ($(H)!0.5!(O)$) {$6\ 400\ \text{km}$};
+                \pic[draw,angle radius=3mm] {right angle=O--T--A};
+            \end{tikzpicture}
+        \end{center}
+
+        \answerline
+        \answerline
+
+        \item Giải các bất phương trình sau:
+        \begin{questions}
+            \item $-6x+3(x+1)>4x-(x-4)$;
+            \answerline
+            \item $(2x+1)(2x-1)<4x^2-4x+1$.
+            \answerline
+        \end{questions}
+
+        \item Giải các phương trình sau:
+        \begin{questions}
+            \item $\dfrac{2}{x+1}-\dfrac{2x}{x^2-x+1}=\dfrac{3}{x^3+1}$;
+            \answerline
+            \answerline
+            \item $\dfrac{x+1}{2x-1}-\dfrac{2}{2x+1}=\dfrac{2x^2}{4x^2-1}$.
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Kí hiệu $(d_1)$ là đường thẳng $x+2y=4$, $(d_2)$ là đường thẳng $x-y=1$.
+        \begin{questions}
+            \item Vẽ $(d_1)$ và $(d_2)$ trên cùng một mặt phẳng tọa độ.
+            \answerline
+            \answerline
+            \item Giải hệ phương trình
+            \[
+                \begin{cases}
+                    x+2y=4,\\
+                    x-y=1
+                \end{cases}
+            \]
+            để tìm tọa độ giao điểm của hai đường thẳng $(d_1)$ và $(d_2)$.
+            \answerline
+        \end{questions}
+
+        \item Với mỗi giá trị đã cho của $m$, hãy giải hệ phương trình sau:
+        \[
+            \begin{cases}
+                x\sqrt{2}-3y=m,\\
+                m^2x-3y\sqrt{2}=2.
+            \end{cases}
+        \]
+        \begin{questions}
+            \item $m=\sqrt{2}$;
+            \answerline
+            \item $m=-\sqrt{2}$;
+            \answerline
+            \item $m=2\sqrt{2}$.
+            \answerline
+        \end{questions}
+
+        \item Để chuẩn bị làm một ngôi nhà, chú Ba tính rằng tổng diện tích xây dựng là khoảng $100$ m$^2$ và tổng chi phí (tiền vật liệu và tiền công thợ) hết khoảng $600$ triệu đồng. Khi thực hiện, diện tích xây dựng tăng thêm $20$ m$^2$ và cứ mỗi mét vuông xây dựng, chi phí tiền vật liệu tăng thêm $10\%$ và tiền công thợ tăng thêm $\dfrac{1}{5}$ lần so với dự tính ban đầu. Do đó tổng chi phí thực tế là $804$ triệu đồng. Hỏi thực tế chú Ba phải trả bao nhiêu tiền vật liệu và bao nhiêu tiền công thợ cho mỗi mét vuông xây dựng?
+        \answerline
+        \answerline
+        \answerline
+
+        \item Hai bến $A$ và $B$ trên một dòng sông cách nhau $36$ km. Một ca nô xuôi dòng từ bến $A$ đến bến $B$, rồi sau đó ngược dòng từ bến $B$ về bến $A$ hết thời gian bằng thời gian nó đi quãng đường $75$ km khi nước yên lặng. Tính vận tốc thực của ca nô (tức là vận tốc của ca nô khi nước yên lặng), biết rằng vận tốc dòng nước là $3$ km/h.
+        \answerline
+        \answerline
+    \end{questions}
+
+    \subsubsection*{Hình học và Đo lường}
+
+    \begin{questions}[resume=SGK]
+        \item Để đo khoảng cách giữa hai điểm $A$ và $B$ không tới được, một người đứng ở điểm $H$ sao cho $B$ ở giữa $A$ và $H$ rồi dịch chuyển đến điểm $K$ sao cho $KH$ vuông góc với $AB$ tại $H$, $HK=a$ (m), ngắm nhìn $A$ với $\widehat{AKH}=\alpha$, ngắm nhìn $B$ với $\widehat{BKH}=\beta$ ($\alpha>\beta$).
+
+        \begin{center}
+            \begin{tikzpicture}[scale=0.95]
+                \coordinate (A) at (0,2.7);
+                \coordinate (B) at (2.8,2.7);
+                \coordinate (H) at (4.2,2.7);
+                \coordinate (K) at (4.2,0);
+                \draw (A)--(H)--(K)--(A);
+                \draw (B)--(K);
+                \node[above] at (A) {$A$};
+                \node[above] at (B) {$B$};
+                \node[above right] at (H) {$H$};
+                \node[below right] at (K) {$K$};
+                \node[right] at ($(H)!0.5!(K)$) {$a$};
+                \pic[draw,angle radius=3mm] {right angle=A--H--K};
+                \pic[draw,"$\alpha$",angle radius=7mm,angle eccentricity=1.35] {angle=A--K--H};
+                \pic[draw,"$\beta$",angle radius=4.5mm,angle eccentricity=1.55] {angle=B--K--H};
+            \end{tikzpicture}
+        \end{center}
+
+        \begin{questions}
+            \item Hãy biểu diễn $AB$ theo $a$, $\alpha$, $\beta$.
+            \answerline
+            \answerline
+            \item Khi $a=3$ m, $\alpha=60^\circ$, $\beta=30^\circ$, hãy tính $AB$ (làm tròn kết quả đến chữ số thập phân thứ ba của mét).
+            \answerline
+        \end{questions}
+
+        \item Cho tam giác $ABC$ vuông tại $B$ có góc $\widehat{A}=30^\circ$, $AB=6$ cm. Vẽ tia $Bt$ sao cho $\widehat{tBC}=30^\circ$, cắt tia $AC$ ở $D$ ($C$ nằm giữa $A$ và $D$).
+        \begin{questions}
+            \item Chứng minh tam giác $ABD$ cân tại $B$.
+            \answerline
+            \answerline
+            \item Tính khoảng cách từ $D$ đến đường thẳng $AB$.
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Tứ giác $ABCD$ có hai góc đối diện $B$ và $D$ vuông, hai góc kia không vuông.
+        \begin{questions}
+            \item Chứng minh rằng có một đường tròn đi qua bốn điểm $A$, $B$, $C$ và $D$. Ta gọi đó là đường tròn $(\mathcal{C})$.
+            \answerline
+            \answerline
+            \item Gọi $I$ và $K$ lần lượt là trung điểm các đường chéo $AC$ và $BD$ của tứ giác. Chứng minh rằng $IK\perp BD$.
+            \answerline
+            \answerline
+            \item Kí hiệu các tiếp tuyến của đường tròn $(\mathcal{C})$ tại $A$, $B$ và $C$ lần lượt là $a$, $b$ và $c$. Giả sử $b$ cắt $a$ và $c$ theo thứ tự tại $E$ và $F$. Chứng minh rằng tứ giác $AEFC$ là một hình thang.
+            \answerline
+            \answerline
+            \item Chứng minh rằng $EF=AE+CF$.
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Tỉ lệ các loại quả bán được trong một ngày của một cửa hàng được thể hiện trong biểu đồ hình quạt tròn như hình bên. Số phần trăm ghi trong mỗi hình quạt đúng bằng tỉ số giữa số đo của cung tròn tương ứng và số đo của cả đường tròn ($360^\circ$).
+
+        \begin{center}
+            \begin{tikzpicture}
+                \def\R{1.7}
+                \fill[orange] (0,0)--(90:\R) arc[start angle=90,end angle=126,radius=\R]--cycle;
+                \fill[purple] (0,0)--(126:\R) arc[start angle=126,end angle=270,radius=\R]--cycle;
+                \fill[green] (0,0)--(270:\R) arc[start angle=270,end angle=378,radius=\R]--cycle;
+                \fill[red] (0,0)--(18:\R) arc[start angle=18,end angle=90,radius=\R]--cycle;
+                \draw (0,0) circle[radius=\R];
+                \draw (0,0)--(90:\R) (0,0)--(126:\R) (0,0)--(270:\R) (0,0)--(18:\R);
+                \node[white] at (108:1.15) {$10\%$};
+                \node[white] at (198:1.0) {$40\%$};
+                \node[white] at (324:1.1) {$30\%$};
+                \node[white] at (54:1.12) {$20\%$};
+                \node[font=\bfseries] at (2.7,2.25) {Tỉ lệ các loại quả bán được};
+                \fill[orange] (2.2,1.25) rectangle +(0.28,0.28);
+                \node[right] at (2.58,1.39) {Lê};
+                \fill[red] (2.2,0.73) rectangle +(0.28,0.28);
+                \node[right] at (2.58,0.87) {Táo};
+                \fill[green] (2.2,0.21) rectangle +(0.28,0.28);
+                \node[right] at (2.58,0.35) {Nhãn};
+                \fill[purple] (2.2,-0.31) rectangle +(0.28,0.28);
+                \node[right] at (2.58,-0.17) {Nho};
+            \end{tikzpicture}
+        \end{center}
+
+        \begin{questions}
+            \item Tính số đo của mỗi cung tròn ứng với hình quạt màu tím, màu cam và màu đỏ.
+            \answerline
+            \item Tính số đo của cung còn lại (ứng với hình quạt màu xanh) bằng hai cách.
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Cho tam giác $ABC$ ($AB<AC$) ngoại tiếp đường tròn $(I)$ với các tiếp điểm trên $BC$, $CA$, $AB$ lần lượt là $D$, $E$, $F$. Gọi $X$ và $Y$ lần lượt là chân đường cao kẻ từ $B$ và $C$ xuống $CI$ và $BI$. Chứng minh rằng:
+        \begin{questions}
+            \item $DBXF$, $DCYE$ là các tứ giác nội tiếp.
+            \answerline
+            \answerline
+            \item Bốn điểm $X$, $Y$, $E$, $F$ thẳng hàng.
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Bạn Khôi làm một chiếc mũ sinh nhật bằng bìa cứng có dạng hình nón với đường kính đáy bằng $20$ cm, độ dài đường sinh bằng $30$ cm. Tính diện tích giấy để làm chiếc mũ sinh nhật trên (lấy $\pi\approx3{,}14$ và coi mép dán không đáng kể).
+        % TODO(HINH-NGUON): ảnh mũ sinh nhật ở SGK trang 129 là ảnh minh hoạ thực tế; không redraw xấp xỉ bằng TikZ.
+        \answerline
+        \answerline
+    \end{questions}
+
+    \subsubsection*{Thống kê và Xác suất}
+
+    \begin{questions}[resume=SGK]
+        \item Chiều cao (cm) của $20$ bé trai $24$ tháng tuổi được cho như bảng sau:
+
+        \begin{center}
+            \begin{tblr}{colspec={*{10}{Q[c,m,1.08cm]}}}
+                $85{,}2$ & $87{,}9$ & $80{,}3$ & $92{,}1$ & $93{,}7$ & $88{,}5$ & $94{,}2$ & $83{,}0$ & $95{,}1$ & $84{,}6$ \\
+                $84{,}1$ & $89{,}6$ & $87{,}5$ & $90{,}3$ & $81{,}2$ & $87{,}6$ & $93{,}5$ & $84{,}8$ & $94{,}4$ & $85{,}1$
+            \end{tblr}
+        \end{center}
+
+        Theo Tổ chức Y tế Thế giới WHO, nếu bé trai $24$ tháng tuổi có chiều cao dưới $81{,}7$ cm được xem là thấp còi, chiều cao từ $81{,}7$ cm đến dưới $93{,}9$ cm được xem là đạt chuẩn, chiều cao từ $93{,}9$ cm trở lên được xem là cao.
+
+        \begin{questions}
+            \item Hãy hoàn thiện bảng sau vào vở:
+
+            \begin{center}
+                \begin{tblr}{colspec={Q[l,m,4.4cm] *{3}{Q[c,m,2cm]}}}
+                    Phân loại theo chiều cao & Thấp còi & Đạt chuẩn & Cao \\
+                    Số trẻ & ? & ? & ?
+                \end{tblr}
+            \end{center}
+
+            \item Tính tỉ lệ bé trai $24$ tháng tuổi theo các mức phân loại về chiều cao. Vẽ biểu đồ hình quạt tròn biểu diễn các tỉ lệ thu được.
+            \answerline
+            \answerline
+            \item Ước lượng số bé trai thấp còi, đạt chuẩn, cao trong số $1\ 200$ bé trai $24$ tháng tuổi.
+            \answerline
+        \end{questions}
+
+        \item Một nhóm học sinh của lớp 9A có $3$ bạn nam và $2$ bạn nữ. Giáo viên chọn ngẫu nhiên hai bạn trong nhóm để tham gia một phong trào của trường.
+        \begin{questions}
+            \item Mô tả không gian mẫu.
+            \answerline
+            \answerline
+            \item Tính xác suất để hai bạn được chọn khác giới tính.
+            \answerline
+        \end{questions}
+    \end{questions}
+\end{exercises}
+
+\begin{practice}
+    \subsection{Bài tập ôn tập cuối năm}
+    \renewcommand{\questionprefix}{}
+
+    \subsubsection*{Đại số}
+
+    \begin{questions}[series=SBT]
+        \item Giải các phương trình sau:
+        \begin{questions}
+            \item $(x+2)(x^2-x+3)=x^3+8$;
+            \answerline
+            \item $\dfrac{11}{x}=\dfrac{9}{x+1}+\dfrac{2}{x-4}$;
+            \answerline
+            \answerline
+            \item $(x^2-3x)^2-(x-4)^2=0$.
+            \answerline
+        \end{questions}
+
+        \item Cho hệ phương trình:
+        \[
+            \begin{cases}
+                x+3y=1,\\
+                2x+my=5.
+            \end{cases}
+        \]
+        \begin{questions}
+            \item Giải hệ phương trình với $m=1$.
+            \answerline
+            \item Tìm các số nguyên $m$ để hệ phương trình có nghiệm $(x;y)$, với $x$, $y$ đều là số nguyên.
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item
+        \begin{questions}
+            \item Giải bất phương trình $-10x+7>3x-4$.
+            \answerline
+            \item Chứng minh rằng $9a^2-6a\ge -1$ với mọi số thực $a$.
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Cho biểu thức:
+        \[
+            A=\left(\dfrac{\sqrt{x}}{\sqrt{x}+2}-\dfrac{\sqrt{x}}{\sqrt{x}-2}+\dfrac{4\sqrt{x}-1}{x-4}\right):\dfrac{1}{\sqrt{x}+2}\qquad (x\ge0,x\ne4).
+        \]
+        \begin{questions}
+            \item Rút gọn $A$.
+            \answerline
+            \answerline
+            \item Tìm $x$ sao cho $A=1$.
+            \answerline
+        \end{questions}
+
+        \item Cho phương trình $x^2+4x+m=0$.
+        \begin{questions}
+            \item Giải phương trình với $m=1$.
+            \answerline
+            \item Tìm $m$ để phương trình có hai nghiệm $x_1$, $x_2$ thoả mãn $x_1^2+x_2^2=10$.
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Nếu trộn dung dịch muối nồng độ $10\%$ với dung dịch muối nồng độ $60\%$ để được $250$ ml dung dịch muối nồng độ $40\%$ thì cần lấy bao nhiêu mililit dung dịch mỗi loại?
+        \answerline
+        \answerline
+
+        \item Một ô tô và một xe máy cùng khởi hành từ địa điểm $A$ và đi đến địa điểm $B$. Do vận tốc của ô tô lớn hơn vận tốc của xe máy là $20$ km/h nên ô tô đến $B$ sớm hơn xe máy $30$ phút. Biết quãng đường $AB$ dài $60$ km, tính vận tốc của mỗi xe (giả sử rằng vận tốc của mỗi xe là không đổi trên toàn bộ quãng đường $AB$).
+        \answerline
+        \answerline
+
+        \item Trái Đất là một quả cầu khổng lồ có thể tích khoảng $1086{,}23\cdot10^9$ km$^3$. Sử dụng công thức tính thể tích hình cầu, hãy cho biết chiều dài đường xích đạo Trái Đất dài khoảng bao nhiêu kilômét (làm tròn kết quả đến hàng đơn vị của km)?
+        \answerline
+        \answerline
+    \end{questions}
+
+    \subsubsection*{Hình học và Đo lường}
+
+    \begin{questions}[resume=SBT]
+        \item Trong hình bên, cho $AC=8$ cm, $AD=9{,}6$ cm, $\widehat{ABC}=90^\circ$, $\widehat{ACB}=54^\circ$ và $\widehat{ACD}=74^\circ$.
+        Hãy tính:
+
+        \begin{center}
+            \begin{tikzpicture}[scale=1.05]
+                \coordinate (C) at (0,0);
+                \coordinate (A) at ({3.5*cos(74)},{3.5*sin(74)});
+                \coordinate (B) at ({3.5*cos(54)*cos(128)},{3.5*cos(54)*sin(128)});
+                \coordinate (D) at (3.48,0);
+                \coordinate (H) at (A |- C);
+                \draw (B)--(A)--(D)--(C)--(B);
+                \draw[dashed] (A)--(H);
+                \node[above] at (A) {$A$};
+                \node[left] at (B) {$B$};
+                \node[below left] at (C) {$C$};
+                \node[below right] at (D) {$D$};
+                \node[below] at (H) {$H$};
+                \node[left] at ($(C)!0.55!(A)$) {$8$};
+                \node[right] at ($(A)!0.48!(D)$) {$9{,}6$};
+                \pic[draw,angle radius=3mm] {right angle=A--B--C};
+                \pic[draw,"$54^\circ$",angle radius=6mm,angle eccentricity=1.5] {angle=B--C--A};
+                \pic[draw,"$74^\circ$",angle radius=8mm,angle eccentricity=1.35] {angle=A--C--D};
+                \pic[draw,angle radius=3mm] {right angle=A--H--D};
+            \end{tikzpicture}
+        \end{center}
+
+        \begin{questions}
+            \item $AB$ (làm tròn đến hàng phần nghìn của cm);
+            \answerline
+            \item $\widehat{ADC}$ (làm tròn đến phút).
+            \answerline
+        \end{questions}
+
+        \textit{(Gợi ý: Kẻ đường cao $AH$ của tam giác $ACD$).}
+
+        \item Một chiếc thuyền đi với vận tốc $2$ km/h vượt qua một khúc sông nước chảy mạnh mất $5$ phút. Biết rằng đường đi của thuyền tạo với bờ một góc $70^\circ$. Tính chiều rộng của khúc sông (làm tròn đến hàng đơn vị của mét).
+        \answerline
+        \answerline
+
+        \item Cho hai tiếp tuyến $MA$ và $MB$ của đường tròn $(O)$. Gọi $N$ là điểm sao cho $MANB$ là một hình bình hành.
+        \begin{questions}
+            \item Giả sử $N$ không nằm trên $(O)$, $NA$ và $NB$ cắt $(O)$ lần lượt tại $D$ và $C$.
+            \begin{itemize}[label=--]
+                \item Chứng minh rằng $ABC$ là tam giác cân tại đỉnh $A$.
+                \item Chứng minh rằng hai cung $BC$ và $AD$ có số đo bằng nhau.
+            \end{itemize}
+            \answerline
+            \answerline
+            \item Giả sử $N$ nằm trên $(O)$.
+            \begin{itemize}[label=--]
+                \item Chứng minh rằng $MAB$ là tam giác đều.
+                \item Tính độ dài cung $AB$ và diện tích của hình quạt tròn ứng với cung $AB$, biết rằng đường tròn $(O)$ có bán kính bằng $6$ cm.
+            \end{itemize}
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Cho tam giác nhọn $ABC$ và điểm $D$ nằm giữa $B$ và $C$. Gọi $E$ và $F$ lần lượt là chân đường vuông góc hạ từ $D$ xuống $AB$ và $AC$.
+        \begin{questions}
+            \item Gọi $I$ và $J$ lần lượt là tâm đường tròn ngoại tiếp tam giác $EBD$ và tam giác $FDC$. Chứng minh rằng hai đường tròn $(I)$ và $(J)$ tiếp xúc ngoài với nhau.
+            \answerline
+            \answerline
+            \item Giả sử $M$ là một điểm tuỳ ý khác $F$, nằm giữa $A$ và $C$; gọi $K$ là tâm đường tròn ngoại tiếp tam giác $MDC$. Chứng minh rằng hai đường tròn $(I)$ và $(K)$ cắt nhau.
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Cho tam giác nhọn $ABC$ nội tiếp đường tròn $(O)$. Ba đường cao $AD$, $BE$ và $CF$ của tam giác $ABC$ cắt nhau tại $H$. Gọi $AK$ là đường kính của $(O)$. Chứng minh rằng:
+        \begin{questions}
+            \item $BH=CK$, $CH=BK$;
+            \answerline
+            \answerline
+            \item $AD\cdot AK=AB\cdot AC$.
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Cho tam giác $ABC$ nội tiếp đường tròn $(O)$, vẽ $AX\perp BC$ và cắt nhau tại điểm $D$. Cho điểm $H$ trên đoạn thẳng $AD$ sao cho $DH=DX$. Cho $BH$ cắt $AC$ tại $E$ và $CH$ cắt $AB$ tại $F$.
+        \begin{questions}
+            \item Chứng minh rằng $H$ là trực tâm của tam giác $ABC$.
+            \answerline
+            \answerline
+            \item Chứng minh rằng $H$ là tâm của đường tròn nội tiếp tam giác $DEF$.
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Một vật thể bằng kim loại gồm có một hình nón và một nửa hình cầu có chung đáy. Hình nón có chiều cao $4$ cm và đường kính đáy là $6$ cm.
+
+        \begin{center}
+            \begin{tikzpicture}[scale=0.85]
+                \coordinate (O) at (0,0);
+                \coordinate (S) at (0,3.2);
+                \coordinate (L) at (-2,0);
+                \coordinate (R) at (2,0);
+                \draw (S)--(L) (S)--(R);
+                \draw[dashed] (S)--(O);
+                \draw (L) arc[start angle=180,end angle=360,x radius=2,y radius=0.45];
+                \draw[dashed] (L) arc[start angle=180,end angle=0,x radius=2,y radius=0.45];
+                \draw (L) arc[start angle=180,end angle=360,radius=2];
+                \node[right] at ($(S)!0.52!(O)$) {$4$ cm};
+                \draw[<->] (-2,-2.3)--(2,-2.3) node[midway,below] {$6$ cm};
+                \pic[draw,angle radius=3mm] {right angle=S--O--R};
+            \end{tikzpicture}
+        \end{center}
+
+        \begin{questions}
+            \item Hãy tìm thể tích và tổng diện tích bề mặt của vật thể.
+            \answerline
+            \answerline
+            \item Vật thể được nấu chảy và đúc lại thành một hình trụ có chiều cao $4$ cm. Tìm bán kính đáy của hình trụ đó (làm tròn kết quả đến hàng phần trăm của cm).
+            \answerline
+            \answerline
+            \item Nếu cần sơn $1\ 000$ hình trụ như ở câu b và mỗi hộp sơn có thể dùng để sơn một diện tích $5$ m$^2$ thì cần bao nhiêu hộp sơn (làm tròn kết quả đến hàng đơn vị của cm$^2$)?
+            \answerline
+            \answerline
+        \end{questions}
+    \end{questions}
+
+    \subsubsection*{Thống kê và Xác suất}
+
+    \begin{questions}[resume=SBT]
+        \item Trong buổi tổng kết năm học, lớp 9C đã thực hiện bình chọn cho danh hiệu “Tổ học tập tích cực nhất của lớp” và thu được kết quả như sau:
+
+        \begin{center}
+            \begin{tblr}{colspec={Q[c,m,3.2cm] *{4}{Q[c,m,1.35cm]}}}
+                Tổ & 1 & 2 & 3 & 4 \\
+                Số bình chọn & 15 & 10 & 12 & 3
+            \end{tblr}
+        \end{center}
+
+        \begin{questions}
+            \item Lập bảng tần số tương đối.
+            \answerline
+            \item Vẽ biểu đồ hình quạt tròn biểu diễn bảng tần số thu được.
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Bảng sau đây cho biết cơ cấu theo độ tuổi của công nhân trong một công ty may mặc:
+
+        \begin{center}
+            \begin{tblr}{colspec={Q[c,m,3cm] *{4}{Q[c,m,2.05cm]}}}
+                Độ tuổi & $[18;28)$ & $[28;38)$ & $[38;48)$ & $[48;58)$ \\
+                Số công nhân & 150 & 400 & 200 & 50
+            \end{tblr}
+        \end{center}
+
+        \begin{questions}
+            \item Lập bảng tần số tương đối ghép nhóm cho bảng dữ liệu trên.
+            \answerline
+            \item Vẽ biểu đồ tần số tương đối ghép nhóm dạng cột biểu diễn bảng tần số tương đối ghép nhóm thu được.
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Một đoàn tàu có $4$ toa A, B, C, D đỗ ở một sân ga. Trên sân ga có hai hành khách không quen biết nhau. Từ sân ga, mỗi người chọn ngẫu nhiên một toa tàu để bước lên. Kí hiệu hai hành khách là 1 và 2. Mỗi kết quả có thể là một cặp $(X;Y)$, trong đó $X$, $Y$ tương ứng là toa tàu mà hành khách số 1 và hành khách số 2 bước lên.
+        \begin{questions}
+            \item Có bao nhiêu kết quả có thể xảy ra? Chúng có đồng khả năng không? Tại sao?
+            \answerline
+            \answerline
+            \item Mô tả không gian mẫu.
+            \answerline
+            \answerline
+            \item Tính xác suất của các biến cố sau:
+            \begin{itemize}[label=+]
+                \item $E$: “Hai hành khách này ở cùng một toa tàu”;
+                \item $F$: “Cả hai hành khách đều không lên toa tàu B”.
+            \end{itemize}
+            \answerline
+            \answerline
+        \end{questions}
+    \end{questions}
+\end{practice}
