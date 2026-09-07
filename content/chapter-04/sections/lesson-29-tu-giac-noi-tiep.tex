@@ -113,7 +113,7 @@
             \coordinate (Da) at (0.15,0.35);
             \draw (Oa) circle (1.25);
             \draw (Aa)--(Ba)--(Ca)--(Da)--cycle;
-            \node[below=4pt of Oa] at (0,-1.55) {a)};
+            \node at (0,-1.55) {a)};
 
             % b)
             \coordinate (Ob) at (4,0);
@@ -273,18 +273,18 @@
     \begin{center}
         \begin{tikzpicture}
             \coordinate (A) at (-2,1.2);
-            \coordinate (B) at (2,1.2);
+            \coordinate (B) at (-2,-1.2);
             \coordinate (C) at (2,-1.2);
-            \coordinate (D) at (-2,-1.2);
+            \coordinate (D) at (2,1.2);
             \coordinate (M) at ($(A)!0.5!(C)$);
             \draw (A)--(B)--(C)--(D)--cycle;
             \draw (A)--(C);
             \draw (B)--(D);
             \fill (M) circle (1.2pt);
             \node[above left=1pt of A] {$A$};
-            \node[above right=1pt of B] {$B$};
+            \node[below left=1pt of B] {$B$};
             \node[below right=1pt of C] {$C$};
-            \node[below left=1pt of D] {$D$};
+            \node[above right=1pt of D] {$D$};
             \node[above=1pt of M] {$M$};
         \end{tikzpicture}
 
@@ -304,15 +304,15 @@
     \begin{center}
         \begin{tikzpicture}
             \coordinate (A) at (-1.5,1.5);
-            \coordinate (B) at (1.5,1.5);
+            \coordinate (B) at (-1.5,-1.5);
             \coordinate (C) at (1.5,-1.5);
-            \coordinate (D) at (-1.5,-1.5);
+            \coordinate (D) at (1.5,1.5);
             \draw (A)--(B)--(C)--(D)--cycle;
             \node[above left=1pt of A] {$A$};
-            \node[above right=1pt of B] {$B$};
+            \node[below left=1pt of B] {$B$};
             \node[below right=1pt of C] {$C$};
-            \node[below left=1pt of D] {$D$};
-            \node[above] at ($(A)!0.5!(B)$) {3 cm};
+            \node[above right=1pt of D] {$D$};
+            \node[left] at ($(A)!0.5!(B)$) {3 cm};
         \end{tikzpicture}
 
         \textit{Hình 9.34}
@@ -389,10 +389,10 @@
         \begin{tikzpicture}
             \coordinate (A) at (-2.5,0);
             \coordinate (C) at (2.5,0);
-            \coordinate (B) at (-0.8,1.7);
-            \coordinate (D) at (0.8,-1.7);
-            \coordinate (E) at (0.8,1.7);
-            \coordinate (F) at (-0.8,-1.7);
+            \coordinate (B) at (-1.768,1.768);
+            \coordinate (D) at (1.768,-1.768);
+            \coordinate (E) at (1.768,1.768);
+            \coordinate (F) at (-1.768,-1.768);
             \draw (A)--(B)--(C)--(D)--cycle;
             \draw (A)--(E)--(C)--(F)--cycle;
             \draw (A)--(C);
@@ -403,7 +403,7 @@
             \node[above right=1pt of E] {$E$};
             \node[below left=1pt of F] {$F$};
             \pic[draw, angle radius=3mm] {right angle=A--B--C};
-            \pic[draw, angle radius=3mm] {right angle=B--C--D};
+            \pic[draw, angle radius=3mm] {right angle=C--D--A};
             \pic[draw, angle radius=3mm] {right angle=A--E--C};
             \pic[draw, angle radius=3mm] {right angle=A--F--C};
         \end{tikzpicture}
