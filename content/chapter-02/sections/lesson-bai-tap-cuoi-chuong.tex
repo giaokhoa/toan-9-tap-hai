@@ -1,0 +1,548 @@
+% Nguon SGK: trang 54--55.
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-54-1771844552331.png
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-55-1771844552661.png
+% Nguon SBT: "SBT TOÁN 9 TẬP 2.pdf", PDF trang 38--41.
+% SHA-256: 5ff01fd213d1adc75f9c54b4408d6a9642a4d8038e685040efef3311a196196c.
+
+\section*{Bài tập cuối chương VII}
+
+\begin{exercises}
+    \subsection{Bài tập cuối chương VII}
+
+    \textbf{A. TRẮC NGHIỆM}
+
+    \textit{Sử dụng dữ liệu sau để trả lời các bài tập từ 7.22 đến 7.24.}
+
+    Gieo một con xúc xắc 50 lần cho kết quả như sau:
+
+    \begin{center}
+    \begin{tblr}{
+        colspec={Q[l] *{6}{Q[c]}}
+    }
+        Số chấm xuất hiện & 1 & 2 & 3 & 4 & 5 & 6 \\
+        Tần số & 8 & 7 & ? & 8 & 6 & 11 \\
+    \end{tblr}
+    \end{center}
+
+    \begin{questions}[resume=SGK]
+        \item Tần số xuất hiện của mặt 3 chấm là
+        \begin{tasks}(4)
+            \task 9.
+            \task 10.
+            \task 11.
+            \task 12.
+        \end{tasks}
+        \par\noindent\answerbox\par
+
+        \item Tần số tương đối xuất hiện của mặt 5 chấm là
+        \begin{tasks}(4)
+            \task 6\%.
+            \task 8\%.
+            \task 12\%.
+            \task 14\%.
+        \end{tasks}
+        \par\noindent\answerbox\par
+
+        \item Để biểu diễn bảng thống kê trên, \textbf{không thể} dùng loại biểu đồ nào sau đây?
+        \begin{tasks}(2)
+            \task Biểu đồ tranh.
+            \task Biểu đồ tần số dạng cột.
+            \task Biểu đồ tần số dạng đoạn thẳng.
+            \task Biểu đồ cột kép.
+        \end{tasks}
+        \par\noindent\answerbox\par
+
+        \item Cho bảng tần số tương đối ghép nhóm về thời gian đi từ nhà đến trường của học sinh lớp 9A như sau:
+
+        \begin{center}
+        \begin{tblr}{
+            colspec={Q[l] *{3}{Q[c]}}
+        }
+            Thời gian đến trường (phút) & $[0;10)$ & $[10;20)$ & $[20;30)$ \\
+            Tần số tương đối & 20\% & 55\% & 25\% \\
+        \end{tblr}
+        \end{center}
+
+        Để vẽ biểu đồ tần số tương đối ghép nhóm dạng đoạn thẳng, ta dùng giá trị nào đại diện cho nhóm số liệu $[10;20)$?
+        \begin{tasks}(4)
+            \task 10.
+            \task 15.
+            \task 20.
+            \task 30.
+        \end{tasks}
+        \par\noindent\answerbox\par
+    \end{questions}
+
+    \textbf{B. TỰ LUẬN}
+
+    \begin{questions}[resume=SGK]
+        \item Biểu đồ tần số tương đối ghép nhóm Hình 7.22 cho biết tỉ lệ chiều cao của các cây keo giống do một kĩ sư lâm nghiệp đã trồng trong nhà kính.
+
+        \begin{center}
+        \begin{tikzpicture}[x=1.4cm,y=0.075cm]
+            \coordinate (O) at (0,0);
+            \draw[->] (O) -- (4.35,0);
+            \draw[->] (O) -- (0,47);
+            \foreach \y in {0,5,...,45} {
+                \draw (-0.06,\y) -- (0.06,\y);
+                \node[left=3pt] at (0,\y) {\y\%};
+            }
+            \foreach \x/\lab in {1/10,2/20,3/30,4/40} {
+                \draw (\x,-0.8) -- (\x,0.8);
+                \node[below=4pt] at (\x,0) {\lab};
+            }
+            \draw[fill=black!10] (0,0) rectangle (1,10);
+            \draw[fill=black!10] (1,0) rectangle (2,20);
+            \draw[fill=black!10] (2,0) rectangle (3,40);
+            \draw[fill=black!10] (3,0) rectangle (4,30);
+            \node at (0.5,12.5) {10\%};
+            \node at (1.5,22.5) {20\%};
+            \node at (2.5,42.5) {40\%};
+            \node at (3.5,32.5) {30\%};
+            \node[rotate=90] at (-1.0,23) {Tỉ lệ};
+            \node at (2,-12) {Chiều cao (cm)};
+            \node[font=\bfseries] at (2,52.5) {Tỉ lệ chiều cao các cây keo giống trồng trong nhà kính};
+            \node at (2,-21) {Hình 7.22};
+        \end{tikzpicture}
+        \end{center}
+
+        Lập bảng tần số tương đối ghép nhóm cho dữ liệu được biểu diễn trên biểu đồ.
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Kĩ sư lâm nghiệp trên cũng trồng một số cây keo giống khác ngoài trời và thu được kết quả như sau:
+
+        \begin{center}
+        \begin{tblr}{
+            colspec={Q[l] *{4}{Q[c]}}
+        }
+            Chiều cao (cm) & $[0;10)$ & $[10;20)$ & $[20;30)$ & $[30;40)$ \\
+            Số cây & 5 & 9 & 4 & 2 \\
+        \end{tblr}
+        \end{center}
+
+        \begin{questions}
+            \item Vẽ biểu đồ tần số tương đối ghép nhóm dạng cột cho bảng thống kê trên.
+
+            \answerline
+            \answerline
+            \answerline
+            \answerline
+
+            \item Từ biểu đồ vừa vẽ và biểu đồ cho trong bài tập 7.26, hãy so sánh chiều cao của các cây keo giống được trồng trong nhà kính và trồng ngoài trời.
+
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Tỉ lệ học sinh bình chọn cho danh hiệu cầu thủ xuất sắc nhất trong giải bóng đá của trường được cho trong bảng sau:
+
+        \begin{center}
+        \begin{tblr}{
+            colspec={Q[l] *{4}{Q[c]}}
+        }
+            Cầu thủ & Huy & Minh & An & Thảo \\
+            Tỉ lệ học sinh bình chọn & 30\% & 25\% & 10\% & 35\% \\
+        \end{tblr}
+        \end{center}
+
+        Biết rằng có 500 học sinh tham gia bình chọn.
+
+        \begin{questions}
+            \item Vẽ biểu đồ hình quạt tròn biểu diễn bảng tần số tương đối trên.
+
+            \answerline
+            \answerline
+            \answerline
+
+            \item Lập bảng tần số biểu diễn số học sinh bình chọn cho danh hiệu cầu thủ xuất sắc nhất trong giải bóng đá của trường.
+
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Qua đợt khám mắt, lớp 9A có 20 học sinh bị cận thị trong đó có 10 học sinh cận thị nhẹ, 8 học sinh cận thị vừa và 2 học sinh cận thị nặng. Biết rằng cận thị có số đo từ 0,25 đến dưới 3,25 dioptre là cận thị nhẹ; từ 3,25 đến dưới 6,25 dioptre là cận thị vừa; từ 6,25 đến dưới 10,25 dioptre là cận thị nặng.
+
+        \begin{questions}
+            \item Lập bảng tần số và bảng tần số tương đối ghép nhóm theo độ cận thị của các học sinh này.
+
+            \answerline
+            \answerline
+            \answerline
+
+            \item Vẽ biểu đồ tần số tương đối ghép nhóm dạng đoạn thẳng cho bảng tần số tương đối ghép nhóm thu được ở câu a.
+
+            \answerline
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Lương của các công nhân một nhà máy được cho trong bảng sau:
+
+        \begin{center}
+        \begin{tblr}{
+            colspec={Q[l] *{5}{Q[c]}}
+        }
+            Lương (triệu đồng) & $[5;7)$ & $[7;9)$ & $[9;11)$ & $[11;13)$ & $[13;15)$ \\
+            Số công nhân & 20 & 50 & 70 & 40 & 20 \\
+        \end{tblr}
+        \end{center}
+
+        \begin{questions}
+            \item Nêu các nhóm số liệu và tần số. Giải thích ý nghĩa cho một nhóm số liệu và tần số của nó.
+
+            \answerline
+            \answerline
+            \answerline
+
+            \item Vẽ biểu đồ tần số tương đối ghép nhóm dạng cột cho bảng thống kê trên.
+
+            \answerline
+            \answerline
+            \answerline
+        \end{questions}
+    \end{questions}
+\end{exercises}
+
+\begin{practice}
+    \subsection{Ôn tập chương VII}
+
+    \textbf{A. CÂU HỎI (Trắc nghiệm)}
+
+    \textit{Sử dụng dữ liệu sau để trả lời các câu hỏi từ câu 1 đến câu 3.}
+
+    Dữ liệu về điểm thi học kì môn Toán của 40 học sinh lớp 9D được cho như sau:
+
+    \[
+    \begin{gathered}
+        8,\ 7,\ 9,\ 8,\ 7,\ 6,\ 5,\ 3,\ 10,\ 9,\ 8,\ 7,\ 7,\ 8,\ 8,\ 9,\ 6,\ 5,\ 7,\ 10,\\
+        9,\ 8,\ 6,\ 8,\ 9,\ 10,\ 6,\ 7,\ 2,\ 8,\ 7,\ 6,\ 9,\ 10,\ 8,\ 8,\ 6,\ 5,\ 9,\ 7.
+    \end{gathered}
+    \]
+
+    \begin{enumerate}[label=\arabic*.]
+        \item Tần số xuất hiện của điểm 8 trong dãy dữ liệu trên là
+        \begin{tasks}(4)
+            \task 8.
+            \task 9.
+            \task 10.
+            \task 11.
+        \end{tasks}
+        \par\noindent\answerbox\par
+
+        \item Tần số tương đối của điểm 10 trong dãy dữ liệu trên là
+        \begin{tasks}(4)
+            \task 5\%.
+            \task 10\%.
+            \task 15\%.
+            \task 20\%.
+        \end{tasks}
+        \par\noindent\answerbox\par
+
+        \item Để biểu diễn số lượng học sinh theo điểm thi môn Toán đạt được thì ta không thể dùng biểu đồ nào?
+        \begin{tasks}(2)
+            \task Biểu đồ cột kép.
+            \task Biểu đồ tần số dạng cột.
+            \task Biểu đồ tần số dạng đoạn thẳng.
+            \task Biểu đồ tranh.
+        \end{tasks}
+        \par\noindent\answerbox\par
+    \end{enumerate}
+
+    \textit{Sử dụng dữ liệu sau để trả lời các câu hỏi từ câu 4 đến câu 6.}
+
+    Bảng tần số tương đối ghép nhóm sau cho biết thông tin về tỉ lệ học sinh lớp 9A theo khoảng cách từ nhà đến trường:
+
+    \begin{center}
+    \begin{tblr}{
+        colspec={Q[l] *{4}{Q[c]}}
+    }
+        Khoảng cách (km) & $[0;1)$ & $[1;2)$ & $[2;3)$ & $[3;4)$ \\
+        Tần số tương đối & 25\% & 50\% & $x$\% & 10\% \\
+    \end{tblr}
+    \end{center}
+
+    \begin{enumerate}[label=\arabic*.,start=4]
+        \item Giá trị của $x$ là
+        \begin{tasks}(4)
+            \task 10.
+            \task 15.
+            \task 20.
+            \task 25.
+        \end{tasks}
+        \par\noindent\answerbox\par
+
+        \item Muốn biểu diễn bảng tần số tương đối ghép nhóm trên ta có thể dùng biểu đồ nào sau đây?
+        \begin{tasks}(2)
+            \task Biểu đồ tần số ghép nhóm.
+            \task Biểu đồ tần số dạng cột.
+            \task Biểu đồ tần số dạng đoạn thẳng.
+            \task Biểu đồ tần số tương đối ghép nhóm.
+        \end{tasks}
+        \par\noindent\answerbox\par
+
+        \item Để vẽ biểu đồ tần số tương đối ghép nhóm dạng đoạn thẳng biểu diễn bảng thống kê trên ta chọn giá trị nào làm giá trị đại diện cho nhóm $[2;3)$?
+        \begin{tasks}(4)
+            \task 0,5.
+            \task 1,5.
+            \task 2,5.
+            \task 3,5.
+        \end{tasks}
+        \par\noindent\answerbox\par
+    \end{enumerate}
+
+    \textbf{B. BÀI TẬP}
+
+    \begin{questions}[resume=SBT]
+        \item Kết thúc vòng tứ kết giải bóng đá của một trường Trung học cơ sở, có 4 đội lọt vào bán kết là các đội bóng lớp 9A, 9C, 8B và 7D. Ban tổ chức đã khảo sát học sinh trong trường với câu hỏi “Theo bạn, đội bóng nào sẽ vô địch?” với 4 phương án trả lời:
+        \begin{enumerate}[label=\arabic*.]
+            \item Đội bóng lớp 9A,
+            \item Đội bóng lớp 9C,
+            \item Đội bóng lớp 8B,
+            \item Đội bóng lớp 7D,
+        \end{enumerate}
+        và thu được 500 phản hồi với 150 lựa chọn phương án 1, 200 lựa chọn phương án 2, 50 lựa chọn phương án 3 và 100 lựa chọn phương án 4.
+
+        \begin{questions}
+            \item Lập bảng tần số và bảng tần số tương đối cho kết quả thu được.
+
+            \answerline
+            \answerline
+            \answerline
+
+            \item Tìm tỉ lệ học sinh không dự đoán hai đội bóng của khối lớp 9 vô địch giải bóng đá trường.
+
+            \answerline
+            \answerline
+
+            \item Vẽ biểu đồ hình quạt tròn biểu diễn tỉ lệ học sinh dự đoán mỗi đội vô địch.
+
+            \answerline
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Biểu đồ hình quạt tròn sau đây cho biết tỉ lệ vô địch bóng đá nam SEA Games của các đội bóng trong khu vực tính đến năm 2023.
+
+        \begin{center}
+        \begin{tikzpicture}
+            \coordinate (O) at (0,0);
+            \def\r{2.35}
+            \draw (O) circle (\r);
+            \foreach \a in {90,-79.2,-147.6,-205.2,-237.6} {
+                \draw (O) -- (\a:\r);
+            }
+            \node[font=\bfseries] at (0,3.85) {Tỉ lệ vô địch bóng đá nam SEA Games};
+
+            \node[right] at (2.45,0.2) {Thái Lan 47\%};
+            \draw (1.55,0.45) -- (2.35,0.45);
+
+            \node[below left] at (-1.15,-2.45) {Malaysia 19\%};
+            \draw (-1.25,-1.65) -- (-1.95,-2.0);
+
+            \node[left] at (-2.75,-0.4) {Myanmar 16\%};
+            \draw (-1.75,-0.35) -- (-2.35,-0.35);
+
+            \node[above left] at (-2.15,1.55) {Việt Nam 9\%};
+            \draw (-1.35,1.35) -- (-1.75,1.95);
+
+            \node[above] at (0,2.7) {Indonesia 9\%};
+            \draw (0,2.35) -- (0,2.55);
+        \end{tikzpicture}
+
+        \emph{(Theo Liên đoàn Bóng đá Đông Nam Á)}
+        \end{center}
+
+        \begin{questions}
+            \item Lập bảng tần số tương đối cho biết tỉ lệ vô địch bóng đá nam SEA Games của các quốc gia trong khu vực.
+
+            \answerline
+            \answerline
+
+            \item Biết rằng tính đến năm 2023 môn Bóng đá nam đã được tổ chức ở 32 kì SEA Games. Lập bảng tần số cho số lần vô địch của các đội tuyển (làm tròn số liệu đến số nguyên gần nhất).
+
+            \answerline
+            \answerline
+            \answerline
+
+            \item Vẽ biểu đồ tần số dạng cột biểu diễn bảng tần số thu được ở câu b.
+
+            \answerline
+            \answerline
+            \answerline
+
+            \item Đội tuyển quốc gia nào có số lần vô địch bóng đá nam SEA Games nhiều nhất, với bao nhiêu lần?
+
+            \answerline
+        \end{questions}
+
+        \item Biểu đồ sau cho biết số lượng các loại ô tô một cửa hàng bán được trong năm 2023:
+
+        \begin{center}
+        \begin{tikzpicture}[x=2.4cm,y=0.095cm]
+            \coordinate (O) at (0,0);
+            \draw[->] (O) -- (4.2,0);
+            \draw[->] (O) -- (0,42);
+            \foreach \y in {0,5,...,40} {
+                \draw (-0.04,\y) -- (0.04,\y);
+                \node[left=3pt] at (0,\y) {\y};
+            }
+            \draw[fill=black!8] (0.25,0) rectangle (0.75,35);
+            \draw[fill=black!8] (1.25,0) rectangle (1.75,20);
+            \draw[fill=black!8] (2.25,0) rectangle (2.75,15);
+            \draw[fill=black!8] (3.25,0) rectangle (3.75,10);
+            \node at (0.5,37.5) {35};
+            \node at (1.5,22.5) {20};
+            \node at (2.5,17.5) {15};
+            \node at (3.5,12.5) {10};
+            \node[align=center,text width=2.4cm] at (0.5,-6) {Xe 4 chỗ ngồi};
+            \node[align=center,text width=2.4cm] at (1.5,-6) {Xe 7 chỗ ngồi};
+            \node[align=center,text width=2.4cm] at (2.5,-6) {Xe 16 chỗ ngồi};
+            \node[align=center,text width=2.8cm] at (3.5,-6) {Xe trên 16 chỗ ngồi};
+            \node[rotate=90] at (-0.45,20) {Tần số};
+            \node at (2,-13) {Loại xe};
+            \node[font=\bfseries] at (2,46.5) {Số lượng xe các loại bán được năm 2023};
+        \end{tikzpicture}
+        \end{center}
+
+        \begin{questions}
+            \item Lập bảng tần số và bảng tần số tương đối cho dữ liệu được biểu diễn trên biểu đồ.
+
+            \answerline
+            \answerline
+            \answerline
+
+            \item Vẽ biểu đồ hình quạt tròn biểu diễn bảng tần số tương đối thu được ở câu a.
+
+            \answerline
+            \answerline
+            \answerline
+
+            \item Giả sử tỉ lệ các loại xe bán được không đổi và cửa hàng bán được tổng số 200 ô tô các loại trong năm 2024. Hãy ước lượng số ô tô 7 chỗ cửa hàng bán được.
+
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Biểu đồ tần số tương đối ghép nhóm sau cho biết thành tích ném lao của các vận động viên nữ tại một giải đấu:
+
+        \begin{center}
+        \begin{tikzpicture}[x=2.05cm,y=0.11cm]
+            \coordinate (O) at (0,0);
+            \draw[->] (O) -- (5.25,0);
+            \draw[->] (O) -- (0,42);
+            \foreach \y in {0,5,...,40} {
+                \draw (-0.05,\y) -- (0.05,\y);
+                \node[left=3pt] at (0,\y) {\y\%};
+            }
+            \draw[fill=black!8] (0,0) rectangle (1,15);
+            \draw[fill=black!8] (1,0) rectangle (2,25);
+            \draw[fill=black!8] (2,0) rectangle (3,30);
+            \draw[fill=black!8] (3,0) rectangle (4,20);
+            \draw[fill=black!8] (4,0) rectangle (5,10);
+            \node at (0.5,17.5) {15\%};
+            \node at (1.5,27.5) {25\%};
+            \node at (2.5,32.5) {30\%};
+            \node at (3.5,22.5) {20\%};
+            \node at (4.5,12.5) {10\%};
+            \node[align=center] at (0.5,-5.2) {$[53{,}5;54)$};
+            \node[align=center] at (1.5,-5.2) {$[54;54{,}5)$};
+            \node[align=center] at (2.5,-5.2) {$[54{,}5;55)$};
+            \node[align=center] at (3.5,-5.2) {$[55;55{,}5)$};
+            \node[align=center] at (4.5,-5.2) {$[55{,}5;56)$};
+            \node[rotate=90] at (-0.75,20) {Tỉ lệ};
+            \node at (2.5,-12) {Thành tích (m)};
+            \node[font=\bfseries] at (2.5,46.5) {Thành tích ném lao của các vận động viên nữ};
+        \end{tikzpicture}
+        \end{center}
+
+        \begin{questions}
+            \item Đọc và giải thích thông tin cho hai nhóm dữ liệu được biểu diễn trên biểu đồ.
+
+            \answerline
+            \answerline
+            \answerline
+
+            \item Lập bảng tần số tương đối ghép nhóm cho dữ liệu này.
+
+            \answerline
+            \answerline
+
+            \item Biết rằng có 40 vận động viên nữ tham dự giải. Lập bảng tần số ghép nhóm (các tần số làm tròn đến số nguyên gần nhất).
+
+            \answerline
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Thành tích ném lao của 40 vận động viên nam trong giải thể thao trên được cho như sau:
+
+        \begin{center}
+        \begin{tblr}{
+            colspec={Q[l] *{6}{Q[c]}}
+        }
+            Thành tích (m) & $[70{,}5;71)$ & $[71;71{,}5)$ & $[71{,}5;72)$ & $[72;72{,}5)$ & $[72{,}5;73)$ & $[73;73{,}5)$ \\
+            Số vận động viên & 2 & 5 & 7 & 15 & 8 & 3 \\
+        \end{tblr}
+        \end{center}
+
+        \begin{questions}
+            \item Lập bảng tần số tương đối ghép nhóm.
+
+            \answerline
+            \answerline
+
+            \item Vẽ biểu đồ tần số tương đối ghép nhóm dạng cột biểu diễn bảng tần số tương đối ghép nhóm thu được ở câu a.
+
+            \answerline
+            \answerline
+            \answerline
+
+            \item Từ biểu đồ thu được ở câu b và biểu đồ cho trong bài tập 7.28, hãy nhận xét về thành tích ném lao của các vận động viên nam và nữ.
+
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Dữ liệu dưới đây cho biết cỡ giày của một nhóm 30 học sinh tại trường Trung học cơ sở C:
+
+        \[
+        \begin{gathered}
+            32,\ 33,\ 36,\ 34,\ 33,\ 32,\ 36,\ 34,\ 35,\ 34,\ 32,\ 33,\ 34,\ 36,\ 35,\\
+            34,\ 34,\ 34,\ 34,\ 34,\ 35,\ 34,\ 35,\ 33,\ 35,\ 34,\ 34,\ 35,\ 33,\ 34.
+        \end{gathered}
+        \]
+
+        \begin{questions}
+            \item Lập bảng tần số cho dãy dữ liệu trên. Cỡ giày nào phù hợp với nhiều bạn nhất?
+
+            \answerline
+            \answerline
+
+            \item Lập bảng tần số tương đối cho dãy dữ liệu trên. Chọn ngẫu nhiên một học sinh trường Trung học cơ sở C, hãy ước lượng xác suất để học sinh này đi giày cỡ 34.
+
+            \answerline
+            \answerline
+            \answerline
+
+            \item Bảng sau quy định cỡ giày theo chiều dài của bàn chân:
+
+            \begin{center}
+            \begin{tblr}{
+                colspec={Q[l] *{5}{Q[c]}}
+            }
+                Chiều dài bàn chân (cm) & $[19;19{,}4)$ & $[19{,}4;19{,}7)$ & $[19{,}7;20{,}6)$ & $[20{,}6;21{,}6)$ & $[21{,}6;22{,}2)$ \\
+                Cỡ giày & 32 & 33 & 34 & 35 & 36 \\
+            \end{tblr}
+            \end{center}
+
+            Lập bảng tần số và bảng tần số tương đối ghép nhóm theo chiều dài bàn chân của nhóm học sinh trên.
+
+            \answerline
+            \answerline
+            \answerline
+        \end{questions}
+    \end{questions}
+\end{practice}
