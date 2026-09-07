@@ -1,0 +1,365 @@
+% Nguồn SGK Toán 9 Tập hai — Bài tập cuối chương VI, trang 30--31:
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-30-1771844544624.png
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-31-1771844544937.png
+%
+% Nguồn SBT Toán 9 Tập hai — Ôn tập chương VI, PDF page 18--21:
+% SBT TOÁN 9 TẬP 2.pdf (Project Sources)
+% SHA-256: 5ff01fd213d1adc75f9c54b4408d6a9642a4d8038e685040efef3311a196196c
+% PDF page 18 là trang chồng ranh giới: chỉ lấy phần bắt đầu từ heading "ÔN TẬP CHƯƠNG VI".
+% Không lấy LỜI GIẢI – HƯỚNG DẪN – ĐÁP SỐ (PDF page 75 trở đi).
+
+\section*{Bài tập cuối chương VI}
+
+\begin{exercises}
+    \subsection{Bài tập cuối chương VI}
+
+    \textbf{A. TRẮC NGHIỆM}
+
+    \begin{questions}[resume=SGK]
+        \item Điểm nào sau đây thuộc đồ thị của hàm số $y=\dfrac{1}{2}x^2$?
+        \begin{tasks}(2)
+            \task[(A)] $(1;2)$.
+            \task[(B)] $(2;1)$.
+            \task[(C)] $(-1;2)$.
+            \task[(D)] $\left(1;\dfrac{1}{2}\right)$.
+        \end{tasks}
+        \par\noindent\answerbox\par
+
+        \item Hình 6.11 là hai đường parabol trong mặt phẳng tọa độ $Oxy$. Khẳng định nào sau đây là đúng?
+
+        \begin{center}
+            \begin{tikzpicture}
+                \coordinate (O) at (0,0);
+                \draw[->] (-1.45,0)--(1.75,0) node[right] {$x$};
+                \draw[->] (0,-1.85)--(0,2.05) node[above] {$y$};
+                \node[below left=1pt of O] {$O$};
+
+                \draw[red, domain=-1.08:1.08, samples=80, smooth]
+                    plot (\x,{1.45*\x*\x});
+                \draw[orange, domain=-1.28:1.28, samples=80, smooth]
+                    plot (\x,{-1.05*\x*\x});
+
+                \node[rotate=69] at (1.10,1.35) {$y=ax^2$};
+                \node[rotate=-69] at (1.17,-1.20) {$y=bx^2$};
+            \end{tikzpicture}
+
+            \textit{Hình 6.11}
+        \end{center}
+
+        \begin{tasks}(2)
+            \task[(A)] $a<0<b$.
+            \task[(B)] $a<b<0$.
+            \task[(C)] $a>b>0$.
+            \task[(D)] $a>0>b$.
+        \end{tasks}
+        \par\noindent\answerbox\par
+
+        \item Các nghiệm của phương trình $x^2+7x+12=0$ là
+        \begin{tasks}(2)
+            \task[(A)] $x_1=3;\ x_2=4$.
+            \task[(B)] $x_1=-3;\ x_2=-4$.
+            \task[(C)] $x_1=3;\ x_2=-4$.
+            \task[(D)] $x_1=-3;\ x_2=4$.
+        \end{tasks}
+        \par\noindent\answerbox\par
+
+        \item Phương trình bậc hai có hai nghiệm $x_1=13$ và $x_2=25$ là
+        \begin{tasks}(2)
+            \task[(A)] $x^2-13x+25=0$.
+            \task[(B)] $x^2-25x+13=0$.
+            \task[(C)] $x^2-38x+325=0$.
+            \task[(D)] $x^2+38x+325=0$.
+        \end{tasks}
+        \par\noindent\answerbox\par
+
+        \item Gọi $x_1$, $x_2$ là hai nghiệm của phương trình $x^2-5x+6=0$. Khi đó, giá trị của biểu thức $A=x_1^2+x_2^2$ là
+        \begin{tasks}(2)
+            \task[(A)] $13$.
+            \task[(B)] $19$.
+            \task[(C)] $25$.
+            \task[(D)] $5$.
+        \end{tasks}
+        \par\noindent\answerbox\par
+
+        \item Chiều dài và chiều rộng của hình chữ nhật có chu vi 20 cm và diện tích 24 cm$^2$ là
+        \begin{tasks}(2)
+            \task[(A)] 5 cm và 4 cm.
+            \task[(B)] 6 cm và 4 cm.
+            \task[(C)] 8 cm và 3 cm.
+            \task[(D)] 10 cm và 2 cm.
+        \end{tasks}
+        \par\noindent\answerbox\par
+    \end{questions}
+
+    \textbf{B. TỰ LUẬN}
+
+    \begin{questions}[resume=SGK]
+        \item Vẽ đồ thị của các hàm số $y=\dfrac{5}{2}x^2$ và $y=-\dfrac{5}{2}x^2$ trên cùng một mặt phẳng tọa độ.
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Cho hàm số $y=ax^2$. Xác định hệ số $a$, biết đồ thị hàm số đi qua điểm $A(3;3)$. Vẽ đồ thị của hàm số trong trường hợp đó.
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Giải các phương trình sau:
+        \begin{questions}
+            \item $5x^2-6\sqrt{5}x+2=0$;
+            \item $2x^2-2\sqrt{6}x+3=0$.
+        \end{questions}
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Cho phương trình $x^2-11x+30=0$. Gọi $x_1$, $x_2$ là hai nghiệm của phương trình. Không giải phương trình, hãy tính:
+        \begin{questions}
+            \item $x_1^2+x_2^2$;
+            \item $x_1^3+x_2^3$.
+        \end{questions}
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Tìm hai số $u$ và $v$, biết:
+        \begin{questions}
+            \item $u+v=13$ và $uv=40$;
+            \item $u-v=4$ và $uv=77$.
+        \end{questions}
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Các kĩ sư đảm bảo an toàn của đường cao tốc thường sử dụng công thức $d=0{,}05v^2+1{,}1v$ để ước tính khoảng cách an toàn tối thiểu $d$ (feet) (tức là độ dài quãng đường mà xe đi được kể từ khi đạp phanh đến khi xe dừng lại) đối với một phương tiện di chuyển với tốc độ $v$ (dặm/giờ) (theo \textit{Algebra 2, NXB McGraw-Hill, 2008}). Giả sử giới hạn tốc độ trên một đường cao tốc nào đó là 70 dặm/giờ. Nếu một ô tô có thể dừng lại sau 300 feet kể từ khi đạp phanh thì ô tô đó có chạy nhanh hơn giới hạn tốc độ của đường cao tốc này không?
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Bác Hương gửi tiết kiệm ngân hàng 100 triệu đồng với kì hạn 12 tháng. Sau một năm, do chưa có nhu cầu sử dụng nên bác chưa rút sổ tiết kiệm này ra mà gửi tiếp và gửi thêm một sổ tiết kiệm mới với số tiền 50 triệu đồng, cũng với kì hạn 12 tháng. Sau hai năm (kể từ khi gửi lần đầu), bác Hương nhận được số tiền cả vốn lẫn lãi là 176 triệu đồng. Tính lãi suất năm của hình thức gửi tiết kiệm này (giả sử lãi suất không đổi trong suốt quá trình gửi).
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Hai khối học sinh lớp 8 và lớp 9 của một trường trung học cơ sở tham gia lao động. Nếu làm chung thì sẽ hoàn thành công việc sau 1 giờ 12 phút. Nếu mỗi khối lớp làm riêng thì khối lớp 9 làm xong nhanh hơn khối lớp 8 là 1 giờ. Hỏi nếu mỗi khối lớp làm riêng thì sau bao lâu sẽ hoàn thành công việc?
+
+        \answerline
+        \answerline
+        \answerline
+    \end{questions}
+\end{exercises}
+
+\begin{practice}
+    \subsection{Ôn tập chương VI}
+
+    \textbf{A. CÂU HỎI (Trắc nghiệm)}
+
+    \begin{enumerate}
+        \item Hình vẽ dưới đây là đồ thị của hàm số nào?
+
+        \begin{center}
+            \begin{tikzpicture}
+                \coordinate (O) at (0,0);
+                \draw[->] (-3.75,0)--(3.8,0) node[right] {$x$};
+                \draw[->] (0,-1.25)--(0,4.35) node[above] {$y$};
+                \node[below left=1pt of O] {$O$};
+
+                \foreach \x in {-3,-2,-1,1,2,3} {
+                    \draw (\x,0.07)--(\x,-0.07) node[below] {$\x$};
+                }
+                \foreach \y in {-1,1,2,3,4} {
+                    \draw (0.07,\y)--(-0.07,\y) node[left] {$\y$};
+                }
+
+                \draw[domain=-3.45:3.45, samples=100, smooth]
+                    plot (\x,{\x*\x/3});
+                \draw[dashed] (3,0)--(3,3)--(0,3);
+            \end{tikzpicture}
+        \end{center}
+
+        \begin{tasks}(2)
+            \task[(A)] $y=x^2$.
+            \task[(B)] $y=-\dfrac{1}{2}x^2$.
+            \task[(C)] $y=\dfrac{1}{4}x^2$.
+            \task[(D)] $y=\dfrac{1}{3}x^2$.
+        \end{tasks}
+        \par\noindent\answerbox\par
+
+        \item Cho hàm số $y=-\dfrac{2}{5}x^2$ có đồ thị là parabol $(P)$. Điểm trên $(P)$ khác gốc tọa độ $O(0;0)$ có tung độ gấp ba lần hoành độ thì có hoành độ là
+        \begin{tasks}(2)
+            \task[(A)] $-\dfrac{15}{2}$.
+            \task[(B)] $\dfrac{15}{2}$.
+            \task[(C)] $\dfrac{2}{15}$.
+            \task[(D)] $-\dfrac{2}{15}$.
+        \end{tasks}
+        \par\noindent\answerbox\par
+
+        \item Trong các điểm $A(1;-2)$, $B(-1;-1)$, $C(10;-200)$, $D(\sqrt{10};-20)$, có bao nhiêu điểm thuộc đồ thị của hàm số $y=-2x^2$?
+        \begin{tasks}(4)
+            \task[(A)] 2.
+            \task[(B)] 1.
+            \task[(C)] 3.
+            \task[(D)] 4.
+        \end{tasks}
+        \par\noindent\answerbox\par
+
+        \item Tọa độ một giao điểm của parabol $(P): y=\dfrac{1}{2}x^2$ và đường thẳng $(d): y=x+\dfrac{3}{2}$ là
+        \begin{tasks}(2)
+            \task[(A)] $\left(1;\dfrac{1}{2}\right)$.
+            \task[(B)] $\left(\dfrac{1}{2};2\right)$.
+            \task[(C)] $\left(-\dfrac{1}{2};1\right)$.
+            \task[(D)] $\left(-1;\dfrac{1}{2}\right)$.
+        \end{tasks}
+        \par\noindent\answerbox\par
+
+        \item Để điểm $A\left(-\dfrac{\sqrt{2}}{\sqrt{5}};m\sqrt{5}\right)$ nằm trên parabol $y=-\sqrt{5}x^2$ thì giá trị của $m$ bằng
+        \begin{tasks}(2)
+            \task[(A)] $m=-\dfrac{5}{2}$.
+            \task[(B)] $m=\dfrac{2}{5}$.
+            \task[(C)] $m=-\dfrac{2}{5}$.
+            \task[(D)] $m=\dfrac{5}{2}$.
+        \end{tasks}
+        \par\noindent\answerbox\par
+
+        \item Cho parabol $(P): y=\left(m-\dfrac{3}{4}\right)x^2$, với $m\ne\dfrac{3}{4}$ và đường thẳng $(d): y=3x-5$. Biết đường thẳng $d$ cắt $(P)$ tại một điểm có tung độ $y=1$. Tìm $m$ và hoành độ giao điểm còn lại của $d$ và $(P)$.
+        \begin{tasks}(2)
+            \task[(A)] $m=0;\ x=2$.
+            \task[(B)] $m=1;\ x=2$.
+            \task[(C)] $m=1;\ x=10$.
+            \task[(D)] $m=\dfrac{5}{4};\ x=10$.
+        \end{tasks}
+        \par\noindent\answerbox\par
+
+        \item Không giải phương trình, hãy tính tổng hai nghiệm của phương trình $-3x^2+5x+1=0$.
+        \begin{tasks}(4)
+            \task[(A)] $-\dfrac{5}{6}$.
+            \task[(B)] $\dfrac{5}{3}$.
+            \task[(C)] $-\dfrac{5}{3}$.
+            \task[(D)] $\dfrac{5}{6}$.
+        \end{tasks}
+        \par\noindent\answerbox\par
+
+        \item Gọi $x_1,x_2$ là hai nghiệm của phương trình $-x^2-4x+6=0$. Không giải phương trình, tính giá trị của biểu thức $M=\dfrac{1}{x_1+2}+\dfrac{1}{x_2+2}$.
+        \begin{tasks}(4)
+            \task[(A)] $M=0$.
+            \task[(B)] $M=1$.
+            \task[(C)] $M=4$.
+            \task[(D)] $M=-2$.
+        \end{tasks}
+        \par\noindent\answerbox\par
+
+        \item Tìm điều kiện của tham số $m$ để phương trình $x^2-2(m-2)x+m^2-3m+5=0$ có hai nghiệm phân biệt.
+        \begin{tasks}(2)
+            \task[(A)] $m\le -1$.
+            \task[(B)] $m=-1$.
+            \task[(C)] $m>-1$.
+            \task[(D)] $m<-1$.
+        \end{tasks}
+        \par\noindent\answerbox\par
+
+        \item Nếu hai số $u,v$ có tổng là 7 và tích là $-8$ thì chúng là hai nghiệm của phương trình nào?
+        \begin{tasks}(2)
+            \task[(A)] $x^2+7x-8=0$.
+            \task[(B)] $x^2-7x-8=0$.
+            \task[(C)] $x^2+7x+8=0$.
+            \task[(D)] $x^2-7x+8=0$.
+        \end{tasks}
+        \par\noindent\answerbox\par
+    \end{enumerate}
+
+    \textbf{B. TỰ LUẬN}
+
+    \begin{questions}[resume=SBT]
+        \item Cho hai hàm số: $y=-\dfrac{3}{2}x^2$ và $y=x^2$.
+        \begin{questions}
+            \item Vẽ đồ thị của hai hàm số này trên cùng một mặt phẳng tọa độ.
+            \item Tìm điểm $A$ nằm trên đồ thị của hàm số $y=-\dfrac{3}{2}x^2$ và điểm $B$ nằm trên đồ thị của hàm số $y=x^2$, biết rằng chúng đều có hoành độ là $x=\dfrac{3}{2}$.
+            \item Gọi $A'$, $B'$ lần lượt là các điểm đối xứng của $A$, $B$ qua trục tung $Oy$. Tìm tọa độ của $A'$, $B'$ và chứng minh hai điểm này tương ứng nằm trên hai đồ thị của hàm số đi qua $A$, $B$.
+        \end{questions}
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Cho phương trình: $(m+1)x^2-3x+1=0$.
+        \begin{questions}
+            \item Giải phương trình với $m=1$.
+            \item Tìm điều kiện của $m$ để phương trình đã cho là phương trình bậc hai.
+            \item Tìm điều kiện của $m$ để phương trình đã cho:
+            \begin{itemize}[label={--}]
+                \item Có hai nghiệm phân biệt;
+                \item Có nghiệm kép;
+                \item Vô nghiệm.
+            \end{itemize}
+        \end{questions}
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Tìm hai số $u$ và $v$, biết:
+        \begin{questions}
+            \item $u-v=2$, $uv=255$;
+            \item $u^2+v^2=346$, $uv=165$.
+        \end{questions}
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Phương trình cầu đối với một sản phẩm là $p=60-0{,}0004x$, trong đó $p$ là giá tiền của mỗi sản phẩm (USD) và $x$ là số lượng sản phẩm đã bán. Tổng doanh thu cho việc bán $x$ sản phẩm này là:
+        \[
+            R(x)=xp=x(60-0{,}0004x).
+        \]
+        Hỏi phải bán bao nhiêu sản phẩm để doanh thu đạt được là 220 000 USD?
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Độ cao $h(t)$ (feet) của một vật sau $t$ giây kể từ khi nó được phóng thẳng đứng lên trên từ mặt đất với vận tốc ban đầu là 85 feet/giây được cho bởi công thức $h(t)=-16t^2+85t$.
+        \begin{questions}
+            \item Khi nào thì vật ở độ cao 50 feet?
+            \item Vật có bao giờ đạt đến độ cao 120 feet không? Giải thích lí do.
+        \end{questions}
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Công thức tính huyết áp tâm thu bình thường (kí hiệu là $P$) của một người đàn ông ở độ tuổi $A$, được đo bằng mmHg, được đưa ra như sau:
+        \[
+            P=0{,}006A^2-0{,}02A+120
+        \]
+        (Theo \textit{Algebra and Trigonometry, Pearson Education Limited, 2014}).
+
+        Tìm tuổi (làm tròn đến năm gần nhất) của người đàn ông có huyết áp bình thường là 125 mmHg.
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Trong một giải cờ vua thi đấu vòng tròn tính điểm, mỗi người chơi đấu với một người chơi khác đúng một lần. Công thức $N=\dfrac{x^2-x}{2}$ dùng để tính số ván cờ $N$ phải chơi theo thể thức thi đấu vòng tròn một lượt khi có $x$ người chơi.
+        \begin{questions}
+            \item Nếu một giải đấu có 10 người chơi thì có tất cả bao nhiêu ván cờ?
+            \item Trong một giải cờ vua thi đấu vòng tròn có tất cả 36 ván cờ, hỏi có bao nhiêu người chơi đã tham gia giải đấu?
+        \end{questions}
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Hai vòi nước cùng chảy vào một bể nước cạn, sau $4\dfrac{4}{5}$ giờ thì đầy bể. Nếu lúc đầu để vòi thứ nhất chảy riêng và 9 giờ sau mở thêm vòi thứ hai thì sau $\dfrac{6}{5}$ giờ nữa mới đầy bể. Hỏi mỗi vòi chảy riêng thì sau bao lâu sẽ đầy bể?
+
+        \answerline
+        \answerline
+        \answerline
+    \end{questions}
+\end{practice}
