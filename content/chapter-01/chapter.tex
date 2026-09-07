@@ -1,5 +1,19 @@
-\chapter{Số nguyên}
+% Verification-only harness for issue #28. Do not merge.
+\setcounter{chapter}{9}
+\chapter{Một số hình khối trong thực tiễn}
 
-Giới thiệu chương
+% Seed named SGK series immediately before Bài 10.17 without rendering the seed.
+\setbox0=\vbox{%
+    \begin{questions}[series=SGK,start=16]
+        \item seed
+    \end{questions}%
+}
 
-\input{content/chapter-01/sections/section-01}
+% Seed named SBT series immediately before Bài 10.14 without rendering the seed.
+\setbox0=\vbox{%
+    \begin{questions}[series=SBT,start=13]
+        \item seed
+    \end{questions}%
+}
+
+\input{content/chapter-05/sections/lesson-bai-tap-cuoi-chuong}
