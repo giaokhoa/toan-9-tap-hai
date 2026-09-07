@@ -1,0 +1,301 @@
+% Nguồn SGK Toán 9 Tập hai — Luyện tập chung sau Bài 23, trang 43--45:
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-43-1771844548794.png
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-44-1771844549112.png
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-45-1771844549411.png
+
+\section*{Luyện tập chung}
+
+\begin{lesson}
+    \textbf{Ví dụ 1}
+
+    Một vận động viên bắn 30 viên đạn vào bia với các điểm số thu được như sau:
+
+    10, 8, 9, 9, 10, 9, 9, 9, 8, 7, 10, 10, 9, 8, 7, 10, 9, 8, 7, 9, 9, 9, 10, 9, 10, 8, 9, 8, 8, 10.
+
+    a) Lập bảng tần số và tần số tương đối cho dãy dữ liệu trên.
+
+    b) Vẽ biểu đồ tần số dạng đoạn thẳng cho bảng tần số thu được ở câu a.
+
+    \textbf{Giải}
+
+    a) Số lần vận động viên được 10, 9, 8, 7 điểm tương ứng là 8, 12, 7, 3. Ta có bảng tần số sau:
+
+    \begin{center}
+        \begin{tblr}{
+            colspec={Q[l] *{4}{Q[c]}}
+        }
+            Điểm   & 10 & 9  & 8 & 7 \\
+            Tần số & 8  & 12 & 7 & 3 \\
+        \end{tblr}
+    \end{center}
+
+    Tổng số lần bắn là $n=30$.
+
+    Tỉ lệ được 10, 9, 8, 7 điểm tương ứng là $\dfrac{8}{30}\cdot 100\%\approx 26{,}7\%$; $\dfrac{12}{30}\cdot 100\%=40\%$; $\dfrac{7}{30}\cdot 100\%\approx 23{,}3\%$; $\dfrac{3}{30}\cdot 100\%=10\%$.
+
+    Ta có bảng tần số tương đối sau:
+
+    \begin{center}
+        \begin{tblr}{
+            colspec={Q[l] *{4}{Q[c]}}
+        }
+            Điểm             & 10      & 9    & 8       & 7    \\
+            Tần số tương đối & 26{,}7\% & 40\% & 23{,}3\% & 10\% \\
+        \end{tblr}
+    \end{center}
+
+    b) Vẽ biểu đồ tần số dạng đoạn thẳng (H.7.14).
+
+    \begin{center}
+        \begin{tikzpicture}[x=1.45cm,y=0.28cm]
+            \foreach \y in {0,2,...,14} {
+                \draw[base300] (0,\y) -- (4.2,\y);
+                \node[left] at (0,\y) {$\y$};
+            }
+
+            \draw[base700] (0,0) -- (4.2,0);
+            \draw[base700] (0,0) -- (0,14.5);
+
+            \coordinate (Pten) at (0.65,8);
+            \coordinate (Pnine) at (1.65,12);
+            \coordinate (Peight) at (2.65,7);
+            \coordinate (Pseven) at (3.65,3);
+
+            \draw[thick,base700] (Pten) -- (Pnine) -- (Peight) -- (Pseven);
+            \foreach \P/\lab in {Pten/8,Pnine/12,Peight/7,Pseven/3} {
+                \node[draw=base700,fill=base700,minimum size=5pt,inner sep=0pt,rotate=45] at (\P) {};
+                \node[above=2pt] at (\P) {\lab};
+            }
+
+            \node[below] at (0.65,0) {10};
+            \node[below] at (1.65,0) {9};
+            \node[below] at (2.65,0) {8};
+            \node[below] at (3.65,0) {7};
+            \node[below=14pt] at (2.1,0) {Điểm};
+            \node[rotate=90] at (-0.65,7) {Tần số};
+            \node[font=\bfseries] at (2.1,15.6) {Kết quả bắn súng của vận động viên};
+        \end{tikzpicture}
+
+        \textit{Hình 7.14}
+    \end{center}
+
+    \textbf{Ví dụ 2}
+
+    Bảng thống kê sau cho biết số lượt mượn các loại sách trong một tuần tại thư viện của một trường Trung học cơ sở.
+
+    \begin{center}
+        \begin{tblr}{
+            width=\linewidth,
+            colspec={Q[l] *{4}{X[c]}}
+        }
+            Loại sách & Sách giáo khoa & Sách tham khảo & Truyện ngắn & Tiểu thuyết \\
+            Số lượt   & 20             & 80             & 70          & 30 \\
+        \end{tblr}
+    \end{center}
+
+    a) Lập bảng tần số tương đối cho bảng thống kê trên.
+
+    b) Vẽ biểu đồ hình quạt tròn biểu diễn bảng tần số tương đối thu được ở câu a.
+
+    \textbf{Giải}
+
+    a) Tổng số lượt mượn sách là $20+80+70+30=200$.
+
+    Tỉ lệ lượt mượn sách giáo khoa, sách tham khảo, truyện ngắn, tiểu thuyết tương ứng là $\dfrac{20}{200}\cdot 100\%=10\%$; $\dfrac{80}{200}\cdot 100\%=40\%$; $\dfrac{70}{200}\cdot 100\%=35\%$; $\dfrac{30}{200}\cdot 100\%=15\%$.
+
+    Ta có bảng tần số tương đối như sau:
+
+    \begin{center}
+        \begin{tblr}{
+            width=\linewidth,
+            colspec={Q[l] *{4}{X[c]}}
+        }
+            Loại sách          & Sách giáo khoa & Sách tham khảo & Truyện ngắn & Tiểu thuyết \\
+            Tần số tương đối   & 10\%           & 40\%           & 35\%        & 15\% \\
+        \end{tblr}
+    \end{center}
+
+    b) Số đo cung tương ứng của các hình quạt biểu diễn tỉ lệ các loại sách được mượn là:
+
+    Sách giáo khoa: $360^\circ\cdot 10\%=36^\circ$;
+
+    Sách tham khảo: $360^\circ\cdot 40\%=144^\circ$;
+
+    Truyện ngắn: $360^\circ\cdot 35\%=126^\circ$;
+
+    Tiểu thuyết: $360^\circ\cdot 15\%=54^\circ$.
+
+    Biểu đồ hình quạt tròn như Hình 7.15.
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (O) at (0,0);
+            \def\R{2}
+
+            \fill[cyan!60] (O) -- (90:\R) arc[start angle=90,end angle=54,radius=\R] -- cycle;
+            \fill[red!75] (O) -- (54:\R) arc[start angle=54,end angle=-90,radius=\R] -- cycle;
+            \fill[green!55] (O) -- (-90:\R) arc[start angle=-90,end angle=-216,radius=\R] -- cycle;
+            \fill[violet!65] (O) -- (-216:\R) arc[start angle=-216,end angle=-270,radius=\R] -- cycle;
+            \draw[base700] (O) circle (\R);
+
+            \node at (72:1.3) {10\%};
+            \node at (-18:1.2) {40\%};
+            \node at (-153:1.2) {35\%};
+            \node at (117:1.25) {15\%};
+
+            \node[font=\bfseries,align=center] at (1.8,2.65) {Tỉ lệ mượn các loại sách\\tại thư viện};
+
+            \fill[cyan!60] (2.8,1.15) rectangle +(0.18,0.18);
+            \node[right] at (3.05,1.24) {Sách giáo khoa};
+            \fill[red!75] (2.8,0.65) rectangle +(0.18,0.18);
+            \node[right] at (3.05,0.74) {Sách tham khảo};
+            \fill[green!55] (2.8,0.15) rectangle +(0.18,0.18);
+            \node[right] at (3.05,0.24) {Truyện ngắn};
+            \fill[violet!65] (2.8,-0.35) rectangle +(0.18,0.18);
+            \node[right] at (3.05,-0.26) {Tiểu thuyết};
+        \end{tikzpicture}
+
+        \textit{Hình 7.15}
+    \end{center}
+\end{lesson}
+
+\begin{exercises}
+    \subsection{Bài tập}
+
+    \begin{questions}[resume=SGK]
+        \item Bảng thống kê sau cho biết số lượng học sinh của lớp 9B theo mức độ cận thị.
+
+        \begin{center}
+            \begin{tblr}{
+                width=\linewidth,
+                colspec={Q[l] *{4}{X[c]}}
+            }
+                Mức độ      & Không cận thị & Cận thị nhẹ & Cận thị vừa & Cận thị nặng \\
+                Số học sinh & 10            & 13          & 12          & 5 \\
+            \end{tblr}
+        \end{center}
+
+        \begin{questions}
+            \item Lập bảng tần số tương đối cho bảng thống kê trên.
+
+            \answerline
+            \answerline
+            \answerline
+
+            \item Đa số học sinh của lớp 9B cận thị hay không cận thị?
+
+            \answerline
+        \end{questions}
+
+        \item Tỉ lệ bình chọn các tiết mục văn nghệ của các lớp 9A, 9B, 9C, 9D tham gia hội diễn văn nghệ khối lớp 9 như sau:
+
+        \begin{center}
+            \begin{tblr}{
+                colspec={Q[l] *{4}{Q[c]}}
+            }
+                Lớp                       & 9A   & 9B   & 9C   & 9D \\
+                Tỉ lệ học sinh bình chọn  & 35\% & 25\% & 30\% & 10\% \\
+            \end{tblr}
+        \end{center}
+
+        Biết rằng có 300 học sinh tham gia bình chọn. Lập bảng tần số biểu diễn số học sinh bình chọn cho tiết mục văn nghệ của mỗi lớp.
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Bạn Hoàng khảo sát ý kiến của các bạn trong tổ về chất lượng phục vụ của căng tin trường thu được kết quả sau:
+
+        \begin{center}
+            A, B, C, B, A, A, B, A, B, A,
+        \end{center}
+
+        trong đó A là mức Tốt, B là mức Trung bình, C là mức Kém.
+
+        Hãy lập bảng tần số và bảng tần số tương đối biểu diễn kết quả bạn Hoàng thu được.
+
+        \answerline
+        \answerline
+        \answerline
+        \answerline
+
+        \item Biểu đồ cột Hình 7.16 cho biết cỡ giày của các bạn nam khối lớp 9 trong trường.
+
+        \begin{center}
+            \begin{tikzpicture}[x=1.15cm,y=0.12cm]
+                \foreach \y in {0,5,...,40} {
+                    \draw[base300] (0,\y) -- (6,\y);
+                    \node[left] at (0,\y) {$\y$};
+                }
+
+                \draw[base700] (0,0) -- (6,0);
+                \draw[base700] (0,0) -- (0,41);
+
+                \foreach \x/\lab/\h in {1/36/28,2/37/37,3/38/30,4/39/10,5/40/15} {
+                    \fill[cyan!55] (\x-0.28,0) rectangle (\x+0.28,\h);
+                    \node[above=2pt] at (\x,\h) {\h};
+                    \node[below] at (\x,0) {\lab};
+                }
+
+                \node[rotate=90] at (-0.75,20) {Số học sinh};
+                \node[below=14pt] at (3,0) {Cỡ giày};
+                \node[font=\bfseries] at (3,45) {Cỡ giày của các bạn nam khối lớp 9};
+            \end{tikzpicture}
+
+            \textit{Hình 7.16}
+        \end{center}
+
+        Lập bảng tần số và bảng tần số tương đối cho dữ liệu được biểu diễn trên biểu đồ.
+
+        \answerline
+        \answerline
+        \answerline
+        \answerline
+
+        \item Cho bảng tần số sau:
+
+        \begin{center}
+            \begin{tblr}{
+                colspec={Q[l] *{5}{Q[c]}}
+            }
+                Điểm thi môn Toán & 6 & 7 & 8  & 9  & 10 \\
+                Số học sinh       & 5 & 8 & 12 & 10 & 4 \\
+            \end{tblr}
+        \end{center}
+
+        Vẽ biểu đồ tần số dạng đoạn thẳng cho bảng tần số trên.
+
+        \answerline
+        \answerline
+        \answerline
+        \answerline
+        \answerline
+        \answerline
+
+        \item Theo dõi thời tiết tại một điểm du lịch trong 30 ngày người ta thu được bảng sau:
+
+        \begin{center}
+            \begin{tblr}{
+                colspec={Q[l] *{3}{Q[c]}}
+            }
+                Thời tiết & Không mưa & Mưa nhỏ & Mưa to \\
+                Số ngày   & 10        & 8       & 12 \\
+            \end{tblr}
+        \end{center}
+
+        \begin{questions}
+            \item Lập bảng tần số tương đối và vẽ biểu đồ hình quạt tròn biểu diễn bảng tần số tương đối thu được.
+
+            \answerline
+            \answerline
+            \answerline
+            \answerline
+            \answerline
+
+            \item Ước lượng xác suất để một ngày trời có mưa ở điểm du lịch này.
+
+            \answerline
+            \answerline
+        \end{questions}
+    \end{questions}
+\end{exercises}
