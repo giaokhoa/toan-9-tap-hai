@@ -1,0 +1,342 @@
+\begin{lesson}
+    \subsection{Kiến thức trọng tâm}
+
+    \begin{center}
+        \begin{tblr}{
+            width=\linewidth,
+            colspec={X[l] X[l]},
+            cells={valign=t},
+            row{1}={font=\bfseries, halign=c}
+        }
+            Khái niệm, thuật ngữ & Kiến thức, kĩ năng \\
+            \textbullet\ Đa giác, đa giác đều\par
+            \textbullet\ Đỉnh, cạnh, góc của đa giác\par
+            \textbullet\ Phép quay
+            &
+            \textbullet\ Nhận dạng đa giác đều. Nhận biết những hình phẳng đều trong tự nhiên, nghệ thuật, kiến trúc, công nghệ chế tạo,\ldots\par
+            \textbullet\ Nhận biết vẻ đẹp của thế giới tự nhiên biểu hiện qua tính đều.\par
+            \textbullet\ Nhận biết phép quay. Mô tả được các phép quay giữ nguyên hình đa giác đều.
+        \end{tblr}
+    \end{center}
+
+    Chúng ta đã biết tam giác đều được tạo bởi ba cạnh bằng nhau, hình vuông được tạo bởi bốn cạnh bằng nhau. Hơn nữa, các góc trong mỗi hình đó bằng nhau. Trong bài này các em sẽ được học về những hình tương tự như vậy nhưng số cạnh có thể nhiều hơn, chúng được gọi chung là các đa giác đều.
+
+    \textbf{1. ĐA GIÁC ĐỀU}
+
+    \textbf{Đa giác}
+
+    Những hình như Hình 9.38 được gọi chung là các đa giác.
+
+    % TODO(HINH-NGUON): bo sung asset/crop dung Hinh 9.38 tu SGK trang 84; khong redraw xap xi bang TikZ.
+
+    Đa giác $ABCDE$ (H.9.38a) là hình gồm năm đoạn thẳng $AB$, $BC$, $CD$, $DE$, $EA$, trong đó bất kì hai đoạn thẳng nào có một điểm chung cũng không cùng nằm trên một đường thẳng. Đa giác $ABCDE$ có năm đỉnh là các điểm $A$, $B$, $C$, $D$, $E$; năm cạnh là các đoạn thẳng $AB$, $BC$, $CD$, $DE$, $EA$ và năm góc là các góc $EAB$, $ABC$, $BCD$, $CDE$, $DEA$.
+
+    Nếu với một cạnh bất kì, các đỉnh không thuộc cạnh đó đều nằm về một phía đối với đường thẳng chứa cạnh đó thì đa giác được gọi là đa giác lồi. Các đa giác trong Hình 9.38 a, b, d là các đa giác lồi. Đa giác trong Hình 9.38c không phải đa giác lồi.
+
+    \textbf{Đa giác đều}
+
+    \textbf{HĐ1} Ta đã biết các tam giác đều và hình vuông có các đỉnh nằm trên một đường tròn. Ta dựng một đa giác lồi 5 cạnh có các đỉnh nằm trên một đường tròn như sau:
+    \begin{itemize}
+        \item Vẽ đường tròn tâm $O$ bán kính $R$.
+        \item Lần lượt lấy các điểm $A$, $B$, $C$, $D$, $E$ trên đường tròn theo thứ tự ngược chiều kim đồng hồ (hoặc theo chiều kim đồng hồ) sao cho:
+        \[
+            \widehat{AOB}=\widehat{BOC}=\widehat{COD}=\widehat{DOE}=\widehat{EOA}
+            =\dfrac{360^\circ}{5}=72^\circ.
+        \]
+    \end{itemize}
+    Em hãy giải thích vì sao các cạnh và các góc của đa giác $ABCDE$ bằng nhau (H.9.39).
+
+    \begin{center}
+        \begin{tikzpicture}[scale=0.9]
+            \coordinate (O) at (0,0);
+            \foreach \name/\ang in {A/90,B/18,C/-54,D/-126,E/162}{
+                \coordinate (\name) at (\ang:2);
+            }
+            \draw (O) circle (2);
+            \draw (A)--(B)--(C)--(D)--(E)--cycle;
+            \foreach \name in {A,B,C,D,E}{\draw (O)--(\name);}
+            \fill (O) circle (1.2pt);
+            \node[below=1pt of O] {$O$};
+            \node[above=1pt of A] {$A$};
+            \node[right=1pt of B] {$B$};
+            \node[below right=1pt of C] {$C$};
+            \node[below left=1pt of D] {$D$};
+            \node[left=1pt of E] {$E$};
+        \end{tikzpicture}
+
+        \textit{Hình 9.39}
+    \end{center}
+
+    \answerline
+    \answerline
+
+    Đa giác $ABCDE$ như Hình 9.39 được gọi là một đa giác đều. Tổng quát, ta có định nghĩa:
+
+    \begin{keyconcept}
+        Đa giác đều là một đa giác lồi có các cạnh bằng nhau và các góc bằng nhau.
+    \end{keyconcept}
+
+    Người ta chứng minh được rằng các đỉnh của mỗi đa giác đều luôn cùng nằm trên một đường tròn, được gọi là đường tròn ngoại tiếp đa giác, tâm đường tròn được gọi là tâm của đa giác và đa giác được gọi là nội tiếp đường tròn đó.
+
+    \textbf{Câu hỏi} Nếu một lục giác đều (đa giác đều 6 cạnh) nội tiếp đường tròn bán kính 2 cm (H.9.40) thì độ dài các cạnh của lục giác đều bằng bao nhiêu centimét? Số đo các góc của lục giác đều bằng bao nhiêu độ?
+
+    \begin{center}
+        \begin{tikzpicture}[scale=0.8]
+            \coordinate (O) at (0,0);
+            \foreach \name/\ang in {A/120,B/60,C/0,D/-60,E/-120,F/180}{
+                \coordinate (\name) at (\ang:2);
+            }
+            \draw (O) circle (2);
+            \draw (A)--(B)--(C)--(D)--(E)--(F)--cycle;
+            \draw (O)--(F) node[midway,above] {$2$ cm};
+            \fill (O) circle (1.2pt);
+            \node[below=1pt of O] {$O$};
+            \node[above left=1pt of A] {$A$};
+            \node[above right=1pt of B] {$B$};
+            \node[right=1pt of C] {$C$};
+            \node[below right=1pt of D] {$D$};
+            \node[below left=1pt of E] {$E$};
+            \node[left=1pt of F] {$F$};
+        \end{tikzpicture}
+
+        \textit{Hình 9.40}
+    \end{center}
+
+    \answerline
+    \answerline
+
+    \textbf{Ví dụ 1}
+    \begin{enumerate}[label=\alph*)]
+        \item Dưới đây là hình các đa giác đều thường gặp trong hình học (H.9.41).
+
+        % TODO(HINH-NGUON): bo sung asset/crop dung Hinh 9.41 tu SGK trang 85; giu du nhan Tam giac deu, Hinh vuong, Ngu giac deu, Luc giac deu, Bat giac deu.
+        \item Trong nghệ thuật, kiến trúc, công nghệ chế tạo và thế giới tự nhiên có nhiều hình phẳng có dạng đa giác đều. Những hình phẳng này không chỉ đẹp vì sự cân đối hài hoà mà còn tối ưu trong việc sắp xếp và sử dụng (H.9.42).
+
+        % TODO(HINH-NGUON): bo sung asset/crop dung Hinh 9.42 tu SGK trang 85--86; day la cum anh thuc te/minh hoa, khong redraw xap xi bang TikZ.
+    \end{enumerate}
+
+    \textbf{Ví dụ 2.} Trong các hình phẳng dưới đây, hình phẳng nào có dạng là một đa giác đều?
+
+    % TODO(HINH-NGUON): bo sung asset/crop dung bon hinh a, b, c, d cua Vi du 2 tu SGK trang 86; khong redraw khi chua kiem chung chinh xac.
+
+    \textbf{Giải.} Ta thấy đa giác trong hình a không phải đa giác lồi, đa giác trong hình b là hình thoi có các góc không bằng nhau, đa giác trong hình c là bát giác có các cạnh không bằng nhau, đa giác trong hình d là hình vuông. Do vậy chỉ có hình phẳng trong hình d có dạng đa giác đều.
+
+    \textbf{Ví dụ 3} Cho tam giác đều $ABC$ có cạnh 6 cm. Trên cạnh $AB$ lấy các điểm $M$, $N$; trên cạnh $BC$ lấy các điểm $P$, $Q$; trên cạnh $CA$ lấy các điểm $E$, $F$, sao cho các đoạn thẳng $AM$, $MN$, $NB$, $BP$, $PQ$, $QC$, $CE$, $EF$, $FA$ đều bằng 2 cm như Hình 9.43. Hỏi $MNPQEF$ có là một lục giác đều hay không?
+
+    % TODO(HINH-NGUON): bo sung asset/crop dung Hinh 9.43 tu SGK trang 86; hinh tam giac ABC voi cac diem chia ba tren ba canh.
+
+    \textbf{Giải (H.9.43).}
+
+    Theo Hình 9.43, ta thấy $MNPQEF$ là một đa giác lồi.
+
+    Ta có $\dfrac{AM}{AB}=\dfrac{AF}{AC}=\dfrac{1}{3}$. Theo định lí Thalès đảo cho tam giác $ABC$ và đường thẳng $MF$ thì $MF\parallel BC$.
+
+    Suy ra $\dfrac{MF}{BC}=\dfrac{AM}{AB}=\dfrac{1}{3}$. Do đó $MF=\dfrac{BC}{3}=2$ cm. Tương tự, $NP=QE=2$ cm.
+
+    Vậy lục giác $MNPQEF$ có tất cả các cạnh bằng nhau.
+
+    Mặt khác, tam giác $AMF$ là tam giác đều vì $AM=MF=FA=2$ cm nên $\widehat{FMA}=60^\circ$ và $\widehat{FMN}=180^\circ-\widehat{FMA}=120^\circ$.
+
+    Tương tự các góc tại các đỉnh $N$, $P$, $Q$, $E$, $F$ của lục giác $MNPQEF$ đều bằng nhau và bằng $120^\circ$. Vậy lục giác $MNPQEF$ có các cạnh và các góc bằng nhau. Do đó $MNPQEF$ là lục giác đều.
+
+    \textbf{Luyện tập 1}
+
+    Cho $M$, $N$, $P$, $Q$, $K$ lần lượt là trung điểm của các cạnh $AB$, $BC$, $CD$, $DE$ và $EA$ của ngũ giác đều $ABCDE$ (H.9.44). Hỏi $MNPQK$ có phải là ngũ giác đều hay không?
+
+    % TODO(HINH-NGUON): bo sung asset/crop dung Hinh 9.44 tu SGK trang 86.
+
+    \answerline
+    \answerline
+
+    \textbf{Thử thách nhỏ 1} Cho một bát giác đều (đa giác đều 8 cạnh) nội tiếp một đường tròn tâm $O$ (H.9.45). Hỏi mỗi góc của bát giác đều có số đo bằng bao nhiêu?
+
+    % TODO(HINH-NGUON): bo sung asset/crop dung Hinh 9.45 tu SGK trang 87.
+
+    \answerline
+
+    \textbf{2. PHÉP QUAY}
+
+    \textbf{Phép quay}
+
+    \textbf{HĐ2} Để bày bàn ăn cho nhiều người, các nhà hàng thường sử dụng bàn xoay có dạng hình tròn và quay được quanh tâm của hình tròn. Đặt một chiếc cốc nhỏ ở vị trí điểm $A$ trên bàn xoay có dạng hình tròn với tâm $O$ sao cho điểm $A$ khác điểm $O$. Khi quay bàn xoay thuận chiều quay của kim đồng hồ (H.9.46) thì chiếc cốc di chuyển đến một vị trí mới là điểm $B$.
+
+    % TODO(HINH-NGUON): Hinh 9.46 la anh/minh hoa ban xoay trong SGK trang 87; bo sung asset/crop dung nguon, khong redraw xap xi.
+
+    Em hãy so sánh khoảng cách từ hai điểm $A$ và $B$ đến điểm $O$. Hai điểm $A$, $B$ có cùng nằm trên một đường tròn tâm $O$ hay không?
+
+    \answerline
+
+    \textbf{HĐ3} Trên bàn xoay tâm $O$, vẽ tam giác đều $ABC$ nội tiếp một đường tròn $(O)$ và hai tia $OA$, $OB$ (H.9.47). Khi quay bàn xoay thuận chiều quay của kim đồng hồ để tia $OA$ di chuyển trùng với tia $OB$ (ở vị trí ban đầu), điểm $A$ có di chuyển đến vị trí của điểm $B$ không và sẽ di chuyển trên cung tròn nào của đường tròn $(O)$? Khi đó, điểm $C$ sẽ di chuyển đến vị trí của điểm nào?
+
+    \begin{center}
+        \begin{tikzpicture}[scale=0.8]
+            \coordinate (O) at (0,0);
+            \coordinate (A) at (90:2);
+            \coordinate (B) at (-30:2);
+            \coordinate (C) at (210:2);
+            \draw (O) circle (2);
+            \draw (A)--(B)--(C)--cycle;
+            \draw (O)--(A) (O)--(B);
+            \fill (O) circle (1.2pt);
+            \node[below left=1pt of O] {$O$};
+            \node[above=1pt of A] {$A$};
+            \node[right=1pt of B] {$B$};
+            \node[left=1pt of C] {$C$};
+        \end{tikzpicture}
+
+        \textit{Hình 9.47}
+    \end{center}
+
+    \answerline
+    \answerline
+
+    Trong HĐ2 và HĐ3, ta đã thực hiện một phép quay tâm $O$ để quay tia $OA$ theo chiều kim đồng hồ đến tia $OB$ và điểm $A$ khi di chuyển tạo thành cung $AB$ của đường tròn $(O;OA)$. Ta nói phép quay này biến điểm $A$ thành điểm $B$. Cụ thể ta có khái niệm phép quay như sau:
+
+    \begin{keyconcept}
+        Phép quay thuận chiều $\alpha^\circ$ ($0^\circ<\alpha<360^\circ$) tâm $O$ giữ nguyên điểm $O$, biến điểm $A$ khác điểm $O$ thành điểm $B$ thuộc đường tròn $(O;OA)$ sao cho tia $OA$ quay thuận chiều kim đồng hồ đến tia $OB$ thì điểm $A$ tạo nên cung $AB$ có số đo $\alpha$ (H.9.48a). Định nghĩa tương tự cho phép quay ngược chiều $\alpha^\circ$ tâm $O$ (H.9.48b). Phép quay $0^\circ$ và phép quay $360^\circ$ giữ nguyên mọi điểm.
+    \end{keyconcept}
+
+    \begin{center}
+        \begin{tikzpicture}[x=1cm,y=1cm]
+            \begin{scope}[shift={(0,0)}]
+                \coordinate (Oa) at (0,0);
+                \coordinate (Aa) at (35:1.8);
+                \coordinate (Ba) at (-35:1.8);
+                \draw (Oa)--(Aa) (Oa)--(Ba);
+                \draw (35:.65) arc[start angle=35,end angle=-35,radius=.65];
+                \fill (Oa) circle (1.2pt);
+                \node[left=1pt of Oa] {$O$};
+                \node[above right=1pt of Aa] {$A$};
+                \node[below right=1pt of Ba] {$B$};
+                \node[right] at (.72,0) {$\alpha^\circ$};
+                \node[below=4pt] at (.9,-.9) {a)};
+            \end{scope}
+            \begin{scope}[shift={(5,0)}]
+                \coordinate (Ob) at (0,0);
+                \coordinate (Ab) at (-35:1.8);
+                \coordinate (Bb) at (35:1.8);
+                \draw (Ob)--(Ab) (Ob)--(Bb);
+                \draw (-35:.65) arc[start angle=-35,end angle=35,radius=.65];
+                \fill (Ob) circle (1.2pt);
+                \node[left=1pt of Ob] {$O$};
+                \node[below right=1pt of Ab] {$A$};
+                \node[above right=1pt of Bb] {$B$};
+                \node[right] at (.72,0) {$\alpha^\circ$};
+                \node[below=4pt] at (.9,-.9) {b)};
+            \end{scope}
+        \end{tikzpicture}
+
+        \textit{Hình 9.48}
+    \end{center}
+
+    \textbf{Câu hỏi}
+    \begin{enumerate}[label=\alph*)]
+        \item Phép quay ngược chiều $180^\circ$ tâm $O$ biến điểm $A$ thành điểm $A'$. Hỏi điểm $A'$ có đối xứng với điểm $A$ qua $O$ hay không?
+        \item Nếu phép quay thuận chiều $\alpha^\circ$ tâm $O$ biến điểm $A$ thành điểm $B$ thì phép quay ngược chiều $\alpha^\circ$ tâm $O$ có biến điểm $B$ thành điểm $A$ hay không?
+    \end{enumerate}
+
+    \answerline
+    \answerline
+
+    \textbf{Ví dụ 4} Cho tam giác đều $ABC$ nội tiếp đường tròn $(O)$ như Hình 9.49. Hãy cho biết các phép quay ngược chiều lần lượt $120^\circ$, $240^\circ$, $360^\circ$ với tâm $O$ sẽ biến các đỉnh $A$, $B$, $C$ thành những điểm nào?
+
+    \begin{center}
+        \begin{tikzpicture}[scale=0.8]
+            \coordinate (O) at (0,0);
+            \coordinate (A) at (90:2);
+            \coordinate (B) at (210:2);
+            \coordinate (C) at (330:2);
+            \draw (O) circle (2);
+            \draw (A)--(B)--(C)--cycle;
+            \draw (O)--(A) (O)--(B) (O)--(C);
+            \fill (O) circle (1.2pt);
+            \node[below right=1pt of O] {$O$};
+            \node[above=1pt of A] {$A$};
+            \node[left=1pt of B] {$B$};
+            \node[right=1pt of C] {$C$};
+            \node[left=2pt] at (-.6,.35) {$120^\circ$};
+        \end{tikzpicture}
+
+        \textit{Hình 9.49}
+    \end{center}
+
+    \textbf{Giải.} Các phép quay ngược chiều lần lượt $120^\circ$, $240^\circ$, $360^\circ$ với tâm $O$ biến các điểm $A$, $B$, $C$ thành những điểm tương ứng được cho bởi bảng sau:
+
+    \begin{center}
+        \begin{tblr}{colspec={Q[l] Q[c] Q[c] Q[c]}}
+            Phép quay ngược chiều\textbackslash Đỉnh & $A$ & $B$ & $C$ \\
+            $120^\circ$ & $B$ & $C$ & $A$ \\
+            $240^\circ$ & $C$ & $A$ & $B$ \\
+            $360^\circ$ & $A$ & $B$ & $C$
+        \end{tblr}
+    \end{center}
+
+    Người ta nói ba phép quay trên biến tam giác đều $ABC$ thành chính nó, hay các phép quay này giữ nguyên tam giác đều $ABC$. Tổng quát, ta có khái niệm và kết quả sau:
+
+    \begin{keyconcept}
+        Một phép quay được gọi là giữ nguyên một đa giác đều $\mathcal H$ nếu phép quay đó biến mỗi điểm của $\mathcal H$ thành một điểm của $\mathcal H$.
+
+        Người ta chỉ ra rằng nếu một phép quay biến các đỉnh của đa giác đều $\mathcal H$ thành các đỉnh của $\mathcal H$ thì phép quay đó giữ nguyên $\mathcal H$.
+    \end{keyconcept}
+
+    \textbf{Luyện tập 2}
+
+    Cho hình vuông $ABCD$ nội tiếp đường tròn $(O)$ như Hình 9.50.
+
+    \begin{center}
+        \begin{tikzpicture}[scale=0.8]
+            \coordinate (O) at (0,0);
+            \coordinate (A) at (135:2);
+            \coordinate (B) at (45:2);
+            \coordinate (C) at (-45:2);
+            \coordinate (D) at (-135:2);
+            \draw (O) circle (2);
+            \draw (A)--(B)--(C)--(D)--cycle;
+            \fill (O) circle (1.2pt);
+            \node[below=1pt of O] {$O$};
+            \node[above left=1pt of A] {$A$};
+            \node[above right=1pt of B] {$B$};
+            \node[below right=1pt of C] {$C$};
+            \node[below left=1pt of D] {$D$};
+        \end{tikzpicture}
+
+        \textit{Hình 9.50}
+    \end{center}
+
+    \begin{enumerate}[label=\alph*)]
+        \item Phép quay thuận chiều $90^\circ$ tâm $O$ biến các điểm $A$, $B$, $C$, $D$ thành những điểm nào? Phép quay này có giữ nguyên hình vuông $ABCD$ không?
+        \item Hãy liệt kê thêm ba phép quay khác với tâm $O$ theo chiều kim đồng hồ giữ nguyên hình vuông $ABCD$.
+    \end{enumerate}
+
+    \answerline
+    \answerline
+
+    \textbf{Thực hành} Cho điểm $O$ và điểm $A$ khác điểm $O$ (H.9.51). Phép quay ngược chiều $60^\circ$ tâm $O$ biến điểm $A$ thành điểm $A'$. Xác định điểm $A'$ theo hướng dẫn sau: Vẽ đường tròn $(O;OA)$ và tia $Ox$ sao cho $\widehat{AOx}=60^\circ$, tia $Ox$ cắt đường tròn $(O;OA)$ tại điểm $A'$ (H.9.51).
+
+    \begin{center}
+        \begin{tikzpicture}[scale=0.85]
+            \coordinate (O) at (0,0);
+            \coordinate (A) at (-25:2);
+            \coordinate (Ap) at (35:2);
+            \draw (O) circle (2);
+            \draw (O)--(A) (O)--(Ap);
+            \draw (-25:.55) arc[start angle=-25,end angle=35,radius=.55];
+            \fill (O) circle (1.2pt);
+            \node[left=1pt of O] {$O$};
+            \node[below right=1pt of A] {$A$};
+            \node[above right=1pt of Ap] {$A'$};
+            \node[right=1pt] at (35:2.3) {$x$};
+            \node[right=1pt] at (.62,.05) {$60^\circ$};
+        \end{tikzpicture}
+
+        \textit{Hình 9.51}
+    \end{center}
+
+    \answerline
+
+    \textbf{Thử thách nhỏ 2}
+
+    Hãy liệt kê 6 phép quay giữ nguyên một lục giác đều nội tiếp một đường tròn $(O)$.
+
+    \answerline
+\end{lesson}
