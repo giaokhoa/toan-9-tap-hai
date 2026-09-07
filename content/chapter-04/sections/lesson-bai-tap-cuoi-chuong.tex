@@ -1,0 +1,259 @@
+% Nguồn SGK Toán 9 Tập hai — Bài tập cuối chương IX, trang 92:
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-92-1771844565141.png
+%
+% Nguồn SBT Toán 9 Tập hai — Ôn tập chương IX, PDF page 61--62:
+% SBT TOÁN 9 TẬP 2.pdf (Project Sources)
+% SHA-256: 5ff01fd213d1adc75f9c54b4408d6a9642a4d8038e685040efef3311a196196c
+% Không lấy phần lời giải/hướng dẫn/đáp số của SBT.
+
+\section*{Bài tập cuối chương IX}
+
+\begin{exercises}
+    \subsection{Bài tập cuối chương IX}
+
+    \textbf{A. TRẮC NGHIỆM}
+
+    \begin{questions}[resume=SGK]
+        \item Khẳng định nào sau đây là đúng?
+        \begin{tasks}(1)
+            \task Góc nội tiếp có số đo bằng số đo cung bị chắn.
+            \task Góc có hai cạnh chứa các dây cung của đường tròn là góc nội tiếp đường tròn đó.
+            \task Góc nội tiếp có số đo bằng một nửa số đo cung bị chắn.
+            \task Góc có đỉnh nằm trên đường tròn là góc nội tiếp đường tròn đó.
+        \end{tasks}
+        \par\noindent\answerbox\par
+
+        \item Cho tứ giác $ABCD$ nội tiếp một đường tròn có $\widehat{A}-\widehat{C}=100^\circ$. Khẳng định nào sau đây là đúng?
+        \begin{tasks}(4)
+            \task $\widehat{A}=80^\circ$.
+            \task $\widehat{C}=80^\circ$.
+            \task $\widehat{B}+\widehat{D}=100^\circ$.
+            \task $\widehat{A}=140^\circ$.
+        \end{tasks}
+        \par\noindent\answerbox\par
+
+        \item Đa giác nào dưới đây \textbf{không} nội tiếp một đường tròn?
+        \begin{tasks}(4)
+            \task Đa giác đều.
+            \task Hình chữ nhật.
+            \task Hình bình hành.
+            \task Tam giác.
+        \end{tasks}
+        \par\noindent\answerbox\par
+    \end{questions}
+
+    \textbf{B. TỰ LUẬN}
+
+    \begin{questions}[resume=SGK]
+        \item Cho tam giác $ABC$ có các đường cao $BE$, $CF$ cắt nhau tại $H$. Gọi $M$ là trung điểm của $BC$ và $I$ là trung điểm của $AH$. Chứng minh rằng:
+        \begin{questions}
+            \item Tứ giác $AEHF$ nội tiếp một đường tròn tâm $I$;
+            \item $ME$, $MF$ tiếp xúc với đường tròn ngoại tiếp tứ giác $AEHF$.
+        \end{questions}
+        \answerline
+        \answerline
+        \answerline
+        \answerline
+
+        \item Cho tam giác $ABC$ nội tiếp đường tròn $(O)$. Gọi $M$, $N$, $P$ lần lượt là trung điểm của các cạnh $BC$, $CA$, $AB$. Chứng minh rằng các tứ giác $ANOP$, $BPOM$, $CMON$ là các tứ giác nội tiếp.
+        \answerline
+        \answerline
+        \answerline
+        \answerline
+
+        \item Cho một hình lục giác đều và một hình vuông cùng nội tiếp một đường tròn. Biết rằng hình vuông có cạnh bằng $3$ cm. Tính chu vi và diện tích của hình lục giác đều đã cho.
+        \answerline
+        \answerline
+        \answerline
+
+        \item
+        \begin{questions}
+            \item Cho hình vuông $ABCD$ nội tiếp đường tròn tâm $O$ (H.9.61). Phép quay thuận chiều $45^\circ$ tâm $O$ biến các điểm $A$, $B$, $C$, $D$ lần lượt thành các điểm $A'$, $B'$, $C'$, $D'$. Hãy vẽ tứ giác $A'B'C'D'$.
+
+            \begin{center}
+            \begin{tikzpicture}
+                \coordinate (O) at (0,0);
+                \coordinate (A) at (135:1.55);
+                \coordinate (D) at (45:1.55);
+                \coordinate (C) at (-45:1.55);
+                \coordinate (B) at (-135:1.55);
+                \draw[step=0.5cm, very thin] (-1.8,-1.8) grid (1.8,1.8);
+                \draw (O) circle (1.55);
+                \draw (A)--(D)--(C)--(B)--cycle;
+                \fill (O) circle (1.2pt);
+                \node[above left=1pt of A] {$A$};
+                \node[above right=1pt of D] {$D$};
+                \node[below right=1pt of C] {$C$};
+                \node[below left=1pt of B] {$B$};
+                \node[below left=1pt of O] {$O$};
+            \end{tikzpicture}
+
+            \textit{Hình 9.61}
+            \end{center}
+
+            \answerline
+            \answerline
+
+            \item Phép quay trong câu a biến các điểm $A'$, $B'$, $C'$, $D'$ thành những điểm nào?
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Bạn Lan muốn cắt hình ngôi sao có dạng như Hình 9.62 (trong đó $ABCDE$ là một ngũ giác đều). Lan gấp đôi tờ giấy, vẽ một nửa ngôi sao và cắt theo nét vẽ. Hỏi góc tạo bởi lưỡi kéo và nếp gấp lúc đầu bằng bao nhiêu độ?
+
+        \begin{center}
+        \begin{tikzpicture}
+            % Ngôi sao và ngũ giác ABCDE trong hình nguồn.
+            \coordinate (T) at (90:1.55);
+            \coordinate (B) at (54:0.62);
+            \coordinate (R) at (18:1.55);
+            \coordinate (C) at (-18:0.62);
+            \coordinate (BR) at (-54:1.55);
+            \coordinate (D) at (-90:0.62);
+            \coordinate (BL) at (-126:1.55);
+            \coordinate (E) at (-162:0.62);
+            \coordinate (L) at (162:1.55);
+            \coordinate (A) at (126:0.62);
+            \draw (T)--(B)--(R)--(C)--(BR)--(D)--(BL)--(E)--(L)--(A)--cycle;
+            \draw (A)--(B)--(C)--(D)--(E)--cycle;
+            \node[left=1pt of A] {$A$};
+            \node[right=1pt of B] {$B$};
+            \node[right=1pt of C] {$C$};
+            \node[below=1pt of D] {$D$};
+            \node[left=1pt of E] {$E$};
+
+            % Tờ giấy đã gấp đôi và nửa ngôi sao được vẽ để cắt theo nét.
+            \begin{scope}[xshift=4.0cm]
+                \coordinate (P1) at (-0.85,1.5);
+                \coordinate (P2) at (0.85,1.5);
+                \coordinate (P3) at (0.85,-1.5);
+                \coordinate (P4) at (-0.85,-1.5);
+                \draw (P1)--(P2)--(P3)--(P4)--cycle;
+                \draw (0.85,1.5)--(0.85,-1.5);
+                \draw (-0.85,0.35)--(0.10,0.35)--(-0.28,-0.15)--(0.05,-0.62)--(-0.25,-1.5);
+                \draw (0.72,1.52) circle (0.11);
+                \draw (0.98,1.52) circle (0.11);
+                \draw (0.79,1.44)--(0.55,1.20);
+                \draw (0.91,1.44)--(0.67,1.20);
+            \end{scope}
+        \end{tikzpicture}
+
+        \textit{Hình 9.62}
+        \end{center}
+
+        \answerline
+        \answerline
+    \end{questions}
+\end{exercises}
+
+\section*{Ôn tập chương IX}
+
+\begin{practice}
+    \subsection{Ôn tập chương IX}
+
+    \textbf{A. CÂU HỎI (Trắc nghiệm)}
+
+    \begin{enumerate}
+        \item Cho tứ giác $ABCD$ nội tiếp một đường tròn với $\widehat{A}=70^\circ$, $\widehat{B}=100^\circ$. Khẳng định nào dưới đây là đúng?
+        \begin{tasks}(2)
+            \task $\widehat{C}=80^\circ$, $\widehat{D}=110^\circ$.
+            \task $\widehat{C}=110^\circ$, $\widehat{D}=80^\circ$.
+            \task $\widehat{C}=140^\circ$, $\widehat{D}=200^\circ$.
+            \task $\widehat{C}=200^\circ$, $\widehat{D}=140^\circ$.
+        \end{tasks}
+        \par\noindent\answerbox\par
+
+        \item Xét trong một đường tròn, khẳng định nào dưới đây là \textbf{không đúng}?
+        \begin{tasks}(1)
+            \task Hai góc nội tiếp bằng nhau chắn hai cung bằng nhau.
+            \task Hai góc ở tâm bằng nhau chắn hai cung bằng nhau.
+            \task Góc nội tiếp có số đo bằng số đo góc ở tâm chắn cùng một cung.
+            \task Góc nội tiếp có số đo bằng nửa số đo của cung bị chắn.
+        \end{tasks}
+        \par\noindent\answerbox\par
+
+        \item Cho hình chữ nhật $ABCD$ nội tiếp $(O)$ với $AB=4$ cm, $BC=3$ cm. Đường tròn $(O)$ có bán kính là
+        \begin{tasks}(4)
+            \task $R=2{,}5$ cm.
+            \task $R=5$ cm.
+            \task $R=1{,}5$ cm.
+            \task $R=2$ cm.
+        \end{tasks}
+        \par\noindent\answerbox\par
+    \end{enumerate}
+
+    \textbf{B. BÀI TẬP}
+
+    \begin{questions}[resume=SBT]
+        \item Xét trong một đường tròn, những câu nào dưới đây là đúng?
+        \begin{questions}
+            \item Hai góc nội tiếp bằng nhau chắn hai cung bằng nhau.
+            \item Hai góc ở tâm bằng nhau chắn hai cung bằng nhau.
+            \item Góc ở tâm có số đo bằng số đo góc nội tiếp chắn cùng một cung.
+            \item Góc nội tiếp có số đo bằng số đo của cung bị chắn.
+        \end{questions}
+        \answerline
+
+        \item Cho tam giác $ABC$ nội tiếp đường tròn $(O)$. Tính số đo của các góc $BOC$, $COA$, $AOB$, biết rằng $\widehat{A}=60^\circ$; $\widehat{B}=70^\circ$.
+        \answerline
+        \answerline
+
+        \item Cho tam giác $ABC$ ngoại tiếp đường tròn $(I)$. Đường tròn $(I)$ tiếp xúc các cạnh $BC$, $CA$, $AB$ tại $D$, $E$, $F$. Chứng tỏ rằng $IEAF$, $IFBD$, $IDCE$ là các tứ giác nội tiếp.
+        \answerline
+        \answerline
+        \answerline
+
+        \item Cho tam giác đều $ABC$ nội tiếp một đường tròn bán kính $4$ cm. Hãy tính độ dài mỗi cạnh và bán kính đường tròn nội tiếp của tam giác $ABC$.
+        \answerline
+        \answerline
+        \answerline
+
+        \item Tính diện tích tam giác vuông cân, nội tiếp đường tròn bán kính $4$ cm.
+        \answerline
+        \answerline
+
+        \item Cho tam giác $ABC$ vuông tại $A$, có diện tích là $24$ cm$^2$ và nội tiếp đường tròn có bán kính $5$ cm. Tính bán kính đường tròn nội tiếp tam giác $ABC$.
+        \answerline
+        \answerline
+        \answerline
+
+        \item Hãy cho biết số đo các góc còn lại của tứ giác nội tiếp $ABCD$ trong mỗi trường hợp sau:
+        \begin{questions}
+            \item $\widehat{A}=80^\circ$; $\widehat{D}=100^\circ$;
+            \item $\widehat{B}=80^\circ$; $\widehat{A}=110^\circ$;
+            \item $\widehat{C}=120^\circ$; $\widehat{B}=60^\circ$;
+            \item $\widehat{D}=65^\circ$; $\widehat{C}=125^\circ$.
+        \end{questions}
+        \answerline
+        \answerline
+
+        \item Cho tam giác nhọn $ABC$ có đường cao $AH$. Các điểm $M$ và $N$ lần lượt là hình chiếu vuông góc của $H$ trên $AB$, $AC$. Chứng minh rằng $AM\cdot AB=AN\cdot AC$.
+        \answerline
+        \answerline
+        \answerline
+
+        \item Cho tam giác nhọn $ABC$ ($AB<AC$) có các đường cao $AD$, $BE$, $CF$. Cho $EF$ cắt $BC$ tại $K$. Chứng minh rằng:
+        \begin{questions}
+            \item $KB\cdot KC=KE\cdot KF$;
+            \item $\dfrac{KB}{KC}=\dfrac{DB}{DC}$.
+        \end{questions}
+        \answerline
+        \answerline
+        \answerline
+        \answerline
+
+        \item Cho một lục giác đều và một tam giác đều cùng nội tiếp một đường tròn. Biết rằng tam giác đều có cạnh bằng $3$ cm. Tính chu vi và diện tích của hình lục giác đều đã cho.
+        \answerline
+        \answerline
+        \answerline
+
+        \item Cho đa giác đều $\mathcal{H}$ có 12 cạnh, nội tiếp một đường tròn $(O)$. Kẻ các đoạn thẳng nối $O$ với các đỉnh của $\mathcal{H}$ và thu được 12 góc nhọn tại đỉnh $O$ (không chồng lên nhau).
+        \begin{questions}
+            \item Chứng tỏ rằng mỗi góc nhọn này có số đo bằng $30^\circ$.
+            \item Hãy chỉ ra 12 phép quay giữ nguyên $\mathcal{H}$.
+        \end{questions}
+        \answerline
+        \answerline
+        \answerline
+    \end{questions}
+\end{practice}
