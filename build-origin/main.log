@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.9.6)  7 SEP 2026 05:17
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.9.6)  7 SEP 2026 05:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1106,45 +1106,36 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 
 Package babel Info: Main language set to 'vietnamese'.
 (./content/chapter-01/chapter.tex
-Chương I.
-(./content/chapter-01/sections/section-01.tex [1
-
-
-]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 10.
-
-
+Chương VI.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
 (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 10.
-
+LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+(./content/chapter-01/sections/section-01.tex [1
 
-Package tasks Warning: The width of `item-indent' is too small on line 69.
-(tasks)                Please set it at least to 21.59985pt.
-
-[1
 
 ]
 Package babel Info: 'vietnamese' activates 'vietnamese' shorthands.
-(babel)             Reported on input line 170.
- [2] [3])) [4] (build/main.aux)
+(babel)             Reported on input line 148.
+ [2] [3] [4] [5] [6] [7]
+[8])) [9] (build/main.aux)
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-08-10>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 26778 strings out of 467745
- 628198 string characters out of 5422258
- 1131827 words of memory out of 5000000
- 55471 multiletter control sequences out of 15000+600000
- 632670 words of font info for 96 fonts, out of 8000000 for 9000
+ 28556 strings out of 467745
+ 664767 string characters out of 5422258
+ 1202530 words of memory out of 5000000
+ 57246 multiletter control sequences out of 15000+600000
+ 639280 words of font info for 124 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 102i,17n,100p,472b,1302s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,18n,107p,479b,1337s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on build/main.xdv (5 pages, 99540 bytes).
+Output written on build/main.xdv (9 pages, 316300 bytes).
