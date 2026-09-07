@@ -1,0 +1,309 @@
+% Nguồn SGK Toán 9 Tập hai — Bài 26, trang 60--63:
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-60-1771844554386.png
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-61-1771844554727.png
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-62-1771844555094.png
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-63-1771844555421.png
+% Nguồn SBT Toán 9 Tập hai — Bài 26, PDF trang 46--47:
+% SBT TOÁN 9 TẬP 2.pdf
+% SHA-256: 5ff01fd213d1adc75f9c54b4408d6a9642a4d8038e685040efef3311a196196c
+
+\section{Xác suất của biến cố liên quan tới phép thử}
+
+\begin{lesson}
+    \subsection{Kiến thức trọng tâm}
+
+    \textbf{Mở đầu}
+
+    Màu hạt của đậu Hà Lan có hai kiểu hình là vàng và xanh. Có hai gene ứng với hai kiểu hình này là allele trội A và allele lặn a. Hình dạng hạt của đậu Hà Lan có hai kiểu hình là hạt trơn và hạt nhăn. Có hai gene ứng với hai kiểu hình này là allele trội B và allele lặn b. Khi cho lai hai cây đậu Hà Lan, cặp gene của cây con được lấy ngẫu nhiên một gene từ cây bố và một gene từ cây mẹ. Phép thử là cho lai hai cây đậu Hà Lan, trong đó cây bố và cây mẹ có kiểu hình là “hạt vàng và trơn”. Hỏi xác suất để cây con có kiểu hình như cây bố và cây mẹ là bao nhiêu?
+
+    \answerline
+
+    \subsubsection{Kết quả thuận lợi cho một biến cố liên quan tới phép thử}
+
+    \textbf{HĐ} Bạn Tùng gieo một con xúc xắc liên tiếp hai lần. Xét các biến cố sau:
+
+    $E$: “Cả hai lần gieo con xúc xắc đều xuất hiện mặt có số chấm là số nguyên tố”;
+
+    $F$: “Cả hai lần gieo con xúc xắc đều không xuất hiện mặt có số chấm là số chẵn”.
+
+    \begin{enumerate}[label=\alph*)]
+        \item Phép thử là gì?
+        \item Giả sử số chấm xuất hiện trên con xúc xắc trong lần gieo thứ nhất, thứ hai tương ứng là 2 và 5 chấm. Khi đó, biến cố nào xảy ra? Biến cố nào không xảy ra?
+    \end{enumerate}
+
+    \answerline
+    \answerline
+
+    \begin{keyconcept}
+        Cho phép thử $T$. Xét biến cố $E$, ở đó việc xảy ra hay không xảy ra của $E$ tùy thuộc vào kết quả của phép thử $T$. Kết quả của phép thử $T$ làm cho biến cố $E$ xảy ra gọi là \textit{kết quả thuận lợi cho $E$}.
+    \end{keyconcept}
+
+    \textbf{Ví dụ 1} Một tấm bìa cứng hình tròn được chia làm bốn hình quạt bằng nhau, đánh số 1; 2; 3; 4 và được gắn vào trục quay có mũi tên ở tâm (H.8.2). Bạn Tuấn quay tấm bìa hai lần, quan sát và ghi lại số của hình quạt mà mũi tên chỉ vào.
+    \begin{enumerate}[label=\alph*)]
+        \item Phép thử là gì? Hãy mô tả không gian mẫu của phép thử.
+        \item Xét biến cố $E$: “Tổng hai số ghi trên hai hình quạt ở hai lần quay bằng 5”. Mô tả các kết quả thuận lợi cho biến cố $E$.
+        \item Xét biến cố $F$: “Tích hai số ghi trên hai hình quạt ở hai lần quay bằng 4”. Mô tả các kết quả thuận lợi cho biến cố $F$.
+    \end{enumerate}
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (O) at (0,0);
+            \coordinate (N) at (0,1.35);
+            \coordinate (E) at (1.35,0);
+            \coordinate (S) at (0,-1.35);
+            \coordinate (W) at (-1.35,0);
+            \draw (O) circle (1.35cm);
+            \draw (N)--(S);
+            \draw (W)--(E);
+            \node at ($(O)!0.55!(N)$) {1};
+            \node at ($(O)!0.55!(E)$) {2};
+            \node at ($(O)!0.55!(S)$) {3};
+            \node at ($(O)!0.55!(W)$) {4};
+            \draw[->] (O)--($(O)!0.72!(S)$);
+        \end{tikzpicture}
+
+        \textit{Hình 8.2}
+    \end{center}
+
+    \textbf{Giải}
+
+    a) Phép thử là quay tấm bìa hai lần. Kết quả của phép thử là một cặp số $(a,\,b)$, trong đó $a$ và $b$ tương ứng là số ghi trên các hình quạt mà mũi tên chỉ vào ở lần quay thứ nhất và thứ hai.
+
+    Ta liệt kê được tất cả các kết quả có thể của phép thử bằng cách lập bảng như sau:
+
+    \begin{center}
+        \begin{tblr}{
+            colspec={Q[c,m,1.8cm] *{4}{Q[c,m,1.55cm]}},
+            rows={0.85cm}
+        }
+            Lần 1 / Lần 2 & 1 & 2 & 3 & 4 \\
+            1 & $(1,\,1)$ & $(1,\,2)$ & $(1,\,3)$ & $(1,\,4)$ \\
+            2 & $(2,\,1)$ & $(2,\,2)$ & $(2,\,3)$ & $(2,\,4)$ \\
+            3 & $(3,\,1)$ & $(3,\,2)$ & $(3,\,3)$ & $(3,\,4)$ \\
+            4 & $(4,\,1)$ & $(4,\,2)$ & $(4,\,3)$ & $(4,\,4)$ \\
+        \end{tblr}
+    \end{center}
+
+    Mỗi ô trong bảng là một kết quả có thể. Không gian mẫu là tập hợp 16 ô của bảng trên. Như vậy, không gian mẫu của phép thử là
+    \[
+        \begin{aligned}
+            \Omega=\{&(1,\,1);\ (1,\,2);\ (1,\,3);\ (1,\,4);\ (2,\,1);\ (2,\,2);\ (2,\,3);\ (2,\,4);\\
+                     &(3,\,1);\ (3,\,2);\ (3,\,3);\ (3,\,4);\ (4,\,1);\ (4,\,2);\ (4,\,3);\ (4,\,4)\}.
+        \end{aligned}
+    \]
+
+    b) Các kết quả thuận lợi cho biến cố $E$ là $(1,\,4)$; $(2,\,3)$; $(3,\,2)$; $(4,\,1)$.
+
+    c) Các kết quả thuận lợi cho biến cố $F$ là $(1,\,4)$; $(2,\,2)$; $(4,\,1)$.
+
+    \textbf{Luyện tập 1} Bạn Hoàng lấy ngẫu nhiên một quả cầu từ một túi đựng 2 quả cầu gồm một quả màu đen và một quả màu trắng, có cùng khối lượng và kích thước. Bạn Hải rút ngẫu nhiên một tấm thẻ từ một hộp đựng 3 tấm thẻ A, B, C.
+    \begin{enumerate}[label=\alph*)]
+        \item Mô tả không gian mẫu của phép thử.
+        \item Xét các biến cố sau:
+
+        $E$: “Bạn Hoàng lấy được quả cầu màu đen”;
+
+        $F$: “Bạn Hoàng lấy được quả cầu màu trắng và bạn Hải không rút được tấm thẻ A”. Hãy mô tả các kết quả thuận lợi cho hai biến cố $E$ và $F$.
+    \end{enumerate}
+
+    \answerline
+    \answerline
+
+    \subsubsection{Tính xác suất của biến cố liên quan đến phép thử khi các kết quả của phép thử đồng khả năng}
+
+    \begin{keyconcept}
+        Giả sử rằng các kết quả có thể của phép thử $T$ là đồng khả năng. Khi đó xác suất $P(E)$ của biến cố $E$ bằng tỉ số giữa số kết quả thuận lợi cho biến cố $E$ và số phần tử của tập $\Omega$:
+        \[
+            P(E)=\dfrac{n(E)}{n(\Omega)},
+        \]
+        trong đó $\Omega$ là không gian mẫu của $T$; $n(E)$ là số kết quả thuận lợi cho biến cố $E$ và $n(\Omega)$ là số phần tử của tập $\Omega$.
+    \end{keyconcept}
+
+    \textbf{Cách tính xác suất của một biến cố}
+
+    Việc tính xác suất của một biến cố $E$ gồm các bước sau:
+    \begin{itemize}
+        \item \textbf{Bước 1.} Mô tả không gian mẫu của phép thử. Từ đó xác định số phần tử của không gian mẫu $\Omega$.
+        \item \textbf{Bước 2.} Chứng tỏ các kết quả có thể của phép thử là đồng khả năng.
+        \item \textbf{Bước 3.} Mô tả các kết quả thuận lợi cho biến cố $E$. Từ đó xác định số kết quả thuận lợi cho biến cố $E$.
+        \item \textbf{Bước 4.} Lập tỉ số giữa số kết quả thuận lợi cho biến cố $E$ với số phần tử của không gian mẫu $\Omega$.
+    \end{itemize}
+
+    \textbf{Ví dụ 2} Ba bạn Bảo, Châu, Dương được xếp ngẫu nhiên ngồi trên một hàng ghế có ba chỗ ngồi. Tính xác suất của các biến cố sau:
+    \begin{enumerate}[label=\alph*)]
+        \item $E$: “Bảo không ngồi ngoài cùng bên phải”;
+        \item $F$: “Châu và Dương không ngồi cạnh nhau”.
+    \end{enumerate}
+
+    \textbf{Giải}
+
+    Kí hiệu ba bạn Bảo, Châu, Dương lần lượt là $B$, $C$, $D$.
+
+    Ta liệt kê các kết quả có thể xảy ra:
+    \begin{itemize}
+        \item Bảo ngồi ngoài cùng bên trái: có 2 cách xếp là $BCD$ và $BDC$.
+        \item Bảo ngồi giữa: có 2 cách xếp là $CBD$ và $DBC$.
+        \item Bảo ngồi ngoài cùng bên phải: có 2 cách xếp là $CDB$ và $DCB$.
+    \end{itemize}
+
+    Vậy không gian mẫu của phép thử là $\Omega=\{BCD;\ BDC;\ CBD;\ DBC;\ CDB;\ DCB\}$. Tập $\Omega$ có 6 phần tử.
+
+    Vì việc xếp chỗ ngồi là ngẫu nhiên nên các kết quả có thể là đồng khả năng.
+
+    a) Có 4 kết quả thuận lợi cho biến cố $E$ là $BCD$, $BDC$, $CBD$ và $DBC$. Vậy $P(E)=\dfrac{4}{6}=\dfrac{2}{3}$.
+
+    b) Có 2 kết quả thuận lợi cho biến cố $F$ là $CBD$ và $DBC$. Vậy $P(F)=\dfrac{2}{6}=\dfrac{1}{3}$.
+
+    \textbf{Luyện tập 2} Cho hai túi I và II, mỗi túi chứa 3 tấm thẻ được ghi các số 2; 3; 7. Rút ngẫu nhiên từ mỗi túi ra một tấm thẻ và ghép thành số có hai chữ số với chữ số trên tấm thẻ rút từ túi I là chữ số hàng chục. Tính xác suất của các biến cố sau:
+    \begin{enumerate}[label=\alph*)]
+        \item $A$: “Số tạo thành chia hết cho 4”;
+        \item $B$: “Số tạo thành là số nguyên tố”.
+    \end{enumerate}
+
+    \answerline
+    \answerline
+
+    \textbf{Ví dụ 3} Để trả lời câu hỏi trong tình huống mở đầu ta cần biết kiểu gene của cây bố và cây mẹ. Giả sử cây bố có kiểu gene là $(AA,\,Bb)$, cây mẹ có kiểu gene là $(Aa,\,Bb)$. Khi đó yêu cầu bài toán trở thành tính xác suất để cây con có hạt vàng và trơn.
+
+    \textbf{Giải}
+
+    Ở Bài 25, ta đã biết không gian mẫu là:
+    \[
+        \Omega=\{(AA,\,BB);\ (AA,\,Bb);\ (AA,\,bB);\ (AA,\,bb);\ (Aa,\,BB);\ (Aa,\,Bb);\ (Aa,\,bB);\ (Aa,\,bb)\}.
+    \]
+
+    Tập $\Omega$ có 8 phần tử. Phép thử có 8 kết quả có thể. Do cây con chọn ngẫu nhiên một gene từ cây bố và một gene từ cây mẹ nên các kết quả có thể trên là đồng khả năng.
+
+    Gọi $M$ là biến cố “Cây con có hạt vàng và trơn”.
+
+    Cây con có hạt vàng và trơn nếu trong gene màu hạt có ít nhất một allele trội A và trong gene dạng hạt có ít nhất một allele trội B.
+
+    Có 6 kết quả thuận lợi cho biến cố $M$ là
+    \[
+        \begin{aligned}
+            &(AA,\,BB);\ (AA,\,Bb);\ (AA,\,bB);\\
+            &(Aa,\,BB);\ (Aa,\,Bb);\ (Aa,\,bB).
+        \end{aligned}
+    \]
+
+    Vậy $P(M)=\dfrac{6}{8}=\dfrac{3}{4}$.
+
+    \textbf{Luyện tập 3} Trở lại Ví dụ 3, tính xác suất để cây con có hạt vàng và nhăn.
+
+    \answerline
+    \answerline
+\end{lesson}
+
+\begin{exercises}
+    \subsection{Bài tập}
+
+    \begin{questions}[resume=SGK]
+        \item Chọn ngẫu nhiên một gia đình có hai con. Giả thiết rằng biến cố “Sinh con trai” và biến cố “Sinh con gái” là đồng khả năng. Tính xác suất của các biến cố sau:
+        \begin{questions}
+            \item $A$: “Gia đình đó có cả con trai và con gái”;
+            \item $B$: “Gia đình đó có con trai”.
+        \end{questions}
+
+        \answerline
+        \answerline
+
+        \item Gieo đồng thời hai con xúc xắc cân đối, đồng chất I và II. Tính xác suất các biến cố sau:
+
+        $E$: “Có đúng một con xúc xắc xuất hiện mặt 6 chấm”;
+
+        $F$: “Có ít nhất một con xúc xắc xuất hiện mặt 6 chấm”;
+
+        $G$: “Tích của hai số chấm xuất hiện trên hai con xúc xắc nhỏ hơn hoặc bằng 6”.
+
+        \answerline
+        \answerline
+
+        \item Bạn An gieo một đồng xu cân đối và bạn Bình rút ngẫu nhiên một tấm thẻ từ hộp chứa 5 tấm thẻ ghi các số 1; 2; 3; 4; 5. Tính xác suất của các biến cố sau:
+
+        $E$: “Rút được tấm thẻ ghi số lẻ”;
+
+        $F$: “Rút được tấm thẻ ghi số chẵn và đồng xu xuất hiện mặt sấp”;
+
+        $G$: “Rút được tấm thẻ ghi số 5 hoặc đồng xu xuất hiện mặt ngửa”.
+
+        \answerline
+        \answerline
+
+        \item Có hai túi I và II mỗi túi chứa 4 tấm thẻ được đánh số 1; 2; 3; 4. Rút ngẫu nhiên từ mỗi túi ra một tấm thẻ và nhân hai số ghi trên hai tấm thẻ với nhau. Tính xác suất của các biến cố sau:
+
+        $A$: “Kết quả là một số lẻ”;
+
+        $B$: “Kết quả là 1 hoặc một số nguyên tố”.
+
+        \answerline
+        \answerline
+    \end{questions}
+\end{exercises}
+
+\begin{practice}
+    \subsection{Luyện tập}
+
+    \begin{questions}[resume=SBT]
+        \item Gieo đồng thời một con xúc xắc và một đồng xu. Tính xác suất của các biến cố sau:
+        \begin{questions}
+            \item $E$: “Số chấm xuất hiện trên con xúc xắc là số lẻ”;
+            \item $F$: “Số chấm xuất hiện trên con xúc xắc là số chẵn và đồng xu xuất hiện mặt ngửa”.
+        \end{questions}
+
+        \answerline
+        \answerline
+
+        \item Gieo một con xúc xắc liên tiếp hai lần. Tính xác suất để tổng số chấm xuất hiện trên con xúc xắc trong hai lần gieo lớn hơn hoặc bằng 8.
+
+        \answerline
+        \answerline
+
+        \item Bạn Hạnh gieo một con xúc xắc và bạn Hằng rút ngẫu nhiên một tấm thẻ từ một hộp chứa 4 tấm thẻ ghi các chữ A, B, C, D. Tính xác suất của các biến cố sau:
+        \begin{questions}
+            \item $E$: “Số chấm xuất hiện trên con xúc xắc là 6”;
+            \item $F$: “Rút được tấm thẻ ghi chữ A hoặc số chấm xuất hiện trên con xúc xắc là 5”.
+        \end{questions}
+
+        \answerline
+        \answerline
+
+        \item Bạn Bình gieo một đồng xu cân đối và bạn Thịnh gieo một con xúc xắc cân đối. Tính xác suất của các biến cố sau:
+        \begin{questions}
+            \item $E$: “Đồng xu xuất hiện mặt sấp và số chấm xuất hiện trên con xúc xắc lớn hơn 3”;
+            \item $F$: “Đồng xu xuất hiện mặt ngửa hoặc số chấm xuất hiện trên con xúc xắc lớn hơn 3”.
+        \end{questions}
+
+        \answerline
+        \answerline
+
+        \item Hai túi I và II chứa các viên bi có cùng kích thước. Túi I chứa 4 viên bi được ghi các số 1, 2, 3, 4. Túi II chứa 5 viên bi được ghi các số 1, 2, 3, 4, 5. Bạn Mai lấy ngẫu nhiên một viên bi từ túi I và bạn Tuấn lấy ngẫu nhiên một viên bi từ túi II. Tính xác suất của các biến cố sau:
+        \begin{questions}
+            \item $A$: “Hai số ghi trên hai viên bi khác nhau”;
+            \item $B$: “Hai số ghi trên hai viên bi chênh nhau 1 đơn vị”;
+            \item $C$: “Hai số ghi trên hai viên bi chênh nhau 3 đơn vị”.
+        \end{questions}
+
+        \answerline
+        \answerline
+
+        \item Một tấm bìa hình tròn được chia làm bốn phần có diện tích bằng nhau; ghi các số 1, 2, 3, 4 và được gắn vào trục quay có mũi tên cố định ở tâm. Bạn Nam quay tấm bìa, bạn Bình gieo một con xúc xắc cân đối. Giả sử mũi tên dừng ở hình quạt ghi số $m$ và số chấm xuất hiện trên con xúc xắc là $n$.
+
+        Tính xác suất của các biến cố sau:
+        \begin{questions}
+            \item $E$: “Trong hai số $m$ và $n$, chỉ có một số nguyên tố”;
+            \item $F$: “Tổng của hai số $m$ và $n$ lớn hơn 6”.
+        \end{questions}
+
+        \answerline
+        \answerline
+
+        \item Có ba chiếc hộp. Hộp A chứa 2 tấm thẻ ghi các số 1, 2. Hộp B chứa 3 tấm thẻ ghi các số 1, 2, 3. Hộp C chứa 4 quả cầu ghi các số 1, 2, 3, 4. Bạn Lan rút ngẫu nhiên đồng thời một tấm thẻ từ mỗi hộp A và B. Bạn Linh lấy ngẫu nhiên một quả cầu từ hộp C. Tính xác suất của các biến cố sau:
+        \begin{questions}
+            \item $E$: “Ba số ghi trên hai tấm thẻ và quả cầu là khác nhau”;
+            \item $F$: “Tổng ba số ghi trên hai tấm thẻ và quả cầu bằng 5”.
+        \end{questions}
+
+        \answerline
+        \answerline
+    \end{questions}
+\end{practice}
