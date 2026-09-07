@@ -1,0 +1,362 @@
+% Nguồn SGK Toán 9 Tập hai — Bài 22, trang 32--37:
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-32-1771844545274.png
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-33-1771844545599.png
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-34-1771844545908.png
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-35-1771844546233.png
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-36-1771844546534.png
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-37-1771844546836.png
+% Nguồn SBT Toán 9 Tập hai — Bài 22, PDF trang 24--26:
+% SBT TOÁN 9 TẬP 2.pdf
+% SHA-256: 5ff01fd213d1adc75f9c54b4408d6a9642a4d8038e685040efef3311a196196c
+
+\section{Bảng tần số và biểu đồ tần số}
+
+\begin{lesson}
+    \subsection{Kiến thức trọng tâm}
+
+    Với dãy dữ liệu $x_1$, $x_2$, \ldots, $x_n$ có nhiều giá trị giống nhau thì có cách nào biểu diễn dãy dữ liệu này thuận tiện hơn không? Chúng ta sẽ tìm hiểu vấn đề này trong bài học.
+
+    \textbf{1. BẢNG TẦN SỐ}
+
+    \textbf{HĐ1. Tần số và bảng tần số}
+
+    Bạn Minh muốn tìm hiểu về dự định của các bạn học sinh khối lớp 9 trong trường sau khi tốt nghiệp Trung học cơ sở. Em hãy giúp bạn Minh thực hiện khảo sát ý kiến của các bạn trong lớp mình theo mẫu phiếu bên.
+
+    \begin{quote}
+        \textbf{Dự định của bạn sau khi học xong lớp 9?}
+
+        (Chỉ chọn một lựa chọn)
+
+        A. Học Trung học phổ thông trong nước.
+
+        B. Đi du học.
+
+        C. Đi học nghề.
+
+        D. Lựa chọn khác.
+    \end{quote}
+
+    \begin{enumerate}[label=\alph*)]
+        \item Bạn Minh muốn khảo sát ý kiến của những ai? Em đã giúp bạn Minh khảo sát ý kiến của tất cả những người đó?
+        \item Liệt kê dãy dữ liệu thu được và đếm số học sinh theo mỗi lựa chọn.
+    \end{enumerate}
+
+    \answerline
+    \answerline
+
+    \textbf{Nhận xét.} Dữ liệu mà bạn Minh muốn có là dữ liệu về ý kiến của tất cả học sinh khối lớp 9 trong trường. Dãy dữ liệu mà em thu được trong khảo sát trên là một phần của dữ liệu mà bạn Minh muốn có và được gọi là \textit{mẫu dữ liệu}. Số giá trị của mẫu dữ liệu được gọi là \textit{cỡ mẫu}.
+
+    \begin{keyconcept}
+        \begin{itemize}
+            \item \textit{Tần số} của một giá trị là số lần xuất hiện giá trị đó trong mẫu dữ liệu.
+            \item \textit{Bảng tần số} là bảng thống kê cho biết tần số của các giá trị trong mẫu dữ liệu. Bảng tần số có dạng sau:
+        \end{itemize}
+
+        \begin{center}
+        \begin{tblr}{
+            colspec={Q[c] Q[c] Q[c] Q[c] Q[c]},
+            row{1}={font=\bfseries}
+        }
+            Giá trị & $x_1$ & $x_2$ & \ldots & $x_k$ \\
+            Tần số & $m_1$ & $m_2$ & \ldots & $m_k$ \\
+        \end{tblr}
+        \end{center}
+
+        trong đó $m_1$ là tần số của $x_1$, $m_2$ là tần số của $x_2$, \ldots, $m_k$ là tần số của $x_k$.
+    \end{keyconcept}
+
+    Lập bảng tần số cho mẫu dữ liệu thu được trong HĐ1.
+
+    \answerline
+    \answerline
+
+    \textbf{Chú ý.} Người ta còn cho bảng tần số ở dạng cột: cột thứ nhất ghi các giá trị, cột thứ hai ghi tần số của các giá trị đó.
+
+    \textbf{Ví dụ 1.} Để mua giày thể thao cho các bạn nam trong lớp luyện tập chuẩn bị cho giải bóng đá của trường, Huy đã thu thập cỡ giày của các bạn nam trong lớp và thu được kết quả như sau:
+
+    \[
+        40,\ 36,\ 37,\ 36,\ 40,\ 38,\ 39,\ 38,\ 37,\ 36,\ 40,\ 39,\ 36,\ 38,\ 37,\ 38,\ 38,\ 37,\ 38,\ 38,\ 38,\ 36.
+    \]
+
+    \begin{enumerate}[label=\alph*)]
+        \item Bạn Huy cần mua giày các cỡ nào? Mỗi loại bao nhiêu đôi?
+        \item Lập bảng tần số cho dãy dữ liệu trên. Từ bảng tần số, cho biết cỡ giày nào phù hợp với nhiều bạn nam trong lớp nhất.
+    \end{enumerate}
+
+    \textbf{Giải}
+
+    a) Bạn Huy cần mua giày với các cỡ 36, 37, 38, 39, 40. Giày cỡ 36 cần 5 đôi; cỡ 37 cần 4 đôi; cỡ 38 cần 8 đôi; cỡ 39 cần 2 đôi; cỡ 40 cần 3 đôi.
+
+    b) Bảng tần số:
+
+    \begin{center}
+    \begin{tblr}{
+        colspec={Q[l] *{5}{Q[c]}},
+        row{1}={font=\bfseries}
+    }
+        Cỡ giày & 36 & 37 & 38 & 39 & 40 \\
+        Tần số & 5 & 4 & 8 & 2 & 3 \\
+    \end{tblr}
+    \end{center}
+
+    Giày cỡ 38 phù hợp với nhiều bạn nam trong lớp nhất.
+
+    \textbf{Luyện tập 1.} Bảng sau đây ghi lại tên các bạn đạt điểm tốt vào các ngày trong tuần của lớp 9E, mỗi điểm tốt ghi tên một lần.
+
+    \begin{center}
+    \begin{tblr}{
+        width=\linewidth,
+        colspec={X[1.6,c,m] *{5}{X[c,m]}},
+        row{1}={font=\bfseries},
+        cells={valign=m}
+    }
+        Ngày & Thứ Hai & Thứ Ba & Thứ Tư & Thứ Năm & Thứ Sáu \\
+        Tên bạn đạt điểm tốt & {Bình\\Nam} & {Tuấn\\Thảo} & Bình & {Yến\\Nam} & {Nam\\Thảo} \\
+    \end{tblr}
+    \end{center}
+
+    \begin{enumerate}[label=\alph*)]
+        \item Trong tuần những bạn nào đạt điểm tốt? Mỗi bạn đạt được mấy điểm tốt?
+        \item Lập bảng tần số cho dãy dữ liệu này. Bạn nào có số lần đạt điểm tốt nhiều nhất?
+    \end{enumerate}
+
+    \answerline
+    \answerline
+
+    \textbf{Nhận xét.} Trong bảng tần số, ta chỉ liệt kê các giá trị $x_i$ khác nhau. Các giá trị $x_i$ này có thể không là số.
+
+    Tần số của một giá trị cho biết giá trị đó xuất hiện trong mẫu dữ liệu nhiều hay ít, từ đó ta dễ dàng xác định được giá trị xuất hiện nhiều nhất, ít nhất.
+
+    \textbf{2. BIỂU ĐỒ TẦN SỐ}
+
+    \textbf{HĐ2. Tìm hiểu về biểu đồ tần số}
+
+    Cho hai biểu đồ sau:
+
+    \begin{center}
+    \begin{tikzpicture}[x=0.8cm,y=0.26cm]
+        \foreach \y in {0,5,10,15} {
+            \draw[base200] (0,\y)--(6.4,\y);
+            \node[left] at (0,\y) {\y};
+        }
+        \draw[->] (0,0)--(6.6,0);
+        \draw[->] (0,0)--(0,16.5);
+        \foreach \x/\v in {1/6,2/7,3/8,4/9,5/10} {
+            \node[below] at (\x,0) {\v};
+        }
+        \foreach \x/\h in {1/3,2/8,3/12,4/6,5/4} {
+            \fill[base700] (\x-0.25,0) rectangle (\x+0.25,\h);
+            \node[above] at (\x,\h) {\h};
+        }
+        \node[font=\bfseries] at (3.1,18) {Kết quả kiểm tra môn Toán};
+        \node[below] at (3.2,-2.2) {Điểm};
+        \node[rotate=90] at (-1.15,8) {Tần số};
+    \end{tikzpicture}
+
+    \textit{Hình 7.1. Biểu đồ A}
+    \end{center}
+
+    \begin{center}
+    \begin{tikzpicture}[x=0.8cm,y=0.26cm]
+        \foreach \y in {0,5,10,15} {
+            \draw[base200] (0,\y)--(6.4,\y);
+            \node[left] at (0,\y) {\y};
+        }
+        \draw[->] (0,0)--(6.6,0);
+        \draw[->] (0,0)--(0,16.5);
+        \foreach \x/\v in {1/6,2/7,3/8,4/9,5/10} {
+            \node[below] at (\x,0) {\v};
+        }
+        \draw[base700,thick] (1,3)--(2,8)--(3,12)--(4,6)--(5,4);
+        \foreach \x/\h in {1/3,2/8,3/12,4/6,5/4} {
+            \fill[base700] (\x,\h) circle (2pt);
+            \node[above right] at (\x,\h) {\h};
+        }
+        \node[font=\bfseries] at (3.1,18) {Kết quả kiểm tra môn Toán};
+        \node[below] at (3.2,-2.2) {Điểm};
+        \node[rotate=90] at (-1.15,8) {Số học sinh};
+    \end{tikzpicture}
+
+    \textit{Hình 7.2. Biểu đồ B}
+    \end{center}
+
+    \begin{enumerate}[label=\alph*)]
+        \item Đọc và giải thích mỗi biểu đồ trên.
+        \item Hai biểu đồ trên có biểu diễn cùng một dữ liệu không? Lập bảng thống kê cho dữ liệu đó. Bảng thống kê thu được có phải là bảng tần số hay không?
+    \end{enumerate}
+
+    \answerline
+    \answerline
+
+    \begin{keyconcept}
+        Biểu đồ biểu diễn bảng tần số được gọi là \textit{biểu đồ tần số}. Biểu đồ tần số thường gặp là biểu đồ tần số dạng cột (H.7.1) và biểu đồ tần số dạng đoạn thẳng (H.7.2).
+    \end{keyconcept}
+
+    Biểu đồ tần số dạng đoạn thẳng còn gọi là đa giác tần số \allowbreak(frequency polygon).
+
+    \textbf{Nhận xét.}
+    \begin{itemize}
+        \item Biểu đồ tần số dạng cột chính là biểu đồ cột với trục đứng biểu diễn tần số.
+        \item Để vẽ biểu đồ tần số dạng đoạn thẳng ta thực hiện theo các bước sau:
+    \end{itemize}
+
+    \textit{Bước 1.} Vẽ trục ngang để biểu diễn các giá trị trong dãy dữ liệu, vẽ trục đứng thể hiện tần số.
+
+    \textit{Bước 2.} Với mỗi giá trị trên trục ngang và tần số tương ứng ta xác định một điểm. Nối các điểm liên tiếp với nhau.
+
+    \textit{Bước 3.} Ghi chú giải cho các trục, các điểm và tiêu đề của biểu đồ.
+
+    \textbf{Ví dụ 2.} Bạn Bình thống kê số anh, chị, em ruột của các bạn trong lớp và thu được bảng sau:
+
+    \begin{center}
+    \begin{tblr}{
+        colspec={Q[l] *{4}{Q[c]}},
+        row{1}={font=\bfseries}
+    }
+        Số anh, chị, em ruột & 0 & 1 & 2 & 3 \\
+        Số bạn & 8 & 19 & 6 & 4 \\
+    \end{tblr}
+    \end{center}
+
+    Vẽ biểu đồ tần số dạng cột và biểu đồ tần số dạng đoạn thẳng biểu diễn bảng thống kê trên.
+
+    \textbf{Giải}
+
+    \begin{itemize}
+        \item Vẽ biểu đồ tần số dạng cột (H.7.3).
+    \end{itemize}
+
+    \begin{center}
+    \begin{tikzpicture}[x=1.2cm,y=0.22cm]
+        \foreach \y in {0,5,10,15,20} {
+            \draw[base200] (0,\y)--(4.4,\y);
+            \node[left] at (0,\y) {\y};
+        }
+        \draw[->] (0,0)--(4.6,0);
+        \draw[->] (0,0)--(0,22);
+        \foreach \x/\v in {0.6/0,1.6/1,2.6/2,3.6/3} {
+            \node[below] at (\x,0) {\v};
+        }
+        \foreach \x/\h in {0.6/8,1.6/19,2.6/6,3.6/4} {
+            \fill[base700] (\x-0.25,0) rectangle (\x+0.25,\h);
+            \node[above] at (\x,\h) {\h};
+        }
+        \node[font=\bfseries] at (2.2,24) {Bạn có mấy anh, chị, em ruột?};
+        \node[below] at (2.2,-2.5) {Số anh, chị, em ruột};
+        \node[rotate=90] at (-1.1,11) {Số học sinh};
+    \end{tikzpicture}
+
+    \textit{Hình 7.3}
+    \end{center}
+
+    \begin{itemize}
+        \item Vẽ biểu đồ tần số dạng đoạn thẳng.
+    \end{itemize}
+
+    \textit{Bước 1.} Vẽ các trục (H.7.4).
+
+    \begin{center}
+    \begin{tikzpicture}[x=1.2cm,y=0.22cm]
+        \foreach \y in {0,5,10,15,20} {
+            \draw[base200] (0,\y)--(4.4,\y);
+            \node[left] at (0,\y) {\y};
+        }
+        \draw[->] (0,0)--(4.6,0);
+        \draw[->] (0,0)--(0,22);
+        \foreach \x/\v in {0.6/0,1.6/1,2.6/2,3.6/3} {
+            \node[below] at (\x,0) {\v};
+        }
+        \draw[base700,thick] (0.6,8)--(1.6,19)--(2.6,6)--(3.6,4);
+        \foreach \x/\h in {0.6/8,1.6/19,2.6/6,3.6/4} {
+            \fill[base700] (\x,\h) circle (2pt);
+        }
+    \end{tikzpicture}
+
+    \textit{Hình 7.4}
+    \end{center}
+
+    \textit{Bước 2.} Xác định các điểm và nối các điểm liên tiếp với nhau (H.7.4).
+
+    \textit{Bước 3.} Ghi chú giải cho các trục, các điểm và tiêu đề của biểu đồ (H.7.5).
+
+    \begin{center}
+    \begin{tikzpicture}[x=1.2cm,y=0.22cm]
+        \foreach \y in {0,5,10,15,20} {
+            \draw[base200] (0,\y)--(4.4,\y);
+            \node[left] at (0,\y) {\y};
+        }
+        \draw[->] (0,0)--(4.6,0);
+        \draw[->] (0,0)--(0,22);
+        \foreach \x/\v in {0.6/0,1.6/1,2.6/2,3.6/3} {
+            \node[below] at (\x,0) {\v};
+        }
+        \draw[base700,thick] (0.6,8)--(1.6,19)--(2.6,6)--(3.6,4);
+        \foreach \x/\h in {0.6/8,1.6/19,2.6/6,3.6/4} {
+            \fill[base700] (\x,\h) circle (2pt);
+            \node[above right] at (\x,\h) {\h};
+        }
+        \node[font=\bfseries] at (2.2,24) {Bạn có mấy anh, chị, em ruột?};
+        \node[below] at (2.2,-2.5) {Số anh, chị, em ruột};
+        \node[rotate=90] at (-1.1,11) {Số học sinh};
+    \end{tikzpicture}
+
+    \textit{Hình 7.5}
+    \end{center}
+
+    \textbf{Luyện tập 2.} Bảng tần số sau cho biết số học sinh của lớp 9D dự đoán đội bóng vô địch World Cup 2022 trước khi giải đấu bắt đầu.
+
+    \begin{center}
+    \begin{tblr}{
+        colspec={Q[l] *{4}{Q[c]}},
+        row{1}={font=\bfseries}
+    }
+        Đội bóng & Brazil & Anh & Pháp & Argentina \\
+        Số bạn dự đoán & 8 & 15 & 12 & 5 \\
+    \end{tblr}
+    \end{center}
+
+    Vẽ biểu đồ tần số dạng cột và biểu đồ tần số dạng đoạn thẳng biểu diễn bảng tần số trên.
+
+    \answerline
+    \answerline
+    \answerline
+
+    \textbf{Tranh luận.} Biểu đồ cột sau biểu diễn nhiệt độ trung bình tháng Sáu tại ba thành phố của Việt Nam năm 2021.
+
+    \begin{center}
+    \begin{tikzpicture}[x=1.5cm,y=0.18cm]
+        \foreach \y in {0,5,10,15,20,25,30,35} {
+            \draw[base200] (0,\y)--(4.5,\y);
+            \node[left] at (0,\y) {\y};
+        }
+        \draw[->] (0,0)--(4.7,0);
+        \draw[->] (0,0)--(0,37);
+        \foreach \x/\lab in {0.8/Hà Nội,2.2/Đà Nẵng,3.6/Đà Lạt} {
+            \node[below,align=center] at (\x,0) {\lab};
+        }
+        \fill[base700] (0.5,0) rectangle (1.1,31.6);
+        \fill[base700] (1.9,0) rectangle (2.5,31.1);
+        \fill[base700] (3.3,0) rectangle (3.9,19.6);
+        \node[above] at (0.8,31.6) {$31{,}6$};
+        \node[above] at (2.2,31.1) {$31{,}1$};
+        \node[above] at (3.6,19.6) {$19{,}6$};
+        \node[font=\bfseries] at (2.25,40) {Nhiệt độ trung bình tháng Sáu năm 2021};
+        \node[below] at (2.25,-4) {Thành phố};
+        \node[rotate=90] at (-1.2,18) {Nhiệt độ ($^\circ$C)};
+    \end{tikzpicture}
+
+    \textit{Hình 7.6 (Theo Tổng cục Thống kê)}
+    \end{center}
+
+    Vuông: ``Đây là biểu đồ tần số.''
+
+    Tròn: ``Đây không phải là biểu đồ tần số.''
+
+    Em ủng hộ Vuông hay Tròn? Vì sao?
+
+    \answerline
+    \answerline
+\end{lesson}
+
+\input{content/chapter-02/sections/section-22-exercises}
+\input{content/chapter-02/sections/section-22-practice}
