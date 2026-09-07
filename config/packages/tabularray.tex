@@ -1,5 +1,10 @@
-% Khoảng đệm và đường kẻ mặc định cho bảng thường lẫn bảng dài.
+% Khoảng đệm, chiều rộng và đường kẻ mặc định cho bảng thường lẫn bảng dài.
+% Bảng student-facing mặc định dùng toàn bộ bề rộng dòng. `columns={co=1}`
+% làm cả các cột Q/fixed-width hiện có tham gia phân phối phần chiều rộng dư;
+% width/column coefficient khai báo cục bộ trong từng bảng vẫn override default này.
 \SetTblrInner[tblr, longtblr]{
+    width = \linewidth,
+    columns = {co=1},
     abovesep = 4pt,
     hlines = {solid, fg=base800},
     vlines = {solid, fg=base700}
