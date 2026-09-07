@@ -18,21 +18,21 @@
             \coordinate (OA) at (0,0);
             \coordinate (OB) at (4.4,0);
 
-            % Tấm bìa A: ba hình quạt bằng nhau.
+            % Tấm bìa A: ba hình quạt bằng nhau như Hình 8.3.
             \path[fill=cyan!45!black,draw=black!65]
-                (OA) -- ++(-30:1.35) arc[start angle=-30,end angle=90,radius=1.35] -- cycle;
+                (OA) -- ++(0:1.35) arc[start angle=0,end angle=120,radius=1.35] -- cycle;
             \path[fill=red!75!orange,draw=black!65]
-                (OA) -- ++(90:1.35) arc[start angle=90,end angle=210,radius=1.35] -- cycle;
+                (OA) -- ++(120:1.35) arc[start angle=120,end angle=240,radius=1.35] -- cycle;
             \path[fill=orange!85,draw=black!65]
-                (OA) -- ++(210:1.35) arc[start angle=210,end angle=330,radius=1.35] -- cycle;
-            \node[text=white,font=\bfseries] at ($(OA)+(30:0.76)$) {2};
-            \node[text=white,font=\bfseries] at ($(OA)+(150:0.76)$) {1};
-            \node[text=white,font=\bfseries] at ($(OA)+(270:0.76)$) {3};
+                (OA) -- ++(240:1.35) arc[start angle=240,end angle=360,radius=1.35] -- cycle;
+            \node[text=white,font=\bfseries] at ($(OA)+(60:0.76)$) {2};
+            \node[text=white,font=\bfseries] at ($(OA)+(180:0.76)$) {1};
+            \node[text=white,font=\bfseries] at ($(OA)+(300:0.76)$) {3};
             \draw[white,line width=1.5pt,-{Stealth[length=2.5mm,width=2mm]}]
                 (OA) -- ($(OA)+(270:0.84)$);
             \node[below=5pt of OA,yshift=-1.35cm] {Tấm bìa A};
 
-            % Tấm bìa B: năm hình quạt bằng nhau.
+            % Tấm bìa B: năm hình quạt bằng nhau như Hình 8.3.
             \path[fill=red!75!orange,draw=black!65]
                 (OB) -- ++(90:1.35) arc[start angle=90,end angle=162,radius=1.35] -- cycle;
             \path[fill=blue!70,draw=black!65]
@@ -78,7 +78,10 @@
         \begin{center}
             \begin{tblr}{
                 colspec={Q[c,m] *{3}{Q[c,m]}},
-                cells={valign=m}
+                cells={valign=m},
+                row{1}={bg=orange!12},
+                column{1}={bg=yellow!15},
+                cell{1}{1}={bg=yellow!15}
             }
                 \begin{tikzpicture}[baseline=(current bounding box.center)]
                     \path[use as bounding box] (0,0) rectangle (3.1,0.95);
@@ -119,6 +122,7 @@
             \item Tích $ab$ là số chẵn khi và chỉ khi trong cặp $(a, b)$ có ít nhất một số chẵn.
             Do đó, có 9 kết quả thuận lợi cho biến cố $G$ là $(1, 2)$; $(2, 1)$; $(2, 2)$; $(2, 3)$; $(3, 2)$; $(4, 1)$;
             $(4, 2)$; $(4, 3)$; $(5, 2)$.
+
             Vậy $P(G)=\dfrac{9}{15}=\dfrac{3}{5}$.
         \end{itemize}
     \end{enumerate}
