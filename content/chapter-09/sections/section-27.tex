@@ -87,10 +87,10 @@
         \fill (O) circle (1.2pt);
         \node[below left=1pt of A] {$A$};
         \node[below right=1pt of B] {$B$};
-        \node[above=1pt of C] {$C$};
+        \node[above left=1pt of C] {$C$};
         \node[above right=1pt of D] {$D$};
         \node[left=1pt of O] {$O$};
-        \node[above right=1pt of C] {$m$};
+        \node at (70:1.82) {$m$};
     \end{tikzpicture}
 
     \textit{Hình 9.2}
@@ -197,9 +197,9 @@
             \fill (Oone) circle (1.1pt);
             \node[above=1pt of Cone] {$C$};
             \node[below left=1pt of Aone] {$A$};
-            \node[below right=1pt of Bone] {$B$};
+            \node[right=1pt of Bone] {$B$};
             \node[right=1pt of Oone] {$O$};
-            \node at (0,-1.75) {Trường hợp 1};
+            \node at (0,-1.95) {Trường hợp 1};
         \end{scope}
         \begin{scope}
             \coordinate (Otwo) at (0,0);
@@ -212,10 +212,10 @@
             \fill (Otwo) circle (1.1pt);
             \node[above=1pt of Ctwo] {$C$};
             \node[below left=1pt of Atwo] {$A$};
-            \node[below right=1pt of Btwo] {$B$};
-            \node[below=1pt of Dtwo] {$D$};
+            \node[right=1pt of Btwo] {$B$};
+            \node[right=1pt of Dtwo] {$D$};
             \node[right=1pt of Otwo] {$O$};
-            \node at (0,-1.75) {Trường hợp 2};
+            \node at (0,-1.95) {Trường hợp 2};
         \end{scope}
         \begin{scope}[xshift=4.2cm]
             \coordinate (Othree) at (0,0);
@@ -228,10 +228,10 @@
             \fill (Othree) circle (1.1pt);
             \node[above left=1pt of Cthree] {$C$};
             \node[below left=1pt of Athree] {$A$};
-            \node[below right=1pt of Bthree] {$B$};
+            \node[below=1pt of Bthree] {$B$};
             \node[right=1pt of Dthree] {$D$};
             \node[above=1pt of Othree] {$O$};
-            \node at (0,-1.75) {Trường hợp 3};
+            \node at (0,-1.95) {Trường hợp 3};
         \end{scope}
     \end{tikzpicture}
 
@@ -309,7 +309,10 @@
         \node[below right=1pt of C] {$C$};
         \node[below left=1pt of D] {$D$};
         \node[right=1pt of O] {$O$};
-        \pic[draw, angle radius=5mm, angle eccentricity=1.35, "$60^\circ$"] {angle=B--A--C};
+        \coordinate (ABnear) at ($(A)!0.24!(B)$);
+        \coordinate (ACnear) at ($(A)!0.24!(C)$);
+        \coordinate (L60) at ($(ABnear)!0.5!(ACnear)$);
+        \node[left=1pt of L60] {$60^\circ$};
     \end{tikzpicture}
 
     \textit{Hình 9.5}
@@ -372,8 +375,8 @@
         \begin{center}
         \begin{tikzpicture}
             \coordinate (O) at (0,0);
-            \coordinate (A) at (155:1.55);
-            \coordinate (B) at (55:1.55);
+            \coordinate (A) at (160:1.55);
+            \coordinate (B) at (40:1.55);
             \coordinate (C) at (320:1.55);
             \draw (O) circle (1.55);
             \draw (A)--(B)--(C)--cycle;
@@ -383,8 +386,10 @@
             \node[above right=1pt of B] {$B$};
             \node[below right=1pt of C] {$C$};
             \node[below left=1pt of O] {$O$};
-            \pic[draw, angle radius=6mm, angle eccentricity=1.35, "$120^\circ$"] {angle=A--O--B};
-            \pic[draw, angle radius=4.2mm, angle eccentricity=1.45, "$80^\circ$"] {angle=B--O--C};
+            \draw (160:0.52) arc[start angle=160,end angle=40,radius=0.52];
+            \draw (40:0.38) arc[start angle=40,end angle=-40,radius=0.38];
+            \node at (100:0.78) {$120^\circ$};
+            \node at (0:0.67) {$80^\circ$};
         \end{tikzpicture}
 
         \textit{Hình 9.7}
@@ -414,8 +419,14 @@
             \node[below left=1pt of D] {$D$};
             \node[above=1pt of X] {$X$};
             \node[right=1pt of O] {$O$};
-            \pic[draw, angle radius=4mm, angle eccentricity=1.5, "$30^\circ$"] {angle=A--D--B};
-            \pic[draw, angle radius=4mm, angle eccentricity=1.5, "$50^\circ$"] {angle=D--B--C};
+            \coordinate (DAnear) at ($(D)!0.24!(A)$);
+            \coordinate (DBnear) at ($(D)!0.24!(B)$);
+            \coordinate (L30) at ($(DAnear)!0.5!(DBnear)$);
+            \node at (L30) {$30^\circ$};
+            \coordinate (BDnear) at ($(B)!0.24!(D)$);
+            \coordinate (BCnear) at ($(B)!0.24!(C)$);
+            \coordinate (L50) at ($(BDnear)!0.5!(BCnear)$);
+            \node at (L50) {$50^\circ$};
         \end{tikzpicture}
 
         \textit{Hình 9.8}
