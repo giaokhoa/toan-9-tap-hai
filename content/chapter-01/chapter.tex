@@ -1,5 +1,21 @@
+% Verification-only harness for issue #6. Do not merge.
 \setcounter{chapter}{5}
 \chapter{Hàm số $y=ax^2$ ($a\ne0$). Phương trình bậc hai một ẩn}
 
-\setcounter{section}{17}
-\input{content/chapter-01/sections/section-01}
+\setcounter{section}{20}
+
+% Seed named SGK series immediately before Bài 6.28 without rendering the seed.
+\setbox0=\vbox{%
+    \begin{questions}[series=SGK,start=27]
+        \item seed
+    \end{questions}%
+}
+
+% Seed named SBT series immediately before Bài 6.25 without rendering the seed.
+\setbox0=\vbox{%
+    \begin{questions}[series=SBT,start=24]
+        \item seed
+    \end{questions}%
+}
+
+\input{content/chapter-01/sections/lesson-21}
