@@ -1,0 +1,372 @@
+\setcounter{section}{31}
+\section{Hình cầu}
+
+% Nguồn SGK Bài 32: direct image OLM trang 101--105 theo issue #26:
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-101-1771844568162.png
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-102-1771844568501.png
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-103-1771844568833.png
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-104-1771844569172.png
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-105-1771844569605.png
+% Nguồn SBT: SBT TOÁN 9 TẬP 2.pdf, PDF pages 68--69, Bài 10.8--10.13.
+% SHA-256: 5ff01fd213d1adc75f9c54b4408d6a9642a4d8038e685040efef3311a196196c.
+
+\begin{lesson}
+    \subsection{Kiến thức trọng tâm}
+
+    \begin{center}
+        \begin{tblr}{
+            width=\linewidth,
+            colspec={X[l] X[2,l]},
+            cells={valign=t},
+            row{1}={font=\bfseries, halign=c}
+        }
+            Khái niệm, thuật ngữ & Kiến thức, kĩ năng \\
+            \textbullet\ Hình cầu\par
+            \textbullet\ Mặt cầu
+            &
+            \textbullet\ Mô tả tâm, bán kính của hình cầu, mặt cầu.\par
+            \textbullet\ Tạo lập hình cầu, mặt cầu. Nhận biết phần chung của mặt phẳng và hình cầu.\par
+            \textbullet\ Tính diện tích mặt cầu, thể tích hình cầu.\par
+            \textbullet\ Giải quyết một số vấn đề thực tiễn gắn với việc tính diện tích mặt cầu, thể tích hình cầu.
+        \end{tblr}
+    \end{center}
+
+    Quả bóng đá theo tiêu chuẩn FIFA (liên đoàn bóng đá thế giới) có dạng hình cầu với đường kính khoảng 22 cm (H.10.18). Khi bơm căng quả bóng thì thể tích quả bóng bằng bao nhiêu?
+
+    % TODO(HINH-NGUON): bo sung asset/crop Hinh 10.18 tu SGK trang 101; khong redraw xap xi bang TikZ.
+
+    \answerline
+    \answerline
+
+    \textbf{1. MẶT CẦU VÀ HÌNH CẦU}
+
+    \textbf{Nhận biết mặt cầu và hình cầu}
+
+    1. Ta đã biết quả bóng (H.10.19) có dạng hình cầu. Một số yếu tố của hình cầu được chỉ ra trên Hình 10.20.
+
+    % TODO(HINH-NGUON): bo sung asset/crop Hinh 10.19 tu SGK trang 101; khong redraw xap xi bang TikZ.
+    % TODO(HINH-NGUON): bo sung asset/crop Hinh 10.20 tu SGK trang 101; khong redraw xap xi bang TikZ.
+
+    2. \begin{itemize}
+        \item Khi quay nửa đường tròn quanh đường kính $AB$ cố định của nó, ta được một mặt cầu.
+        \item Khi quay nửa hình tròn quanh đường kính $AB$ cố định của nó, ta được một hình cầu.
+    \end{itemize}
+
+    Tâm và bán kính của nửa đường tròn (hình tròn) cũng là tâm và bán kính của mặt cầu (hình cầu).
+
+    \textbf{Câu hỏi}
+
+    Tìm một vài hình ảnh của hình cầu, mặt cầu trong thực tế.
+
+    \answerline
+    \answerline
+
+    \begin{keyconcept}
+        Một số yếu tố của mặt cầu:
+        \begin{itemize}
+            \item Tâm mặt cầu: $O$.
+            \item Bán kính mặt cầu: $R=OB$.
+        \end{itemize}
+    \end{keyconcept}
+
+    \textbf{Ví dụ 1}
+
+    Hãy kể tên tâm và một bán kính của mặt cầu trong Hình 10.21.
+
+    \begin{center}
+        \begin{tikzpicture}[x=1cm,y=1cm]
+            \coordinate (O) at (0,0);
+            \coordinate (M) at (-1.7,0);
+            \coordinate (N) at (1.7,0);
+            \coordinate (P) at ({1.7*cos(65)},{1.7*sin(65)});
+            \draw (O) circle (1.7);
+            \draw[dashed] (M) arc[start angle=180,end angle=0,x radius=1.7,y radius=.43];
+            \draw (N) arc[start angle=0,end angle=-180,x radius=1.7,y radius=.43];
+            \draw[dashed] (M)--(N);
+            \draw[dashed] (O)--(P);
+            \fill (O) circle (1.2pt);
+            \fill (P) circle (1.2pt);
+            \node[below=2pt of O] {$O$};
+            \node[left=2pt of M] {$M$};
+            \node[right=2pt of N] {$N$};
+            \node[above right=1pt of P] {$P$};
+        \end{tikzpicture}
+
+        \textit{Hình 10.21}
+    \end{center}
+
+    \textbf{Giải}
+
+    Tâm mặt cầu: $O$.
+
+    Một bán kính: $OP$.
+
+    \textbf{Luyện tập 1}
+
+    Kể tên các bán kính còn lại của mặt cầu trong Hình 10.21.
+
+    \answerline
+
+    \textbf{Cắt mặt cầu, hình cầu bởi một mặt phẳng}
+
+    \textbf{HĐ1} Sọ dừa được xem là có dạng hình cầu. Người ta cắt sọ dừa khô để làm gáo dừa (H.10.22a). Em thấy miệng gáo có dạng hình gì?
+
+    \answerline
+
+    \textbf{HĐ2} Khi cắt đôi một quả cam có dạng hình cầu (H.10.22b), em thấy mặt cắt có dạng hình gì?
+
+    \answerline
+
+    % TODO(HINH-NGUON): bo sung asset/crop Hinh 10.22 tu SGK trang 102; khong redraw xap xi bang TikZ.
+
+    Một cách tổng quát:
+    \begin{enumerate}[label=\arabic*.]
+        \item Nếu cắt một hình cầu bởi một mặt phẳng thì phần chung của mặt phẳng và hình cầu (còn gọi là mặt cắt) là một hình tròn.
+        \item Nếu cắt một mặt cầu bán kính $R$ bởi một mặt phẳng thì phần chung của mặt phẳng và mặt cầu là một đường tròn (H.10.23).
+    \end{enumerate}
+
+    % TODO(HINH-NGUON): bo sung asset/crop Hinh 10.23 tu SGK trang 103; khong redraw xap xi bang TikZ.
+
+    \begin{itemize}
+        \item Khi mặt phẳng đi qua tâm thì đường tròn đó có bán kính $R$ và được gọi là đường tròn lớn.
+        \item Khi mặt phẳng không đi qua tâm thì đường tròn đó có bán kính nhỏ hơn $R$.
+    \end{itemize}
+
+    \textbf{Ví dụ 2}
+
+    Trái Đất của chúng ta được xem là có dạng hình cầu (nên còn gọi là ``Địa Cầu'') và đường Xích đạo là một đường tròn lớn, dài khoảng $40\,075$ km. Tính đường kính của Trái Đất (làm tròn kết quả đến hàng phần trăm của km).
+
+    \textbf{Giải}
+
+    Do đường Xích đạo là một đường tròn lớn nên bán kính của nó bằng bán kính của Trái Đất.
+
+    Nếu gọi $R$ là bán kính Trái Đất thì độ dài của đường Xích đạo là $2R\pi\approx 40\,075$ (km).
+
+    Do đó, đường kính của Trái Đất là $2R\approx 40\,075:\pi\approx 12\,756{,}27$ (km).
+
+    \textbf{Luyện tập 2}
+
+    Khi cắt một hình cầu bởi một mặt phẳng đi qua tâm của hình cầu đó được một hình tròn có diện tích $25\pi$ cm$^2$. Tính bán kính của hình cầu.
+
+    \answerline
+    \answerline
+
+    \textbf{2. DIỆN TÍCH MẶT CẦU VÀ THỂ TÍCH HÌNH CẦU}
+
+    \textbf{Diện tích mặt cầu và thể tích hình cầu}
+
+    \textbf{HĐ3} Người ta thấy rằng lượng sơn cần dùng để sơn kín một mặt cầu bán kính $R$ bằng với lượng sơn cần dùng để sơn kín một hình tròn bán kính $2R$ (khi độ dày của lớp sơn như nhau) (H.10.24). Từ đó, em hãy dự đoán công thức tính diện tích mặt cầu bán kính $R$.
+
+    % TODO(HINH-NGUON): bo sung asset/crop Hinh 10.24 tu SGK trang 103; khong redraw xap xi bang TikZ.
+
+    \answerline
+    \answerline
+
+    \textbf{HĐ4} Sử dụng một hình cầu bán kính $R$ và một cốc thủy tinh có dạng hình trụ bán kính đáy $R$, chiều cao $2R$. Ban đầu để hình cầu nằm khít trong chiếc cốc có đầy nước.
+
+    Ta nhấc hình cầu ra khỏi cốc thủy tinh hình trụ (H.10.25).
+
+    % TODO(HINH-NGUON): bo sung asset/crop Hinh 10.25 tu SGK trang 104; khong redraw xap xi bang TikZ.
+
+    Đo độ cao cột nước còn lại trong chiếc cốc, ta thấy độ cao này chỉ bằng $\dfrac{1}{3}$ chiều cao của chiếc cốc hình trụ. Từ đó, em hãy dự đoán công thức tính thể tích hình cầu bán kính $R$.
+
+    \answerline
+    \answerline
+    \answerline
+
+    \begin{keyconcept}
+        Người ta chứng minh được công thức tính diện tích mặt cầu và thể tích hình cầu có bán kính $R$ là:
+        \[
+            S=4\pi R^2;\qquad V=\dfrac{4}{3}\pi R^3.
+        \]
+    \end{keyconcept}
+
+    \textbf{Ví dụ 3}
+
+    Tính diện tích mặt cầu và thể tích hình cầu có bán kính bằng $10$ cm.
+
+    \textbf{Giải}
+
+    Diện tích mặt cầu là: $S=4\pi R^2=4\pi\cdot 10^2=400\pi$ (cm$^2$).
+
+    Thể tích hình cầu là: $V=\dfrac{4}{3}\pi R^3=\dfrac{4}{3}\pi\cdot 10^3=\dfrac{4000\pi}{3}$ (cm$^3$).
+
+    \textbf{Vận dụng 1}
+
+    Em hãy trả lời câu hỏi của tình huống mở đầu.
+
+    \answerline
+    \answerline
+    \answerline
+
+    \textbf{Ví dụ 4}
+
+    Bạn Trang có một bể cá có dạng một phần hình cầu với đường kính bằng $20$ cm (H.10.26). Khi nuôi cá, Trang thường đổ vào bể lượng nước có thể tích bằng $\dfrac{2}{3}$ thể tích của hình cầu. Tính thể tích nước bạn Trang đã đổ vào bể cá. (Làm tròn kết quả đến hàng đơn vị của cm$^3$).
+
+    % TODO(HINH-NGUON): bo sung asset/crop Hinh 10.26 tu SGK trang 104; khong redraw xap xi bang TikZ.
+
+    \textbf{Giải}
+
+    Bán kính của hình cầu là $20:2=10$ (cm).
+
+    Thể tích của hình cầu là $V=\dfrac{4}{3}\pi R^3=\dfrac{4}{3}\pi\cdot 10^3=\dfrac{4000\pi}{3}$ (cm$^3$).
+
+    Thể tích nước bạn Trang sử dụng để đổ vào bể cá là:
+    \[
+        \dfrac{2}{3}\cdot\dfrac{4000\pi}{3}=\dfrac{8000\pi}{9}\approx 2793\text{ (cm}^3\text{)}.
+    \]
+
+    \textbf{Vận dụng 2}
+
+    Khinh khí cầu đầu tiên được phát minh bởi anh em nhà Montgolfier (người Pháp) vào năm 1782. Chuyến bay đầu tiên của hai anh em trên khinh khí cầu được thực hiện vào ngày 4 tháng 6 năm 1783 trên bầu trời Place des Cordeliers ở Annonay (nước Pháp) (theo cand.com.vn). Giả sử một khinh khí cầu có dạng hình cầu với đường kính bằng 11 m. Tính diện tích mặt khinh khí cầu đó (làm tròn kết quả đến hàng đơn vị của m$^2$).
+
+    % TODO(HINH-NGUON): bo sung asset/crop Hinh 10.27 tu SGK trang 105; khong redraw xap xi bang TikZ.
+
+    \answerline
+    \answerline
+    \answerline
+\end{lesson}
+
+\begin{exercises}
+    \subsection{Bài tập}
+
+    \begin{questions}[resume=SGK]
+        \item Thay dấu ``?'' bằng giá trị thích hợp và hoàn thành bảng sau vào vở:
+
+        \begin{center}
+            \begin{tblr}{
+                colspec={Q[c,m,3.0cm] Q[c,m,2.7cm] Q[c,m,3.2cm] Q[c,m,3.2cm]},
+                rows={1.0cm},
+                row{1}={font=\bfseries, halign=c}
+            }
+                Hình & Bán kính (cm) & Diện tích mặt cầu (cm$^2$) & Thể tích hình cầu (cm$^3$) \\
+                \SetCell[r=3]{c,m}
+                \begin{tikzpicture}[x=.55cm,y=.55cm,baseline=(current bounding box.center)]
+                    \coordinate (O) at (0,0);
+                    \coordinate (L) at (-1.5,0);
+                    \coordinate (Rr) at (1.5,0);
+                    \draw (O) circle (1.5);
+                    \draw[dashed] (L) arc[start angle=180,end angle=0,x radius=1.5,y radius=.38];
+                    \draw (Rr) arc[start angle=0,end angle=-180,x radius=1.5,y radius=.38];
+                    \draw[dashed] (O)--(Rr);
+                    \node[above=1pt] at ($(O)!0.55!(Rr)$) {$R$};
+                \end{tikzpicture}
+                & 3 & ? & ? \\
+                & ? & $100\pi$ & ? \\
+                & ? & ? & $972\pi$ \\
+            \end{tblr}
+        \end{center}
+
+        \item Một cốc đựng ba viên kem có dạng hình cầu, mỗi viên đều có bán kính bằng $3$ cm. Tính thể tích của kem đựng trong cốc (làm tròn kết quả đến hàng đơn vị của cm$^3$).
+
+        \answerline
+        \answerline
+
+        \item Một quả bóng đá có chu vi của đường tròn lớn bằng $68{,}5$ cm. Quả bóng được ghép nối bởi các miếng da hình lục giác đều màu trắng và đen, mỗi miếng có diện tích bằng $49{,}83$ cm$^2$. Hỏi cần ít nhất bao nhiêu miếng da để làm quả bóng trên? (Coi phần mép khâu không đáng kể).
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Hằng năm cứ dịp Tết đến Xuân về, dân làng Thuý Lĩnh, phường Lĩnh Nam, quận Hoàng Mai, Hà Nội lại tổ chức lễ hội vật cầu truyền thống. Trong lễ hội có sử dụng một quả cầu được tiện bằng gỗ, đường kính khoảng $35$ cm, sơn đỏ mặt ngoài. Tính diện tích mặt ngoài của quả cầu gỗ nói trên.
+
+        \answerline
+        \answerline
+    \end{questions}
+\end{exercises}
+
+\begin{practice}
+    \subsection{Luyện tập}
+
+    \begin{questions}[resume=SBT]
+        \item Thay dấu ``?'' bằng giá trị thích hợp và hoàn thành bảng sau vào vở:
+
+        \begin{center}
+            \begin{tblr}{
+                colspec={Q[c,m,3.0cm] Q[c,m,2.7cm] Q[c,m,3.2cm] Q[c,m,3.2cm]},
+                rows={1.0cm},
+                row{1}={font=\bfseries, halign=c}
+            }
+                Hình & Bán kính (cm) & Diện tích mặt cầu (cm$^2$) & Thể tích hình cầu (cm$^3$) \\
+                \SetCell[r=3]{c,m}
+                \begin{tikzpicture}[x=.55cm,y=.55cm,baseline=(current bounding box.center)]
+                    \coordinate (O) at (0,0);
+                    \coordinate (L) at (-1.5,0);
+                    \coordinate (Rr) at (1.5,0);
+                    \draw (O) circle (1.5);
+                    \draw[dashed] (L) arc[start angle=180,end angle=0,x radius=1.5,y radius=.38];
+                    \draw (Rr) arc[start angle=0,end angle=-180,x radius=1.5,y radius=.38];
+                    \draw[dashed] (O)--(Rr);
+                    \node[above=1pt] at ($(O)!0.55!(Rr)$) {$R$};
+                \end{tikzpicture}
+                & 9 & ? & ? \\
+                & ? & $36\pi$ & ? \\
+                & ? & ? & $\dfrac{256\pi}{3}$ \\
+            \end{tblr}
+        \end{center}
+
+        \item Cho một hình cầu có thể tích bằng $288\pi$ cm$^3$.
+        \begin{questions}
+            \item Tính bán kính của hình cầu.
+
+            \answerline
+            \answerline
+            \item Tính diện tích mặt cầu.
+
+            \answerline
+            \answerline
+        \end{questions}
+
+        \item Một quả bóng thám không (loại bóng bay mang theo các dụng cụ đo thời tiết) có dạng hình cầu với đường kính $20$ cm. Hỏi diện tích bề mặt quả bóng là bao nhiêu (làm tròn kết quả đến hàng đơn vị của cm$^2$)?
+
+        \answerline
+        \answerline
+
+        \item Một chiếc chao đèn trang trí có dạng một nửa hình cầu có đường kính bằng $40$ cm. Người ta cần sơn bề mặt bên ngoài của chao đèn. Giả sử chi phí sơn bề mặt khoảng $100\,000$ đồng/m$^2$. Hỏi chi phí sơn $1\,000$ chiếc chao đèn khoảng bao nhiêu tiền (làm tròn kết quả đến hàng nghìn)?
+
+        % TODO(HINH-NGUON): bo sung asset/crop anh chao den tu SBT PDF page 68; khong redraw xap xi bang TikZ.
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Một chiếc hộp hình lập phương có cạnh bằng $18$ cm đựng vừa khít một quả bóng hình cầu (H.10.4). Tính thể tích của quả bóng (coi độ dày của hộp không đáng kể).
+
+        % TODO(HINH-NGUON): bo sung asset/crop Hinh 10.4 tu SBT PDF page 68; khong redraw xap xi bang TikZ.
+
+        \answerline
+        \answerline
+
+        \item Một hộp đựng mỹ phẩm được thiết kế thân hộp có dạng hình trụ, nắp hộp có dạng nửa hình cầu với kích thước như Hình 10.5. Nếu sơn bên ngoài vỏ hộp (không sơn đáy) thì diện tích cần sơn là bao nhiêu?
+
+        \begin{center}
+            \begin{tikzpicture}[x=1cm,y=1cm]
+                \coordinate (C) at (0,0);
+                \coordinate (L) at (-1.45,0);
+                \coordinate (Rr) at (1.45,0);
+                \coordinate (BL) at (-1.45,-2.0);
+                \coordinate (BR) at (1.45,-2.0);
+                \coordinate (B) at (0,-2.0);
+
+                \draw (L) arc[start angle=180,end angle=360,x radius=1.45,y radius=.35];
+                \draw[dashed] (L) arc[start angle=180,end angle=0,x radius=1.45,y radius=.35];
+                \draw (L) arc[start angle=180,end angle=0,radius=1.45];
+                \draw (L)--(BL);
+                \draw (Rr)--(BR);
+                \draw (BL) arc[start angle=180,end angle=360,x radius=1.45,y radius=.35];
+                \draw[dashed] (BL) arc[start angle=180,end angle=0,x radius=1.45,y radius=.35];
+                \draw[dashed] (C)--(Rr);
+                \draw[dashed] (C)--(B);
+                \node[above=1pt] at ($(C)!0.55!(Rr)$) {$5$ cm};
+                \draw[<->] (1.8,0)--(1.8,-2.0);
+                \node[right=2pt] at (1.8,-1.0) {$6$ cm};
+            \end{tikzpicture}
+
+            \textit{Hình 10.5}
+        \end{center}
+
+        \answerline
+        \answerline
+        \answerline
+    \end{questions}
+\end{practice}
