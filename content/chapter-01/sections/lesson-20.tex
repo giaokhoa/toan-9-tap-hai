@@ -1,0 +1,367 @@
+% Nguồn SGK Toán 9 Tập hai — Bài 20, trang 21--24:
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-21-1771844541694.png
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-22-1771844542030.png
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-23-1771844542346.png
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-24-1771844542647.png
+% Authority: https://olm.vn/thu-vien-so/doc-sach/sach.4491669493.4491669493
+%
+% Nguồn SBT Toán 9 Tập hai — Bài 20, PDF trang 13--14:
+% SBT TOÁN 9 TẬP 2.pdf (Project Sources)
+% SHA-256: 5ff01fd213d1adc75f9c54b4408d6a9642a4d8038e685040efef3311a196196c
+
+\section{Định lí Viète và ứng dụng}
+
+\begin{lesson}
+    \subsection{Kiến thức trọng tâm}
+
+    \begin{center}
+    \begin{tblr}{
+        width=\linewidth,
+        colspec={X[2,l] X[5,l]},
+        cells={valign=t},
+        row{1}={font=\bfseries, halign=c}
+    }
+        Khái niệm, thuật ngữ & Kiến thức, kĩ năng \\
+        Định lí Viète &
+        \begin{minipage}[t]{\linewidth}
+        \begin{itemize}
+            \item Giải thích định lí Viète.
+            \item Vận dụng định lí Viète để tính nhẩm nghiệm của phương trình bậc hai, tìm hai số khi biết tổng và tích của chúng.
+        \end{itemize}
+        \end{minipage}
+    \end{tblr}
+    \end{center}
+
+    Bác An có 40 m hàng rào lưới thép. Bác muốn dùng nó để rào xung quanh một mảnh đất trống (đủ rộng) thành một mảnh vườn hình chữ nhật có diện tích $96\,\text{m}^2$ để trồng rau. Tính chiều dài và chiều rộng của mảnh vườn đó.
+
+    % TODO(HINH-NGUON): hình minh hoạ mảnh vườn ở SGK trang 21; bổ sung asset/crop đúng từ nguồn, không redraw xấp xỉ bằng TikZ.
+
+    \subsubsection{Định lí Viète}
+
+    \textbf{Khám phá định lí Viète}
+
+    Xét phương trình bậc hai $ax^2+bx+c=0$ ($a\ne0$). Giả sử $\Delta=b^2-4ac\ge0$.
+
+    \textbf{HĐ1} Nhắc lại công thức tính hai nghiệm $x_1$, $x_2$ của phương trình trên.
+
+    \answerline
+
+    \textbf{HĐ2} Từ kết quả HĐ1, hãy tính $x_1+x_2$ và $x_1x_2$.
+
+    \answerline
+    \answerline
+
+    Từ kết quả HĐ2, ta có định lí Viète như sau:
+
+    \begin{keyconcept}
+        Nếu $x_1$, $x_2$ là hai nghiệm của phương trình $ax^2+bx+c=0$ ($a\ne0$) thì
+        \[
+            \begin{cases}
+                x_1+x_2=-\dfrac{b}{a},\\[4pt]
+                x_1x_2=\dfrac{c}{a}.
+            \end{cases}
+        \]
+    \end{keyconcept}
+
+    \textbf{Ví dụ 1} Không giải phương trình, hãy tính biệt thức $\Delta$ (hoặc $\Delta'$) để kiểm tra điều kiện có nghiệm, rồi tính tổng và tích các nghiệm của các phương trình bậc hai sau:
+    \begin{enumerate}[label=\alph*)]
+        \item $2x^2+11x+7=0$;
+        \item $4x^2-12x+9=0$.
+    \end{enumerate}
+
+    \textbf{Giải}
+
+    a) Ta có: $\Delta=11^2-4\cdot2\cdot7=65>0$ nên phương trình có hai nghiệm phân biệt $x_1$, $x_2$.
+
+    Theo định lí Viète, ta có:
+    \[
+        x_1+x_2=-\dfrac{11}{2};\qquad x_1x_2=\dfrac{7}{2}.
+    \]
+
+    b) Ta có: $\Delta'=(-6)^2-4\cdot9=0$ nên phương trình có hai nghiệm trùng nhau $x_1$, $x_2$.
+
+    Theo định lí Viète, ta có:
+    \[
+        x_1+x_2=-\dfrac{-12}{4}=3;\qquad x_1x_2=\dfrac{9}{4}.
+    \]
+
+    \textbf{Luyện tập 1} Không giải phương trình, hãy tính biệt thức $\Delta$ (hoặc $\Delta'$) để kiểm tra điều kiện có nghiệm, rồi tính tổng và tích các nghiệm của các phương trình bậc hai sau:
+    \begin{enumerate}[label=\alph*)]
+        \item $2x^2-7x+3=0$;
+        \item $25x^2-20x+4=0$;
+        \item $2\sqrt{2}x^2-4=0$.
+    \end{enumerate}
+
+    \answerline
+    \answerline
+    \answerline
+
+    \textbf{Tranh luận}
+
+    Không cần giải, tớ biết ngay tổng và tích hai nghiệm của phương trình $x^2-x+1=0$ đều bằng 1.
+
+    % TODO(HINH-NGUON): tranh minh hoạ Tranh luận ở SGK trang 22; bổ sung asset/crop đúng từ nguồn, không redraw xấp xỉ bằng TikZ.
+
+    Ý kiến của em thế nào?
+
+    \answerline
+
+    \subsubsection{Áp dụng định lí Viète để tính nhẩm nghiệm}
+
+    \textbf{Giải phương trình bậc hai khi biết một nghiệm của nó}
+
+    \textbf{HĐ3} Cho phương trình $2x^2-7x+5=0$.
+    \begin{enumerate}[label=\alph*)]
+        \item Xác định các hệ số $a$, $b$, $c$ rồi tính $a+b+c$.
+        \item Chứng tỏ rằng $x_1=1$ là một nghiệm của phương trình.
+        \item Dùng định lí Viète để tìm nghiệm còn lại $x_2$ của phương trình.
+    \end{enumerate}
+
+    \answerline
+    \answerline
+    \answerline
+
+    \textbf{HĐ4} Cho phương trình $3x^2+5x+2=0$.
+    \begin{enumerate}[label=\alph*)]
+        \item Xác định các hệ số $a$, $b$, $c$ rồi tính $a-b+c$.
+        \item Chứng tỏ rằng $x_1=-1$ là một nghiệm của phương trình.
+        \item Dùng định lí Viète để tìm nghiệm còn lại $x_2$ của phương trình.
+    \end{enumerate}
+
+    \answerline
+    \answerline
+    \answerline
+
+    \begin{keyconcept}
+        Xét phương trình $ax^2+bx+c=0$ ($a\ne0$).
+        \begin{itemize}
+            \item Nếu $a+b+c=0$ thì phương trình có một nghiệm là $x_1=1$, còn nghiệm kia là $x_2=\dfrac{c}{a}$.
+            \item Nếu $a-b+c=0$ thì phương trình có một nghiệm là $x_1=-1$, còn nghiệm kia là $x_2=-\dfrac{c}{a}$.
+        \end{itemize}
+    \end{keyconcept}
+
+    \textbf{Ví dụ 2} Bằng cách nhẩm nghiệm, hãy giải các phương trình sau:
+    \begin{enumerate}[label=\alph*)]
+        \item $x^2-6x+5=0$;
+        \item $5x^2+14x+9=0$.
+    \end{enumerate}
+
+    \textbf{Giải}
+
+    a) Ta có: $a+b+c=1+(-6)+5=0$ nên phương trình có hai nghiệm: $x_1=1$, $x_2=5$.
+
+    b) Ta có: $a-b+c=5-14+9=0$ nên phương trình có hai nghiệm: $x_1=-1$, $x_2=-\dfrac{9}{5}$.
+
+    \textbf{Ví dụ 3} Giải phương trình $x^2-7x+12=0$, biết phương trình có một nghiệm là $x_1=3$.
+
+    \textbf{Giải}
+
+    Gọi $x_2$ là nghiệm còn lại của phương trình. Theo định lí Viète, ta có: $x_1x_2=12$.
+
+    Do đó, $x_2=\dfrac{12}{x_1}=\dfrac{12}{3}=4$.
+
+    Vậy phương trình có hai nghiệm: $x_1=3$, $x_2=4$.
+
+    \textbf{Luyện tập 2} Tính nhẩm nghiệm của các phương trình sau:
+    \begin{enumerate}[label=\alph*)]
+        \item $3x^2-11x+8=0$;
+        \item $4x^2+15x+11=0$;
+        \item $x^2+2\sqrt{2}x+2=0$, biết phương trình có một nghiệm là $x=-\sqrt{2}$.
+    \end{enumerate}
+
+    \answerline
+    \answerline
+    \answerline
+
+    \textbf{Thử thách nhỏ}
+
+    Hãy tìm một phương trình bậc hai mà tổng và tích các nghiệm của phương trình là hai số đối nhau.
+
+    Tớ tìm ra rồi! Đó là phương trình $x^2+x+1=0$.
+
+    % TODO(HINH-NGUON): tranh minh hoạ Thử thách nhỏ ở SGK trang 23; bổ sung asset/crop đúng từ nguồn, không redraw xấp xỉ bằng TikZ.
+
+    Em có đồng ý với ý kiến của Tròn không? Vì sao?
+
+    \answerline
+    \answerline
+
+    \subsubsection{Tìm hai số khi biết tổng và tích của chúng}
+
+    \textbf{Thiết lập phương trình bậc hai để tìm hai số khi biết tổng và tích của chúng}
+
+    \textbf{HĐ5} Giả sử hai số có tổng $S=5$ và tích $P=6$. Thực hiện các bước sau để lập phương trình bậc hai nhận hai số đó làm nghiệm.
+    \begin{enumerate}[label=\alph*)]
+        \item Gọi một số là $x$. Tính số kia theo $x$.
+        \item Sử dụng kết quả câu a và giả thiết, hãy lập phương trình để tìm $x$.
+    \end{enumerate}
+
+    \answerline
+    \answerline
+
+    \begin{keyconcept}
+        Nếu hai số có tổng bằng $S$ và tích bằng $P$ thì hai số đó là hai nghiệm của phương trình bậc hai:
+        \[
+            x^2-Sx+P=0.
+        \]
+        Điều kiện để có hai số đó là $S^2-4P\ge0$.
+    \end{keyconcept}
+
+    \textbf{Ví dụ 4} Tìm hai số biết tổng của chúng bằng 9, tích của chúng bằng 20.
+
+    \textbf{Giải}
+
+    Hai số cần tìm là hai nghiệm của phương trình $x^2-9x+20=0$.
+
+    Ta có: $\Delta=(-9)^2-4\cdot1\cdot20=1$; $\sqrt{\Delta}=1$.
+
+    Suy ra phương trình có hai nghiệm: $x_1=\dfrac{9-1}{2}=4$; $x_2=\dfrac{9+1}{2}=5$.
+
+    Vậy hai số cần tìm là 4 và 5.
+
+    \textbf{Luyện tập 3} Tìm hai số biết tổng của chúng bằng $-11$, tích của chúng bằng 28.
+
+    \answerline
+    \answerline
+
+    \textbf{Vận dụng} Giải bài toán trong tình huống mở đầu.
+
+    \answerline
+    \answerline
+\end{lesson}
+
+\begin{exercises}
+    \subsection{Bài tập}
+
+    \begin{questions}[resume=SGK]
+        \item Không giải phương trình, hãy tính tổng và tích các nghiệm (nếu có) của các phương trình sau:
+        \begin{questions}
+            \item $x^2-12x+8=0$;
+            \item $2x^2+11x-5=0$;
+            \item $3x^2-10=0$;
+            \item $x^2-x+3=0$.
+        \end{questions}
+
+        \answerline
+        \answerline
+
+        \item Tính nhẩm nghiệm của các phương trình sau:
+        \begin{questions}
+            \item $2x^2-9x+7=0$;
+            \item $3x^2+11x+8=0$;
+            \item $7x^2-15x+2=0$, biết phương trình có một nghiệm $x_1=2$.
+        \end{questions}
+
+        \answerline
+        \answerline
+
+        \item Tìm hai số $u$ và $v$, biết:
+        \begin{questions}
+            \item $u+v=20$, $uv=99$;
+            \item $u+v=2$, $uv=15$.
+        \end{questions}
+
+        \answerline
+        \answerline
+
+        \item Chứng tỏ rằng nếu phương trình bậc hai $ax^2+bx+c=0$ có hai nghiệm là $x_1$ và $x_2$ thì đa thức $ax^2+bx+c$ phân tích được thành nhân tử như sau:
+        \[
+            ax^2+bx+c=a(x-x_1)(x-x_2).
+        \]
+
+        \textit{Áp dụng:} Phân tích các đa thức sau thành nhân tử:
+        \begin{questions}
+            \item $x^2+11x+18$;
+            \item $3x^2+5x-2$.
+        \end{questions}
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Một bể bơi hình chữ nhật có diện tích $300\,\text{m}^2$ và chu vi là 74 m. Tính các kích thước của bể bơi này.
+
+        \answerline
+        \answerline
+    \end{questions}
+\end{exercises}
+
+\begin{practice}
+    \subsection{Luyện tập}
+
+    \begin{questions}[resume=SBT]
+        \item Tính nhẩm nghiệm của các phương trình sau:
+        \begin{questions}
+            \item $\sqrt{3}x^2-(\sqrt{3}+1)x+1=0$;
+            \item $3x^2+(\sqrt{5}-1)x-4+\sqrt{5}=0$;
+            \item $2x^2-3\sqrt{5}x+5=0$, biết rằng phương trình có một nghiệm là $x=\sqrt{5}$.
+        \end{questions}
+
+        \answerline
+        \answerline
+
+        \item Tìm hai số $u$ và $v$, biết:
+        \begin{questions}
+            \item $u+v=17$, $uv=72$;
+            \item $u^2+v^2=73$, $uv=24$.
+        \end{questions}
+
+        \answerline
+        \answerline
+
+        \item Dùng định lí Viète, tính nhẩm nghiệm của các phương trình sau:
+        \begin{questions}
+            \item $x^2-8x+15=0$;
+            \item $x^2+5x+6=0$.
+        \end{questions}
+
+        \answerline
+
+        \item Cho phương trình bậc hai (ẩn $x$): $x^2-4x+m-2=0$.
+        \begin{questions}
+            \item Tìm điều kiện của $m$ để phương trình có nghiệm.
+            \item Với các giá trị $m$ tìm được ở câu a, gọi $x_1$ và $x_2$ là hai nghiệm của phương trình. Hãy tính giá trị của các biểu thức sau theo $m$:
+            \[
+                A=x_1^2+x_2^2;\qquad B=x_1^3+x_2^3.
+            \]
+        \end{questions}
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Giả sử phương trình bậc hai $ax^2+bx+c=0$ ($a\ne0$) có hai nghiệm là $x_1$, $x_2$ đều khác 0. Hãy lập phương trình bậc hai có hai nghiệm là $\dfrac{1}{x_1}$ và $\dfrac{1}{x_2}$.
+
+        \answerline
+        \answerline
+
+        \item Chứng tỏ rằng nếu phương trình bậc hai $ax^2+bx+c=0$ có hai nghiệm là $x_1$, $x_2$ thì đa thức $ax^2+bx+c$ có thể phân tích được thành nhân tử như sau:
+        \[
+            ax^2+bx+c=a(x-x_1)(x-x_2).
+        \]
+
+        Áp dụng: Hãy phân tích các đa thức sau thành nhân tử:
+        \[
+            2x^2-9x+7;\qquad 4x^2+(\sqrt{2}-3)x-7+\sqrt{2}.
+        \]
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Tìm $m$ để phương trình $x^2+4x+m=0$ có hai nghiệm $x_1$, $x_2$ thỏa mãn $x_1^2+x_2^2=10$.
+
+        \answerline
+        \answerline
+
+        \item Bác Long có 48 mét lưới thép. Bác muốn dùng để rào xung quanh một mảnh đất trống (đủ rộng) thành một mảnh vườn hình chữ nhật để trồng rau.
+        \begin{questions}
+            \item Biết diện tích của mảnh vườn là $108\,\text{m}^2$, hãy tính chiều dài và chiều rộng của mảnh vườn.
+            \item Hỏi diện tích lớn nhất của mảnh vườn mà bác Long có thể rào được là bao nhiêu mét vuông?
+        \end{questions}
+
+        \answerline
+        \answerline
+        \answerline
+    \end{questions}
+\end{practice}
