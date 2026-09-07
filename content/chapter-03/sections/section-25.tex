@@ -57,7 +57,12 @@
             colspec={Q[c,m,2.6cm] *{6}{Q[c,m,1.25cm]}},
             rows={1cm}
         }
-            Đồng xu / Xúc xắc & 1 & 2 & 3 & 4 & 5 & 6 \\
+            \tikz[baseline=(hdr.center)]{
+                \node[inner sep=0pt, minimum width=2.05cm, minimum height=.72cm] (hdr) {};
+                \draw (hdr.north west)--(hdr.south east);
+                \node[anchor=north east, font=\small, inner sep=1pt] at (hdr.north east) {Xúc xắc};
+                \node[anchor=south west, font=\small, inner sep=1pt] at (hdr.south west) {Đồng xu};
+            } & 1 & 2 & 3 & 4 & 5 & 6 \\
             S & $(1,\,S)$ & $(2,\,S)$ & $(3,\,S)$ & $(4,\,S)$ & $(5,\,S)$ & $(6,\,S)$ \\
             N & $(1,\,N)$ & $(2,\,N)$ & $(3,\,N)$ & $(4,\,N)$ & $(5,\,N)$ & $(6,\,N)$ \\
         \end{tblr}
@@ -98,7 +103,12 @@
             colspec={Q[c,m,2.4cm] *{3}{Q[c,m,1.8cm]}},
             rows={1cm}
         }
-            Lần 1 / Lần 2 & 1 & 2 & 3 \\
+            \tikz[baseline=(hdr.center)]{
+                \node[inner sep=0pt, minimum width=2.05cm, minimum height=.72cm] (hdr) {};
+                \draw (hdr.north west)--(hdr.south east);
+                \node[anchor=north east, font=\small, inner sep=1pt] at (hdr.north east) {Lần 2};
+                \node[anchor=south west, font=\small, inner sep=1pt] at (hdr.south west) {Lần 1};
+            } & 1 & 2 & 3 \\
             1 & $(1,\,1)$ & ... & ... \\
             2 & ... & ... & ... \\
             3 & ... & ... & $(3,\,3)$ \\
@@ -127,7 +137,12 @@
             colspec={Q[c,m,2.2cm] *{4}{Q[c,m,1.65cm]}},
             rows={1cm}
         }
-            Lần 1 / Lần 2 & 1 & 2 & 3 & 4 \\
+            \tikz[baseline=(hdr.center)]{
+                \node[inner sep=0pt, minimum width=1.85cm, minimum height=.72cm] (hdr) {};
+                \draw (hdr.north west)--(hdr.south east);
+                \node[anchor=north east, font=\small, inner sep=1pt] at (hdr.north east) {Lần 2};
+                \node[anchor=south west, font=\small, inner sep=1pt] at (hdr.south west) {Lần 1};
+            } & 1 & 2 & 3 & 4 \\
             1 & \tikz[baseline=(p11.base)]{\node[inner sep=0pt] (p11) {$(1,\,1)$};\draw[red] (p11.south west)--(p11.north east);} & $(1,\,2)$ & $(1,\,3)$ & $(1,\,4)$ \\
             2 & $(2,\,1)$ & \tikz[baseline=(p22.base)]{\node[inner sep=0pt] (p22) {$(2,\,2)$};\draw[red] (p22.south west)--(p22.north east);} & $(2,\,3)$ & $(2,\,4)$ \\
             3 & $(3,\,1)$ & $(3,\,2)$ & \tikz[baseline=(p33.base)]{\node[inner sep=0pt] (p33) {$(3,\,3)$};\draw[red] (p33.south west)--(p33.north east);} & $(3,\,4)$ \\
@@ -167,7 +182,12 @@
             colspec={Q[c,m,2.4cm] *{4}{Q[c,m,1.55cm]}},
             rows={1cm}
         }
-            Màu hạt / Dạng hạt & BB & Bb & bB & bb \\
+            \tikz[baseline=(hdr.center)]{
+                \node[inner sep=0pt, minimum width=2.05cm, minimum height=.72cm] (hdr) {};
+                \draw (hdr.north west)--(hdr.south east);
+                \node[anchor=north east, font=\small, inner sep=1pt] at (hdr.north east) {Dạng hạt};
+                \node[anchor=south west, font=\small, inner sep=1pt] at (hdr.south west) {Màu hạt};
+            } & BB & Bb & bB & bb \\
             AA & ... & ... & ... & ... \\
             Aa & ... & ... & ... & ... \\
         \end{tblr}
