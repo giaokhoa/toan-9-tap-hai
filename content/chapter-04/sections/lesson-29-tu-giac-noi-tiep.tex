@@ -1,0 +1,606 @@
+% Nguồn SGK Toán 9 Tập hai — Bài 29, trang 80--83:
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-80-1771844561010.png
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-81-1771844561352.png
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-82-1771844561772.png
+% https://cdn3.olm.vn/upload/thuvienso/4491669493-page-83-1771844562086.png
+%
+% Nguồn SBT Toán 9 Tập hai — Bài 29, PDF page 55--57:
+% SBT TOÁN 9 TẬP 2.pdf
+% SHA-256: 5ff01fd213d1adc75f9c54b4408d6a9642a4d8038e685040efef3311a196196c
+
+\section{Tứ giác nội tiếp}
+
+\begin{lesson}
+    \subsection{Kiến thức trọng tâm}
+
+    \begin{center}
+    \begin{tblr}{
+        width=\linewidth,
+        colspec={X[2,l] X[5,l]},
+        cells={valign=t},
+        row{1}={font=\bfseries, halign=c}
+    }
+        Khái niệm, thuật ngữ & Kiến thức, kĩ năng \\
+        \begin{minipage}[t]{\linewidth}
+        \begin{itemize}
+            \item Tứ giác nội tiếp
+            \item Đường tròn ngoại tiếp tứ giác
+        \end{itemize}
+        \end{minipage}
+        &
+        \begin{minipage}[t]{\linewidth}
+        \begin{itemize}
+            \item Nhận biết tứ giác nội tiếp đường tròn và giải thích định lí về tổng hai góc đối của tứ giác nội tiếp bằng $180^\circ$.
+            \item Xác định tâm và bán kính đường tròn ngoại tiếp hình chữ nhật, hình vuông.
+            \item Giải quyết một số vấn đề thực tiễn gắn với đường tròn.
+        \end{itemize}
+        \end{minipage}
+    \end{tblr}
+    \end{center}
+
+    Với mỗi tam giác cho trước luôn có một đường tròn đi qua ba đỉnh của tam giác đó. Điều này có đúng với tứ giác hay không? Trong bài học này, các em sẽ tìm hiểu vấn đề đó.
+
+    \subsubsection{Đường tròn ngoại tiếp một tứ giác}
+
+    \textbf{Đường tròn đi qua bốn đỉnh của một tứ giác}
+
+    \textbf{HĐ1} Cho tứ giác $ABCD$ có $\widehat A=\widehat C=90^\circ$ (H.9.28). Hãy giải thích vì sao bốn đỉnh của tứ giác $ABCD$ cùng nằm trên một đường tròn có tâm là trung điểm $O$ của đoạn thẳng $BD$.
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (O) at (0,0);
+            \coordinate (B) at (-2,0);
+            \coordinate (D) at (2,0);
+            \coordinate (A) at (-1,1.732);
+            \coordinate (C) at (-1,-1.732);
+            \draw (A)--(B)--(C)--(D)--cycle;
+            \draw (B)--(D);
+            \fill (O) circle (1.2pt);
+            \node[above left=1pt of A] {$A$};
+            \node[left=1pt of B] {$B$};
+            \node[below left=1pt of C] {$C$};
+            \node[right=1pt of D] {$D$};
+            \node[above=1pt of O] {$O$};
+            \pic[draw, angle radius=4mm] {right angle=B--A--D};
+            \pic[draw, angle radius=4mm] {right angle=B--C--D};
+        \end{tikzpicture}
+
+        \textit{Hình 9.28}
+    \end{center}
+
+    \answerline
+    \answerline
+
+    \textbf{HĐ2} Trên đường tròn $(O)$, lấy các điểm $A$, $B$, $C$, $D$ sao cho $ABCD$ là tứ giác lồi (H.9.29). Các đường trung trực của các cạnh $AB$, $BC$, $CD$, $DA$ có đồng quy hay không?
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (O) at (0,0);
+            \coordinate (A) at (145:2);
+            \coordinate (B) at (220:2);
+            \coordinate (C) at (320:2);
+            \coordinate (D) at (55:2);
+            \draw (O) circle (2);
+            \draw (A)--(B)--(C)--(D)--cycle;
+            \fill (O) circle (1.2pt);
+            \node[above left=1pt of A] {$A$};
+            \node[below left=1pt of B] {$B$};
+            \node[below right=1pt of C] {$C$};
+            \node[above right=1pt of D] {$D$};
+            \node[below=1pt of O] {$O$};
+        \end{tikzpicture}
+
+        \textit{Hình 9.29}
+    \end{center}
+
+    \answerline
+
+    Các tứ giác $ABCD$ như Hình 9.28 và Hình 9.29 được gọi là nội tiếp đường tròn $(O)$ và ta cũng nói đường tròn $(O)$ ngoại tiếp tứ giác $ABCD$. Cụ thể, ta có định nghĩa sau:
+
+    \begin{keyconcept}
+        Tứ giác có bốn đỉnh nằm trên một đường tròn được gọi là \textbf{tứ giác nội tiếp đường tròn} (hoặc đơn giản là \textbf{tứ giác nội tiếp}) và đường tròn được gọi là \textbf{đường tròn ngoại tiếp tứ giác}.
+    \end{keyconcept}
+
+    \textbf{Ví dụ 1} Trong các hình sau (H.9.30), hình nào vẽ một tứ giác nội tiếp một đường tròn?
+
+    \begin{center}
+        \begin{tikzpicture}
+            % a)
+            \coordinate (Oa) at (0,0);
+            \coordinate (Aa) at (120:1.25);
+            \coordinate (Ba) at (205:1.25);
+            \coordinate (Ca) at (320:1.25);
+            \coordinate (Da) at (0.15,0.35);
+            \draw (Oa) circle (1.25);
+            \draw (Aa)--(Ba)--(Ca)--(Da)--cycle;
+            \node[below=4pt of Oa] at (0,-1.55) {a)};
+
+            % b)
+            \coordinate (Ob) at (4,0);
+            \coordinate (Ab) at ($(Ob)+(120:1.25)$);
+            \coordinate (Bb) at ($(Ob)+(205:1.25)$);
+            \coordinate (Cb) at ($(Ob)+(320:1.25)$);
+            \coordinate (Db) at ($(Ob)+(0.25,1.65)$);
+            \draw (Ob) circle (1.25);
+            \draw (Ab)--(Bb)--(Cb)--(Db)--cycle;
+            \node at (4,-1.55) {b)};
+
+            % c)
+            \coordinate (Oc) at (8,0);
+            \coordinate (Ac) at ($(Oc)+(125:1.25)$);
+            \coordinate (Bc) at ($(Oc)+(215:1.25)$);
+            \coordinate (Cc) at ($(Oc)+(315:1.25)$);
+            \coordinate (Dc) at ($(Oc)+(40:1.25)$);
+            \draw (Oc) circle (1.25);
+            \draw (Ac)--(Bc)--(Cc)--(Dc)--cycle;
+            \node at (8,-1.55) {c)};
+        \end{tikzpicture}
+
+        \textit{Hình 9.30}
+    \end{center}
+
+    \textbf{Giải.} Hình a và b không vẽ tứ giác nào nội tiếp một đường tròn vì mỗi tứ giác có ba đỉnh nằm trên đường tròn và đỉnh còn lại không nằm trên đường tròn.
+
+    Hình c vẽ một tứ giác nội tiếp một đường tròn vì tứ giác có bốn đỉnh nằm trên đường tròn.
+
+    \textbf{HĐ3} Em hãy đo các góc đối nhau $A$ và $C$ của tứ giác $ABCD$ trong HĐ2 và tính tổng $\widehat A+\widehat C$. So sánh kết quả của em với các bạn.
+
+    \answerline
+
+    Tổng quát, chúng ta có định lí sau đây về tổng số đo các góc đối nhau của một tứ giác nội tiếp.
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (O) at (0,0);
+            \coordinate (A) at (130:2);
+            \coordinate (B) at (215:2);
+            \coordinate (C) at (320:2);
+            \coordinate (D) at (50:2);
+            \draw (O) circle (2);
+            \draw (A)--(B)--(C)--(D)--cycle;
+            \fill (O) circle (1.2pt);
+            \node[above left=1pt of A] {$A$};
+            \node[below left=1pt of B] {$B$};
+            \node[below right=1pt of C] {$C$};
+            \node[above right=1pt of D] {$D$};
+            \node[below=1pt of O] {$O$};
+            \pic[draw, angle radius=4mm] {angle=D--A--B};
+            \pic[draw, angle radius=4mm] {angle=B--C--D};
+        \end{tikzpicture}
+
+        \textit{Hình 9.31}
+    \end{center}
+
+    \textbf{Định lí}
+
+    \begin{keyconcept}
+        Trong một tứ giác nội tiếp, tổng số đo hai góc đối nhau bằng $180^\circ$.
+    \end{keyconcept}
+
+    \begin{center}
+    \begin{tblr}{colspec={Q[c] X[l]}}
+        GT & Tứ giác $ABCD$ nội tiếp $(O)$. \\
+        KL & $\widehat A+\widehat C=180^\circ$; $\widehat B+\widehat D=180^\circ$. \\
+    \end{tblr}
+    \end{center}
+
+    \textbf{Chứng minh}
+
+    Do hai điểm $B$, $D$ chia đường tròn $(O)$ thành hai cung $\overset{\frown}{BCD}$ và $\overset{\frown}{BAD}$ nên
+    \[
+        \text{sđ}\overset{\frown}{BCD}+\text{sđ}\overset{\frown}{BAD}=360^\circ.
+    \]
+    Do $\widehat A$ và $\widehat C$ là các góc nội tiếp của đường tròn $(O)$ lần lượt chắn cung $\overset{\frown}{BCD}$ và $\overset{\frown}{BAD}$ nên
+    \[
+        \widehat A+\widehat C
+        =\dfrac12\text{sđ}\overset{\frown}{BCD}
+        +\dfrac12\text{sđ}\overset{\frown}{BAD}
+        =180^\circ.
+    \]
+    Tương tự, $\widehat B+\widehat D=180^\circ$.
+
+    \textbf{Ví dụ 2} Cho tứ giác $ABCD$ nội tiếp đường tròn $(O)$ như Hình 9.32. Hai đường thẳng $AB$ và $DC$ cắt nhau tại $X$. Biết rằng $\widehat{DAB}=70^\circ$, $\widehat{ABC}=130^\circ$. Tính số đo của các góc $BCD$ và $BXC$.
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (O) at (0,0);
+            \coordinate (A) at (210:2);
+            \coordinate (B) at (270:2);
+            \coordinate (C) at (310:2);
+            \coordinate (D) at (50:2);
+            \path[name path=ABline] (A)--($(A)!3!(B)$);
+            \path[name path=DCline] (D)--($(D)!3!(C)$);
+            \path[name intersections={of=ABline and DCline, by=X}];
+            \draw (O) circle (2);
+            \draw (A)--(B)--(C)--(D)--cycle;
+            \draw (B)--(X);
+            \draw (C)--(X);
+            \fill (O) circle (1.2pt);
+            \node[left=1pt of A] {$A$};
+            \node[below left=1pt of B] {$B$};
+            \node[right=1pt of C] {$C$};
+            \node[above right=1pt of D] {$D$};
+            \node[above=1pt of O] {$O$};
+            \node[below right=1pt of X] {$X$};
+            \node[above right=1pt] at ($(A)!0.2!(B)$) {$70^\circ$};
+            \node[right=2pt] at ($(B)!0.2!(C)$) {$130^\circ$};
+        \end{tikzpicture}
+
+        \textit{Hình 9.32}
+    \end{center}
+
+    \textbf{Giải.} Vì $ABCD$ là tứ giác nội tiếp đường tròn $(O)$ nên các góc đối diện có tổng số đo bằng $180^\circ$.
+
+    Do đó $\widehat{DAB}+\widehat{BCD}=180^\circ$, hay
+    \[
+        \widehat{BCD}=180^\circ-\widehat{DAB}=180^\circ-70^\circ=110^\circ.
+    \]
+
+    Tương tự, ta có $\widehat{ABC}+\widehat{CDA}=180^\circ$, hay
+    \[
+        \widehat{CDA}=180^\circ-\widehat{ABC}=180^\circ-130^\circ=50^\circ.
+    \]
+
+    Vì tổng các góc trong tam giác $AXD$ bằng $180^\circ$ nên:
+    \[
+        \widehat{BXC}=\widehat{AXD}=180^\circ-\widehat{DAB}-\widehat{CDA}
+        =180^\circ-70^\circ-50^\circ=60^\circ.
+    \]
+
+    \textbf{Luyện tập 1} Cho tam giác $ABC$ có các đường cao $BE$, $CF$. Biết rằng $\widehat B=60^\circ$, $\widehat C=80^\circ$.
+    \begin{enumerate}[label=\alph*)]
+        \item Chứng tỏ rằng tứ giác $BCEF$ nội tiếp một đường tròn có tâm là trung điểm của cạnh $BC$.
+        \item Tính số đo của các góc $BFE$ và $CEF$.
+    \end{enumerate}
+
+    \answerline
+    \answerline
+    \answerline
+
+    \textbf{Thử thách nhỏ 1}
+
+    Cho tứ giác $ABCD$, biết rằng các đường trung trực của ba đoạn thẳng $AB$, $AC$, $AD$ đồng quy tại một điểm. Hãy giải thích vì sao $ABCD$ là tứ giác nội tiếp.
+
+    \answerline
+    \answerline
+
+    \subsubsection{Đường tròn ngoại tiếp hình chữ nhật và hình vuông}
+
+    \textbf{Đường tròn ngoại tiếp hình chữ nhật và hình vuông}
+
+    \textbf{HĐ4} Vẽ hình chữ nhật $ABCD$ và giao điểm $M$ của hai đường chéo $AC$ và $BD$ (H.9.33).
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (A) at (-2,1.2);
+            \coordinate (B) at (2,1.2);
+            \coordinate (C) at (2,-1.2);
+            \coordinate (D) at (-2,-1.2);
+            \coordinate (M) at ($(A)!0.5!(C)$);
+            \draw (A)--(B)--(C)--(D)--cycle;
+            \draw (A)--(C);
+            \draw (B)--(D);
+            \fill (M) circle (1.2pt);
+            \node[above left=1pt of A] {$A$};
+            \node[above right=1pt of B] {$B$};
+            \node[below right=1pt of C] {$C$};
+            \node[below left=1pt of D] {$D$};
+            \node[above=1pt of M] {$M$};
+        \end{tikzpicture}
+
+        \textit{Hình 9.33}
+    \end{center}
+
+    \begin{enumerate}[label=\alph*)]
+        \item Hãy giải thích vì sao điểm $M$ cách đều bốn đỉnh của hình chữ nhật $ABCD$.
+        \item Chứng tỏ rằng hình chữ nhật $ABCD$ nội tiếp một đường tròn có bán kính bằng nửa đường chéo hình chữ nhật.
+    \end{enumerate}
+
+    \answerline
+    \answerline
+
+    \textbf{HĐ5} Cho hình vuông $ABCD$ có cạnh bằng 3 cm (H.9.34).
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (A) at (-1.5,1.5);
+            \coordinate (B) at (1.5,1.5);
+            \coordinate (C) at (1.5,-1.5);
+            \coordinate (D) at (-1.5,-1.5);
+            \draw (A)--(B)--(C)--(D)--cycle;
+            \node[above left=1pt of A] {$A$};
+            \node[above right=1pt of B] {$B$};
+            \node[below right=1pt of C] {$C$};
+            \node[below left=1pt of D] {$D$};
+            \node[above] at ($(A)!0.5!(B)$) {3 cm};
+        \end{tikzpicture}
+
+        \textit{Hình 9.34}
+    \end{center}
+
+    Hãy xác định tâm, vẽ đường tròn ngoại tiếp hình vuông $ABCD$ và cho biết bán kính của đường tròn đó.
+
+    \answerline
+    \answerline
+
+    Từ hai hoạt động trên, ta có khẳng định sau:
+
+    \begin{keyconcept}
+        Hình chữ nhật và hình vuông là các tứ giác nội tiếp. Đường tròn ngoại tiếp của chúng có tâm là giao điểm của hai đường chéo và bán kính bằng một nửa độ dài đường chéo.
+    \end{keyconcept}
+
+    \textbf{Câu hỏi} Với điểm $A$ cho trước nằm trên đường tròn $(O)$, có bao nhiêu hình vuông có một đỉnh là $A$ nội tiếp đường tròn $(O)$?
+
+    \answerline
+
+    \textbf{Ví dụ 3}
+
+    Cho hình chữ nhật $ABCD$ có $AB=3$ cm, $AD=4$ cm. Vẽ đường tròn $(O;R)$ ngoại tiếp hình chữ nhật $ABCD$ và tính bán kính $R$.
+
+    \textbf{Giải}
+
+    Gọi $O$ là giao điểm của $AC$ và $BD$. Vẽ đường tròn tâm $O$ bán kính $R=OA$. Đường tròn $(O;R)$ vừa vẽ ngoại tiếp hình chữ nhật $ABCD$ (H.9.35).
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (O) at (0,0);
+            \coordinate (A) at (-2,1.5);
+            \coordinate (D) at (2,1.5);
+            \coordinate (C) at (2,-1.5);
+            \coordinate (B) at (-2,-1.5);
+            \draw (O) circle (2.5);
+            \draw (A)--(D)--(C)--(B)--cycle;
+            \draw (A)--(C);
+            \draw (B)--(D);
+            \fill (O) circle (1.2pt);
+            \node[above left=1pt of A] {$A$};
+            \node[below left=1pt of B] {$B$};
+            \node[below right=1pt of C] {$C$};
+            \node[above right=1pt of D] {$D$};
+            \node[above=1pt of O] {$O$};
+            \node[above] at ($(A)!0.5!(D)$) {4 cm};
+            \node[left] at ($(A)!0.5!(B)$) {3 cm};
+        \end{tikzpicture}
+
+        \textit{Hình 9.35}
+    \end{center}
+
+    Áp dụng định lí Pythagore cho tam giác $ABD$ vuông tại $A$, ta có:
+    \[
+        BD^2=AB^2+AD^2=3^2+4^2=25
+    \]
+    nên $BD=5$ cm.
+
+    Do đó, ta có $R=\dfrac{BD}{2}=2{,}5$ cm.
+
+    \textbf{Luyện tập 2}
+
+    Cho hình thoi $ABCD$ có các cạnh bằng 3 cm. Gọi $M$, $N$, $P$, $Q$ lần lượt là trung điểm của $AB$, $BC$, $CD$, $DA$. Chứng tỏ rằng tứ giác $MNPQ$ là hình chữ nhật và tìm bán kính đường tròn ngoại tiếp của tứ giác đó.
+
+    \answerline
+    \answerline
+    \answerline
+
+    \textbf{Thử thách nhỏ 2}
+
+    Nếu các hình chữ nhật có chung một đường chéo (ví dụ như hai hình chữ nhật $ABCD$ và $AECF$ trong Hình 9.36) thì các đỉnh của chúng có cùng nằm trên một đường tròn không?
+
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (A) at (-2.5,0);
+            \coordinate (C) at (2.5,0);
+            \coordinate (B) at (-0.8,1.7);
+            \coordinate (D) at (0.8,-1.7);
+            \coordinate (E) at (0.8,1.7);
+            \coordinate (F) at (-0.8,-1.7);
+            \draw (A)--(B)--(C)--(D)--cycle;
+            \draw (A)--(E)--(C)--(F)--cycle;
+            \draw (A)--(C);
+            \node[left=1pt of A] {$A$};
+            \node[above left=1pt of B] {$B$};
+            \node[right=1pt of C] {$C$};
+            \node[below right=1pt of D] {$D$};
+            \node[above right=1pt of E] {$E$};
+            \node[below left=1pt of F] {$F$};
+            \pic[draw, angle radius=3mm] {right angle=A--B--C};
+            \pic[draw, angle radius=3mm] {right angle=B--C--D};
+            \pic[draw, angle radius=3mm] {right angle=A--E--C};
+            \pic[draw, angle radius=3mm] {right angle=A--F--C};
+        \end{tikzpicture}
+
+        \textit{Hình 9.36}
+    \end{center}
+
+    \answerline
+\end{lesson}
+
+\begin{exercises}
+    \subsection{Bài tập}
+
+    \begin{questions}[resume=SGK]
+        \item Cho $ABCD$ là tứ giác nội tiếp. Tính số đo của các góc còn lại của tứ giác trong mỗi trường hợp sau:
+        \begin{questions}
+            \item $\widehat A=60^\circ$, $\widehat B=80^\circ$;
+            \item $\widehat B=70^\circ$, $\widehat C=90^\circ$;
+            \item $\widehat C=100^\circ$, $\widehat D=60^\circ$;
+            \item $\widehat D=110^\circ$, $\widehat A=80^\circ$.
+        \end{questions}
+
+        \answerline
+        \answerline
+
+        \item Cho điểm $I$ nằm ngoài đường tròn $(O)$. Qua $I$ kẻ hai đường thẳng lần lượt cắt $(O)$ tại bốn điểm $A$, $B$ và $C$, $D$ sao cho $A$ nằm giữa $B$ và $I$, $C$ nằm giữa $D$ và $I$. Chứng minh rằng $\widehat{IBD}=\widehat{ICA}$, $\widehat{IAC}=\widehat{IDB}$ và $IA\cdot IB=IC\cdot ID$.
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Cho hình bình hành $ABCD$ nội tiếp đường tròn $(O)$. Chứng minh rằng $ABCD$ là hình chữ nhật.
+
+        \answerline
+        \answerline
+
+        \item Cho hình thang $ABCD$ ($AB$ song song với $CD$) nội tiếp đường tròn $(O)$. Chứng minh rằng $ABCD$ là hình thang cân.
+
+        \answerline
+        \answerline
+
+        \item Tính diện tích của một hình chữ nhật, biết rằng hình chữ nhật đó có chiều dài gấp hai lần chiều rộng và bán kính đường tròn ngoại tiếp bằng $2{,}5$ cm.
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Người ta muốn dựng một khung cổng hình chữ nhật rộng 4 m và cao 3 m, bên ngoài khung cổng được bao bởi một khung thép dạng nửa đường tròn như Hình 9.37. Tính chiều dài của đoạn thép làm khung nửa đường tròn đó.
+
+        \begin{center}
+            \begin{tikzpicture}[x=0.75cm,y=0.75cm]
+                \coordinate (O) at (0,0);
+                \coordinate (L) at (-3.606,0);
+                \coordinate (R) at (3.606,0);
+                \coordinate (A) at (-2,0);
+                \coordinate (B) at (-2,3);
+                \coordinate (C) at (2,3);
+                \coordinate (D) at (2,0);
+                \draw (L) arc[start angle=180,end angle=0,radius=3.606];
+                \draw (L)--(R);
+                \draw (A)--(B)--(C)--(D)--cycle;
+                \node[above] at ($(B)!0.5!(C)$) {4 m};
+                \node[left] at ($(A)!0.5!(B)$) {3 m};
+            \end{tikzpicture}
+
+            \textit{Hình 9.37}
+        \end{center}
+
+        \answerline
+        \answerline
+        \answerline
+    \end{questions}
+\end{exercises}
+
+\begin{practice}
+    \subsection{Luyện tập}
+
+    \begin{questions}[resume=SBT]
+        \item Hãy cho biết số đo các góc còn lại của tứ giác nội tiếp $ABCD$ trong mỗi trường hợp sau:
+        \begin{questions}
+            \item $\widehat A=80^\circ$; $\widehat B=120^\circ$;
+            \item $\widehat B=70^\circ$; $\widehat C=110^\circ$;
+            \item $\widehat C=110^\circ$; $\widehat D=60^\circ$;
+            \item $\widehat D=65^\circ$; $\widehat A=130^\circ$.
+        \end{questions}
+
+        \answerline
+        \answerline
+
+        \item Hãy cho biết số đo các góc của tứ giác $ABCD$ nội tiếp đường tròn $(O)$ trong mỗi trường hợp sau:
+        \begin{questions}
+            \item $\widehat{AOB}=100^\circ$; $\widehat{BOC}=120^\circ$; $\widehat{COD}=70^\circ$.
+            \item $\widehat{BOC}=110^\circ$; $\widehat{COD}=70^\circ$; $\widehat{DOA}=100^\circ$.
+        \end{questions}
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Cho tứ giác $ABCD$ nội tiếp đường tròn $(O)$, hai đường chéo $AC$ và $BD$ cắt nhau tại điểm $E$. Tính số đo các góc của tứ giác $ABCD$, biết rằng $\widehat{AEB}=80^\circ$; $\widehat{ABE}=70^\circ$ và $\widehat{ECB}=50^\circ$.
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Cho tứ giác $ABCD$ nội tiếp đường tròn $(O)$ sao cho hai tia $AB$ và $DC$ cắt nhau tại điểm $K$, hai đường chéo $AC$ và $BD$ cắt nhau tại điểm $H$. Kí hiệu $\overset{\frown}{AD}$ là cung $AD$ không chứa $B$ và $\overset{\frown}{BC}$ là cung $BC$ không chứa $A$. Chứng minh rằng:
+        \begin{questions}
+            \item $\widehat{BKC}=\dfrac12\left(\text{sđ}\overset{\frown}{AD}-\text{sđ}\overset{\frown}{BC}\right)$;
+            \item $\widehat{BHC}=\dfrac12\left(\text{sđ}\overset{\frown}{AD}+\text{sđ}\overset{\frown}{BC}\right)$.
+        \end{questions}
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Cho tứ giác $ABCD$ nội tiếp đường tròn $(O)$ sao cho hai tia $AB$ và $DC$ cắt nhau tại điểm $I$. Chứng minh rằng:
+        \begin{questions}
+            \item $\triangle IAD\sim\triangle ICB$; $\triangle IAC\sim\triangle IDB$;
+            \item $\dfrac{IC}{ID}=\dfrac{AC}{AD}\cdot\dfrac{BC}{BD}$.
+        \end{questions}
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Cho tứ giác $ABCD$ nội tiếp đường tròn $(O)$, hai đường chéo $AC$ và $BD$ cắt nhau tại điểm $J$. Chứng minh rằng:
+        \begin{questions}
+            \item $\triangle JAD\sim\triangle JBC$; $\triangle JAB\sim\triangle JDC$;
+            \item $\dfrac{JA}{JC}=\dfrac{BA}{BC}\cdot\dfrac{DA}{DC}$.
+        \end{questions}
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Chứng minh rằng:
+        \begin{questions}
+            \item Nếu một hình bình hành nội tiếp một đường tròn thì hình đó phải là hình chữ nhật;
+            \item Nếu một hình thoi nội tiếp một đường tròn thì hình đó phải là hình vuông;
+            \item Nếu một hình thang nội tiếp một đường tròn thì hình đó phải là hình thang cân.
+        \end{questions}
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Cho hình vuông $ABCD$ có cạnh bằng 4 cm. Gọi $M$, $N$, $P$, $Q$ lần lượt là trung điểm của $AB$, $BC$, $CD$, $DA$. Chứng minh rằng tứ giác $MNPQ$ nội tiếp một đường tròn và tìm bán kính, chu vi của đường tròn đó.
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Cho hình vuông $ABCD$ có cạnh bằng 3 cm và nội tiếp đường tròn $(O)$ như Hình 9.8. Tính tổng diện tích của bốn hình viên phân được giới hạn bởi các cạnh hình vuông (phần tô đậm trong hình).
+
+        \begin{center}
+            \begin{tikzpicture}
+                \coordinate (O) at (0,0);
+                \coordinate (A) at (-1.5,1.5);
+                \coordinate (B) at (1.5,1.5);
+                \coordinate (C) at (1.5,-1.5);
+                \coordinate (D) at (-1.5,-1.5);
+                \fill[black!12] (O) circle (2.121);
+                \fill[white] (A)--(B)--(C)--(D)--cycle;
+                \draw (O) circle (2.121);
+                \draw (A)--(B)--(C)--(D)--cycle;
+                \draw (A)--(C);
+                \draw (B)--(D);
+                \node[above left=1pt of A] {$A$};
+                \node[above right=1pt of B] {$B$};
+                \node[below right=1pt of C] {$C$};
+                \node[below left=1pt of D] {$D$};
+                \node[above] at ($(A)!0.5!(B)$) {3 cm};
+            \end{tikzpicture}
+
+            \textit{Hình 9.8}
+        \end{center}
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Cho hình thoi $ABCD$ có $AC=8$ cm, $BD=4$ cm. Gọi $M$, $N$, $P$, $Q$ lần lượt là trung điểm của $AB$, $BC$, $CD$, $DA$. Chứng minh rằng tứ giác $MNPQ$ nội tiếp một đường tròn và tìm bán kính của đường tròn đó.
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Cho hình chữ nhật $ABCD$ nội tiếp đường tròn $(O)$ với $AB=3$ cm; $AD=4$ cm. Vẽ một hình vuông nội tiếp $(O)$. Tính diện tích của hình vuông đó.
+
+        \answerline
+        \answerline
+        \answerline
+
+        \item Cho tam giác nhọn $ABC$ có các đường cao $BE$, $CF$. Một đường tròn $(O)$ đi qua hai điểm $E$, $F$ và cắt các tia đối của hai tia $BF$, $CE$ lần lượt tại $X$ và $Y$. Chứng minh rằng $XY$ song song với $BC$.
+
+        \answerline
+        \answerline
+        \answerline
+    \end{questions}
+\end{practice}
