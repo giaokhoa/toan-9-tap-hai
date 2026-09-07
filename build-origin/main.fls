@@ -482,4 +482,9 @@ INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
+INPUT ./content/final-review/lesson-bai-tap-on-tap-cuoi-nam.tex
+INPUT ./content/final-review/lesson-bai-tap-on-tap-cuoi-nam.tex
+INPUT ./content/final-review/lesson-bai-tap-on-tap-cuoi-nam.tex
+INPUT ./content/final-review/lesson-bai-tap-on-tap-cuoi-nam.tex
+INPUT content/final-review/lesson-bai-tap-on-tap-cuoi-nam.tex
 INPUT build/main.aux
