@@ -164,8 +164,6 @@
             \node[below right=1pt of C] {$C$};
             \node[above right=1pt of D] {$D$};
             \node[below=1pt of O] {$O$};
-            \pic[draw, angle radius=4mm] {angle=D--A--B};
-            \pic[draw, angle radius=4mm] {angle=B--C--D};
         \end{tikzpicture}
 
         \textit{Hình 9.31}
@@ -208,9 +206,9 @@
             \coordinate (B) at (270:2);
             \coordinate (C) at (310:2);
             \coordinate (D) at (50:2);
-            \path[name path=ABline] (A)--($(A)!3!(B)$);
-            \path[name path=DCline] (D)--($(D)!3!(C)$);
-            \path[name intersections={of=ABline and DCline, by=X}];
+            \path[overlay,name path=ABline] (A)--($(A)!3!(B)$);
+            \path[overlay,name path=DCline] (D)--($(D)!3!(C)$);
+            \path[overlay,name intersections={of=ABline and DCline, by=X}];
             \draw (O) circle (2);
             \draw (A)--(B)--(C)--(D)--cycle;
             \draw (B)--(X);
